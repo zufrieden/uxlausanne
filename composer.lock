@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "445a507d97f68703751d3015a5dee494",
+    "hash": "a9a053a9f9788ff1bfa94f1d2400525e",
     "packages": [
         {
             "name": "twig/twig",
@@ -53,6 +53,43 @@
                 "templating"
             ],
             "time": "2013-10-15 19:17:38"
+        },
+        {
+            "name": "twitter/bootstrap",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "32468b087b615d1ed710f9118ff4f669cc5ad5e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/32468b087b615d1ed710f9118ff4f669cc5ad5e8",
+                "reference": "32468b087b615d1ed710f9118ff4f669cc5ad5e8",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2013-10-18 20:14:03"
         }
     ],
     "packages-dev": [
@@ -62,9 +99,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "twitter/bootstrap": 20
+    },
     "platform": [
 
     ],
