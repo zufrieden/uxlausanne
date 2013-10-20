@@ -12,69 +12,69 @@ $twig = new Twig_Environment($loader);
 //     'cache' => '../app/cache',
 // ));
 
-$speakers = [
-    "speaker_will-evans" => [
+$speakers = array(
+    "speaker_will-evans" => array(
         "photo" => "speaker_will-evans.jpg",
         "name" => "Will Evans",
         "twitter" => "semanticwill",
         "url" => "http://semanticfoundry.com",
         "site" => "semanticfoundry.com"
-    ],
-    "speaker_jeroen-van-geel" => [
+    ),
+    "speaker_jeroen-van-geel" => array(
         "photo" => "speaker_jeroen-van-geel.jpg",
         "name" => "Jeroen Van Geel",
         "twitter" => "jeroenvangeel",
         "url" => "http://www.jeroenvangeel.com",
         "site" => "jeroenvangeel.com"
-    ],
-    "speaker_ryan-rumsey" => [
+    ),
+    "speaker_ryan-rumsey" => array(
         "photo" => "speaker_ryan-rumsey.jpg",
         "name" => "Ryan Rumsey",
         "twitter" => "ryanrumsey",
         "url" => "http://ryanrumsey.com",
         "site" => "ryanrumsey.com"
-    ],
-    "speaker_valerie-vuillerat" => [
+    ),
+    "speaker_valerie-vuillerat" => array(
         "photo" => "speaker_valerie-vuillerat.jpg",
         "name" => "Valérie Vuillerat",
         "twitter" => "valeriewow",
         "url" => "http://ginetta.ch/en",
         "site" => "ginetta.ch"
-    ]
-];
+    )
+);
 
-$team = [
-    "simon" => [
+$team = array(
+    "simon" => array(
         "photo" => "team_simon.jpg",
         "name" => "Simon Farine",
         "twitter" => "simonfarine"
-    ],
-    "gilles" => [
+    ),
+    "gilles" => array(
         "photo" => "team_gilles.jpg",
         "name" => "Gilles Demarty",
         "twitter" => "gillesdemarty"
-    ],
-    "xavier" => [
+    ),
+    "xavier" => array(
         "photo" => "team_xavier.jpg",
         "name" => "Xavier Alexandre",
         "twitter" => "xavieralexandre"
-    ],
-    "jeremie" => [
+    ),
+    "jeremie" => array(
         "photo" => "team_jeremie.jpg",
         "name" => "Jérémie Fontana",
         "twitter" => "skynebula"
-    ],
-    "darja" => [
+    ),
+    "darja" => array(
         "photo" => "team_darja.jpg",
         "name" => "Darja Gartner",
         "twitter" => "gartner"
-    ],
-    "sophie" => [
+    ),
+    "sophie" => array(
         "photo" => "team_sophie.jpg",
         "name" => "Sophie Delalay",
         "twitter" => "fatallyadapted"
-    ]
-];
+    )
+);
 
 
 echo $twig->render('index.html.twig', array(
