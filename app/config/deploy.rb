@@ -1,17 +1,17 @@
-set :application, "uxlausanne"
+set :application, "uxlausanne.zufrieden.io"
 set :repository,  "git@github.com:zufrieden/uxlausanne.git"
 set :scm,         :git
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-set :deploy_to,   "/home/mfh/www/2014.uxlausanne.ch/"
+set :deploy_to,   "/home/mfh/www/uxlausanne.zufrieden.io/"
 set :user,        "mfh"
 set :domain,      "antistatique"
 set :use_sudo,    false
 
-role :app, '2014.uxlausanne.ch'
-role :web, '2014.uxlausanne.ch'
+role :app, 'uxlausanne.zufrieden.io'
+role :web, 'uxlausanne.zufrieden.io'
 
 
 set :ssh_options, { :forward_agent => true }
