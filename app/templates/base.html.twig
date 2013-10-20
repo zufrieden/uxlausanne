@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% block head %}
+        <link rel="stylesheet" href="assets/css/uxlausanne.css" />
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:300,500,700">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}{% endblock %}</title>
+        <script src="assets/js/modernizr.js"></script>
+        {% endblock %}
+    </head>
+<body>
+
+{% block header %}
+<div id="outer-wrap">
+<div id="inner-wrap">
+<header>
+    <div id="top">
+        <a class="nav-btn" id="nav-open-btn" href="#nav">Menu</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="logo" class="text-center" role="banner">
+                    <div id="ratio" class="organizers"><a href="http://8ratio.ch" target="_blank">:ratio</a> presents:</div>
+                    <h1><span>UX</span> LAUSANNE <sup>2014</sup></h1>
+                    <div class="baseline">a delightful conference on user experience</div>
+                    <div id="uxr" class="organizers">Organized by <a href="http://uxromandie.ch" target="_blank">UXRomandie</a></div>
+                    <div id="date">Thursday 22<sup>nd</sup> &amp; Friday 23<sup>rd</sup> May 2014</div>
+                </div>
+                <nav id="nav" class="main-nav" role="navigation">
+                    <ul class="nav nav-pills nav-centered">
+                        <li><a href="#speakers">Speakers</a></li>
+                        <!-- <li><a href="#sponsors">Sponsors</a></li> -->
+                        <li><a href="#about">About UXRomandie</a></li>
+                        <li class="register highlight"><a href="http://uxlausanne2014.eventbrite.com" target="_blank">Register (soon)</a></li>
+                    </ul>
+                    <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block body %}
+
+
+
+{% endblock %}
+
+{% block footer %}
+<div class="container">
+    <div class="isolated">
+        <div class="row">
+            <div class="col-xs-12">
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-6">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h3 class="text-right"><span class="icon icon-rounded-box icon-inbox"></span></h3>
+                    </div>
+                    <div class="col-xs-9">
+                        <h3 class="title-rounded-icon">Newsletter</h3>
+                        <p>
+                            <a href="http://eepurl.com/FHbDn" target="_blank">Register to our newsletter</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h3 class="text-right"><span class="icon icon-rounded-box icon-comment"></span></h3>
+                    </div>
+                    <div class="col-xs-9">
+                        <h3 class="title-rounded-icon">Networks</h3>
+                        <p>
+                            <a href="http://twitter.com/uxlausanne" target="_blank">Twitter</a><br>
+                            <a href="http://facebook.com/uxlausanne" target="_blank">Facebook</a><br>
+                            <a href="http://instagram.com/uxlausanne" target="_blank">Instagram</a><br>
+                            <a href="http://lanyrd.com/2014/uxlausanne/" target="_blank">Lanyrd</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h3 class="text-right"><span class="icon icon-rounded-box icon-envelope"></span></h3>
+                    </div>
+                    <div class="col-xs-9">
+                        <h3 class="title-rounded-icon">Email</h3>
+                        <p>
+                            <a href="mailto:info@uxromandie.ch">info@uxromandie.ch</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-6">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h3 class="text-right"><span class="icon icon-rounded-box icon-download"></span> </h3>
+                    </div>
+                    <div class="col-xs-9">
+                        <h3 class="title-rounded-icon">kit Sponsor</h3>
+                        <p>
+                            <a href="http://2014.uxlausanne.com/UXlausanne.com_SponsorKit.pdf" target="_blank">Download our sponsor kit</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="copyright" class="text-center">
+                    <h5>&copy; 2013-2014 <a href="http://uxromandie.ch" target="_blank">UXRomandie</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}
+
+</div>
+<!--/#inner-wrap-->
+</div>
+<!--/#outer-wrap-->
+
+    {% block footerscript %}
+    <script src="assets/js/nav.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-44919811-1', 'uxlausanne.com');
+    ga('send', 'pageview');
+
+    </script>
+    {% endblock %}
+    
+</body>
+</html>
