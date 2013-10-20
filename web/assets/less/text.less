@@ -1,6 +1,6 @@
 /* TITLES */
-h1{ .font-size(32); }
-h2{ .font-size(26); }
+h1{ .font-size(28); }
+h2{ .font-size(24); }
 h3{ .font-size(20); }
 h4{ .font-size(16); }
 h5{ .font-size(14); }
@@ -17,12 +17,23 @@ h3, h2, h3, h4, h5, h6{
   h5{ .font-size(14); }
 }
 @media (min-width: @screen-lg){
-  h1{ .font-size(42); }
+  h1{ .font-size(52); }
   h2{ .font-size(32); }
   h3{ .font-size(24); }
   h4{ .font-size(16); }
   h5{ .font-size(14); }
 }
+
+hgroup {
+    h2{
+        margin-bottom: 0em;
+        padding-bottom: 0em;
+    }
+    h3{
+        margin-top: 0.3em;
+    }
+}
+
 
 /* LINK */
 a{
@@ -39,8 +50,54 @@ a{
     h1{
         text-transform: uppercase;
         text-align: center;
-        background-color: @body-bg;
+        background: @body-bg url('../img/overlay.png');
         color: @white;
+    }
+}
+@media (min-width: @screen-md){
+    .section{
+        padding-bottom: 120px;
+    }
+    .section.team{
+        padding-bottom: 0;
+    }
+    .section-title{
+        h1{
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -3em;
+            margin-bottom: 0.3em;
+            padding-top: 0.8em;
+            line-height: 2.2em;
+            letter-spacing: 0.12em;
+            .font-size(20);
+            font-weight: 700;
+            position: relative;
+            &:before{
+                content: '';
+                position: absolute;
+                bottom: -38px;
+                left: -35px;
+                width: 35px;
+                height: 38px;
+                background: url('../img/shadow.png');
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: -38px;
+                right: -35px;
+                width: 35px;
+                height: 38px;
+                background: url('../img/shadow.png');
+                -moz-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
+                -ms-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
     }
 }
 
@@ -51,7 +108,7 @@ a{
 }
 span.icon-rounded-box{
     color: @white;
-    background-color: @ux_red;
+    background-color: @ux_pink;
     border-radius: 1em;
     display: inline-block;
     font-size: 18px;

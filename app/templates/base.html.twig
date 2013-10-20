@@ -16,7 +16,7 @@
 {% block header %}
 <div id="outer-wrap">
 <div id="inner-wrap">
-<header>
+<header class="section">
     <div id="top">
         <a class="nav-btn" id="nav-open-btn" href="#nav">Menu</a>
     </div>
@@ -24,25 +24,25 @@
         <div class="row">
             <div class="col-xs-12">
                 <div id="logo" class="text-center" role="banner">
-                    <div id="ratio" class="organizers"><a href="http://8ratio.ch" target="_blank">:ratio</a> presents:</div>
+                    <h4 id="ratio" class="organizers"><a href="http://8ratio.ch" target="_blank">:ratio</a> presents</h4>
                     <h1><span>UX</span> LAUSANNE <sup>2014</sup></h1>
-                    <div class="baseline">a delightful conference on user experience</div>
-                    <div id="uxr" class="organizers">Organized by <a href="http://uxromandie.ch" target="_blank">UXRomandie</a></div>
-                    <div id="date">Thursday 22<sup>nd</sup> &amp; Friday 23<sup>rd</sup> May 2014</div>
+                    <h3 class="baseline">a delightful conference on user experience</h3>
+                    <h4 id="uxr" class="organizers">Organized by <a href="http://uxromandie.ch" target="_blank">UXRomandie</a></h4>
+                    <h2 id="date">Thursday 22<sup>nd</sup> &amp; Friday 23<sup>rd</sup> May 2014</h2>
                 </div>
-                <nav id="nav" class="main-nav" role="navigation">
-                    <ul class="nav nav-pills nav-centered">
-                        <li><a href="#speakers">Speakers</a></li>
-                        <!-- <li><a href="#sponsors">Sponsors</a></li> -->
-                        <li><a href="#about">About UXRomandie</a></li>
-                        <li class="register highlight"><a href="http://uxlausanne2014.eventbrite.com" target="_blank">Register (soon)</a></li>
-                    </ul>
-                    <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
-                </nav>
             </div>
         </div>
     </div>
 </header>
+<nav id="nav" class="main-nav" role="navigation">
+    <ul class="nav nav-pills nav-centered">
+        <li><a href="#speakers">Speakers</a></li>
+        <!-- <li><a href="#sponsors">Sponsors</a></li> -->
+        <li><a href="#about">About UXRomandie</a></li>
+        <li class="register highlight"><a href="http://uxlausanne2014.eventbrite.com" target="_blank">Register (soon)</a></li>
+    </ul>
+    <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+</nav>
 {% endblock %}
 
 {% block body %}
@@ -120,9 +120,16 @@
                 </div>
             </div>
         </div>
+        <div class="isolated">
+            <div class="row">
+                <div class="col-xs-12">
+                    <hr>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-xs-12">
-                <div id="copyright" class="text-center">
+                <div id="copyright" class="text-center isolated">
                     <h5>&copy; 2013-2014 <a href="http://uxromandie.ch" target="_blank">UXRomandie</a></h5>
                 </div>
             </div>
