@@ -3183,12 +3183,12 @@ header {
     font-size: 8rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   header {
-    height: 500px !important;
+    height: 470px !important;
   }
   #logo {
-    padding: 100px 0;
+    padding: 50px 0 70px 0;
   }
 }
 .main-nav {

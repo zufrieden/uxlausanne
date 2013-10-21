@@ -13,7 +13,7 @@
                 <div class="col-xs-12 text-center">
                     <hgroup>
                         <h2>
-                            2 days ~ 14 talks ~ 8 workshops...
+                            2 days ~ 14 talks ~ 8&nbsp;workshops...
                         </h2>
                         <h3>
                             All packaged in the best UX conference, ever !
@@ -35,7 +35,7 @@
             <div class="container">
                 <div class="row">
                     {% for speaker in speakers %}
-                        <div class="col-xs-6 col-sm-3 text-center">
+                        <div class="col-xs-6 col-md-3 text-center">
                             <div class="isolated">
                                 <img src="assets/img/{{ speaker.photo }}" alt="{{ speaker.name }}" class="img-responsive thumbnail text-center">
                             <h3>{{ speaker.name }}</h3>
@@ -65,7 +65,7 @@
         <div class="container">
             <div class="row">
                 {% for member in team %}
-                    <div class="col-md-2 col-xs-4 col-sm-3 text-center">
+                    <div class="col-xs-4 col-sm-2 text-center">
                         <div class="isolated">
                             <img src="assets/img/{{ member.photo }}" alt="{{ member.name }}" class="img-responsive thumbnail">
                             <h3>{{ member.name }}</h3>
