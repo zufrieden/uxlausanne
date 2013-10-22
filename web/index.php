@@ -28,7 +28,7 @@ $speakers = array(
         "site" => "ginetta.ch"
     ),
     "speaker_jeroen-van-geel" => array(
-        "photo" => "speaker_jeroen-van-geel.jpg",
+        "photo" => "speaker_jeroen-van-geel.png",
         "name" => "Jeroen Van Geel",
         "twitter" => "jeroenvangeel",
         "url" => "http://www.jeroenvangeel.com",
