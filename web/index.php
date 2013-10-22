@@ -20,6 +20,13 @@ $speakers = array(
         "url" => "http://semanticfoundry.com",
         "site" => "semanticfoundry.com"
     ),
+    "speaker_valerie-vuillerat" => array(
+        "photo" => "speaker_valerie-vuillerat.jpg",
+        "name" => "Valérie Vuillerat",
+        "twitter" => "valeriewow",
+        "url" => "http://ginetta.ch/en",
+        "site" => "ginetta.ch"
+    ),
     "speaker_jeroen-van-geel" => array(
         "photo" => "speaker_jeroen-van-geel.jpg",
         "name" => "Jeroen Van Geel",
@@ -33,41 +40,34 @@ $speakers = array(
         "twitter" => "ryanrumsey",
         "url" => "http://ryanrumsey.com",
         "site" => "ryanrumsey.com"
-    ),
-    "speaker_valerie-vuillerat" => array(
-        "photo" => "speaker_valerie-vuillerat.jpg",
-        "name" => "Valérie Vuillerat",
-        "twitter" => "valeriewow",
-        "url" => "http://ginetta.ch/en",
-        "site" => "ginetta.ch"
     )
 );
 
 $team = array(
-    "simon" => array(
-        "photo" => "team_simon.jpg",
-        "name" => "Simon Farine",
-        "twitter" => "simonfarine"
-    ),
     "gilles" => array(
         "photo" => "team_gilles.jpg",
         "name" => "Gilles Demarty",
         "twitter" => "gillesdemarty"
     ),
-    "xavier" => array(
-        "photo" => "team_xavier.jpg",
-        "name" => "Xavier Alexandre",
-        "twitter" => "xavieralexandre"
+    "simon" => array(
+        "photo" => "team_simon.jpg",
+        "name" => "Simon Farine",
+        "twitter" => "simonfarine"
+    ),
+    "darja" => array(
+        "photo" => "team_darja.jpg",
+        "name" => "Darja Gartner",
+        "twitter" => "gartner"
     ),
     "jeremie" => array(
         "photo" => "team_jeremie.jpg",
         "name" => "Jérémie Fontana",
         "twitter" => "skynebula"
     ),
-    "darja" => array(
-        "photo" => "team_darja.jpg",
-        "name" => "Darja Gartner",
-        "twitter" => "gartner"
+    "xavier" => array(
+        "photo" => "team_xavier.jpg",
+        "name" => "Xavier Alexandre",
+        "twitter" => "xavieralexandre"
     ),
     "sophie" => array(
         "photo" => "team_sophie.jpg",

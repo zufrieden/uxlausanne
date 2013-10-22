@@ -1,3 +1,4 @@
 app/cache/*
 bckp
 vendor
+.DS_store
