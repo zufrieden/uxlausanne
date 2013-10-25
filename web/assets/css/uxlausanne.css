@@ -2973,6 +2973,9 @@ body {
   color: #ef745c;
   border-color: #ffffff;
 }
+p {
+  font-size: 1.3em;
+}
 /* TITLES */
 h1 {
   font-size: 28px;
