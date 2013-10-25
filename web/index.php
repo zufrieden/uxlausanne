@@ -27,12 +27,12 @@ $speakers = array(
         "url" => "http://ginetta.ch/en",
         "site" => "ginetta.ch"
     ),
-    "speaker_jeroen-van-geel" => array(
-        "photo" => "speaker_jeroen-van-geel.png",
-        "name" => "Jeroen Van Geel",
-        "twitter" => "jeroenvangeel",
-        "url" => "http://www.jeroenvangeel.com",
-        "site" => "jeroenvangeel.com"
+    "speaker_oliver-reichenstein" => array(
+        "photo" => "speaker_oliver-reichenstein.jpg",
+        "name" => "Oliver Reichenstein",
+        "twitter" => "reichenstein",
+        "url" => "http://www.ia.net",
+        "site" => "ia.net"
     ),
     "speaker_ryan-rumsey" => array(
         "photo" => "speaker_ryan-rumsey.jpg",
