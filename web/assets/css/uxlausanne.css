@@ -256,7 +256,7 @@ body {
   font-family: "Dosis", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #737b89;
+  color: #ffffff;
   background-color: #333d51;
 }
 input,
@@ -290,7 +290,7 @@ img {
   height: auto;
 }
 .img-rounded {
-  border-radius: 0px;
+  border-radius: 10px;
 }
 .img-thumbnail {
   padding: 4px;
@@ -1717,15 +1717,15 @@ textarea.input-sm {
   height: auto;
 }
 .input-lg {
-  height: 45px;
-  padding: 10px 16px;
+  height: 65px;
+  padding: 20px 26px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 0px;
+  border-radius: 10px;
 }
 select.input-lg {
-  height: 45px;
-  line-height: 45px;
+  height: 65px;
+  line-height: 65px;
 }
 textarea.input-lg {
   height: auto;
@@ -1794,7 +1794,7 @@ textarea.input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #b8bcc3;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -1890,7 +1890,7 @@ textarea.input-lg {
 }
 .btn:hover,
 .btn:focus {
-  color: #333333;
+  color: #333d51;
   text-decoration: none;
 }
 .btn:active,
@@ -1911,18 +1911,18 @@ fieldset[disabled] .btn {
   box-shadow: none;
 }
 .btn-default {
-  color: #333333;
+  color: #333d51;
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #ef745c;
 }
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-  color: #333333;
+  color: #333d51;
   background-color: #ebebeb;
-  border-color: #adadad;
+  border-color: #ea4424;
 }
 .btn-default:active,
 .btn-default.active,
@@ -1945,7 +1945,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
-  border-color: #cccccc;
+  border-color: #ef745c;
 }
 .btn-primary {
   color: #ffffff;
@@ -2060,8 +2060,8 @@ fieldset[disabled] .btn-danger.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #ffffff;
+  border-color: #f2f2f2;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -2069,8 +2069,8 @@ fieldset[disabled] .btn-danger.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #47a447;
-  border-color: #398439;
+  background-color: #ebebeb;
+  border-color: #d4d4d4;
 }
 .btn-success:active,
 .btn-success.active,
@@ -2092,8 +2092,8 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #ffffff;
+  border-color: #f2f2f2;
 }
 .btn-info {
   color: #ffffff;
@@ -2166,10 +2166,10 @@ fieldset[disabled] .btn-link:focus {
   text-decoration: none;
 }
 .btn-lg {
-  padding: 10px 16px;
+  padding: 20px 26px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 0px;
+  border-radius: 10px;
 }
 .btn-sm,
 .btn-xs {
@@ -2443,6 +2443,7 @@ input[type="button"].btn-block {
   height: auto;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  margin: auto;
   display: block;
   margin-bottom: 20px;
 }
@@ -2462,7 +2463,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #737b89;
+  color: #ffffff;
 }
 /*@import "../../../vendor/twitter/bootstrap/less/alerts.less";
 @import "../../../vendor/twitter/bootstrap/less/progress-bars.less";
@@ -2937,7 +2938,8 @@ body {
   background: #333d51 url('../img/overlay.png');
 }
 .isolated {
-  margin: 20px inherit;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .inverse-section {
   background: #ffffff url('../img/overlay.png');
@@ -2957,6 +2959,23 @@ body {
 .title-section h2,
 .title-section h3 {
   color: #ef745c;
+}
+.btn-default {
+  background-color: #ffffff;
+  color: #333d51;
+}
+.btn-default.btn-lg {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+.btn-default:hover {
+  background-color: #ffffff;
+  color: #000000;
+  color: #ef745c;
+  border-color: #ffffff;
+}
+p {
+  font-size: 1.3em;
 }
 /* TITLES */
 h1 {
@@ -3050,6 +3069,11 @@ a {
 a:hover {
   border-bottom-color: transparent;
   text-decoration: none;
+}
+p {
+  line-height: 1.6em;
+  letter-spacing: 0.02em;
+  font-weight: 300;
 }
 .section-title h1 {
   text-transform: uppercase;
@@ -3184,9 +3208,6 @@ header {
   }
 }
 @media (min-width: 1200px) {
-  header {
-    height: 470px !important;
-  }
   #logo {
     padding: 50px 0 70px 0;
   }
@@ -3544,4 +3565,5 @@ header {
 .img-thumbnail {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  margin: auto;
 }

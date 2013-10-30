@@ -22,3 +22,24 @@
         color: @ux_pink;
     }
 }
+
+.btn-default{
+	// box-shadow: 10px 10px 12px rbga(255,255,255,1);
+	background-color: @white;
+	color:@ux_grey;
+	
+	&.btn-lg{
+		.font-size(26);
+	}
+	
+	&:hover{
+		background-color: @white;
+		color: darken(@ux_grey, 50%);
+		color: @ux_pink;
+		border-color: @white;
+	}
+}
+
+p{
+	font-size: 1.3em;
+}
