@@ -34,6 +34,13 @@ $speakers = array(
         "url" => "http://www.ia.net",
         "site" => "ia.net"
     ),
+    "speaker_janina-woods" => array(
+        "photo" => "speaker_janina-woods.jpeg",
+        "name" => "Janina Woods",
+        "twitter" => "Kaori_Ino",
+        "url" => "http://www.ateo.ch/",
+        "site" => "ateo.ch"
+    ),
     "speaker_ryan-rumsey" => array(
         "photo" => "speaker_ryan-rumsey.jpg",
         "name" => "Ryan Rumsey",
