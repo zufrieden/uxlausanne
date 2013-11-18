@@ -27,7 +27,7 @@
                         <?php foreach($this->find('/')->children() as $menu): ?>
                         <li><?php echo $menu->link($menu->title, (in_array($menu->slug, explode('/', $this->url)) ? ' class="current"': null)); ?></li>
                         <?php endforeach; ?> 
-                        <li class="register highlight"><a href="http://uxlausanne2014.eventbrite.com" target="_blank">Register</a></li>
+                        <li class="register highlight"><a href="http://register.uxlausanne.com/" target="_blank">Buy tickets</a></li>
                     </ul>
                     <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
                 </nav>
