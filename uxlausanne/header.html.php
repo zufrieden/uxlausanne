@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="<?php echo URL_PUBLIC; ?>themes/current/uxlausanne/assets/css/uxlausanne.css" />
+        <link rel="stylesheet" href="<?php echo URL_PUBLIC; ?>public/themes/current/uxlausanne/assets/css/uxlausanne.css" />
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:300,500,700">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
         <meta name="description" content="<?php echo ($this->description() != '') ? $this->description() : ''; ?>" />
         <meta name="keywords" content="<?php echo ($this->keywords() != '') ? $this->keywords() : '' ; ?>" />
         <title><?php echo $this->title(); ?></title>
-        <script src="<?php echo URL_PUBLIC; ?>themes/current/uxlausanne/assets/js/modernizr.js"></script>
+        <script src="<?php echo URL_PUBLIC; ?>public/themes/current/uxlausanne/assets/js/modernizr.js"></script>
     </head>
     <body>
 
