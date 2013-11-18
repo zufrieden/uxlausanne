@@ -1,0 +1,16 @@
+/* Mixins */
+.font-size(@sizeValue) {
+  @remValue: (@sizeValue/10);
+  @pxValue: (@sizeValue);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+body{
+    background: @body-bg url('../img/overlay.png');
+}
+
+.isolated{
+    margin-top: 20px;
+	margin-bottom: 20px;
+}
