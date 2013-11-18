@@ -20,32 +20,14 @@
                     <div id="top">
                         <a class="nav-btn" id="nav-open-btn" href="#nav">Menu</a>
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div id="logo" class="text-center" role="banner">
-                                    <h4 id="organizers" class="organizers"><a href="http://8ratio.ch" target="_blank">:ratio</a> and <a href="http://uxromandie.ch/" target="_blank">UXRomandie</a> present</h4>
-                                    <h1><span>UX</span> LAUSANNE <sup>2014</sup></h1>
-                                    <h3 class="baseline">Creating delightful User Experiences</h3>
-                                    <h3 class="baseline">2 days ~ 8 talks ~ 8 workshops</h3>
-                                    <h2 id="date">Thursday 22<sup>nd</sup> &amp; Friday 23<sup>rd</sup> May 2014</h2>
-
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <p class="isolated text-center">
-                                    <a href="http://register.uxlausanne.com/" class="btn btn-default btn-lg" target="_blank" onClick="_gaq.push(['_trackEvent', 'Buy Ticket Home', 'Click', 'Click sur le bouton Buy']);">Buy tickets</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </header>
                 <nav id="nav" class="main-nav" role="navigation">
                     <ul class="nav nav-pills nav-centered">
-                        <li><a href="#speakers">Speakers</a></li>
-                        <!-- <li><a href="#sponsors">Sponsors</a></li> -->
-                        <li><a href="#about">About UXRomandie</a></li>
-                        <li class="register highlight"><a href="http://uxlausanne2014.eventbrite.com" target="_blank">Register (soon)</a></li>
+                        <li><a<?php echo url_match('/') ? ' class="current"': ''; ?> href="<?php echo URL_PUBLIC; ?>">Home</a></li>
+                        <?php foreach($this->find('/')->children() as $menu): ?>
+                        <li><?php echo $menu->link($menu->title, (in_array($menu->slug, explode('/', $this->url)) ? ' class="current"': null)); ?></li>
+                        <?php endforeach; ?> 
+                        <li class="register highlight"><a href="http://uxlausanne2014.eventbrite.com" target="_blank">Register</a></li>
                     </ul>
                     <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
                 </nav>
