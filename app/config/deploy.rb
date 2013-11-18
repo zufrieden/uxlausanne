@@ -1,17 +1,18 @@
-set :application, "2014.uxlausanne.com"
+set :application, "uxlausanne.zufrieden.io"
 set :repository,  "git@github.com:zufrieden/uxlausanne.git"
+set :branch,    "frog"
 set :scm,         :git
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-set :deploy_to,   "/home/uxlausanne/www/2014.uxlausanne.com/"
+set :deploy_to,   "/home/uxlausanne/www/uxlausanne.zufrieden.io/current/web/public/themes"
 set :user,        "uxlausanne"
 set :domain,      "antistatique"
 set :use_sudo,    false
 
-role :app, '2014.uxlausanne.com'
-role :web, '2014.uxlausanne.com'
+role :app, 'uxlausanne.zufrieden.io'
+role :web, 'uxlausanne.zufrieden.io'
 
 
 set :ssh_options, { :forward_agent => true }
@@ -33,10 +34,10 @@ set :ssh_options, { :forward_agent => true }
 
 namespace :myproject do
 
-    task :vendors do
-        run "curl -s http://getcomposer.org/installer | php -- --install-dir=#{release_path}"
-        run "cd #{release_path} && #{release_path}/composer.phar install"
-    end
+    # task :vendors do
+    #     run "curl -s http://getcomposer.org/installer | php -- --install-dir=#{release_path}"
+    #     run "cd #{release_path} && #{release_path}/composer.phar install"
+    # end
 
     # task :move_fonts do
     #     run "cp -r #{current_path}/vendor/fortawesome/font-awesome/font #{current_path}/web/assets/font"
@@ -51,7 +52,7 @@ end
 
 set  :keep_releases,  3
 
-after "deploy:update_code", "myproject:vendors"
+# after "deploy:update_code", "myproject:vendors"
 # after "deploy:create_symlink", "myproject:move_fonts"
 
 # Be more verbose by uncommenting the following line
