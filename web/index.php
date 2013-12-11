@@ -18,35 +18,72 @@ $speakers = array(
         "name" => "Will Evans",
         "twitter" => "semanticwill",
         "url" => "http://semanticfoundry.com",
-        "site" => "semanticfoundry.com"
+        "site" => "semanticfoundry.com",
+		"desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper."
     ),
     "speaker_valerie-vuillerat" => array(
         "photo" => "speaker_valerie-vuillerat.jpg",
         "name" => "Valérie Vuillerat",
         "twitter" => "valeriewow",
         "url" => "http://ginetta.ch/en",
-        "site" => "ginetta.ch"
+        "site" => "ginetta.ch",
+		"desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper."
     ),
     "speaker_oliver-reichenstein" => array(
         "photo" => "speaker_oliver-reichenstein.jpg",
         "name" => "Oliver Reichenstein",
         "twitter" => "reichenstein",
         "url" => "http://www.ia.net",
-        "site" => "ia.net"
+        "site" => "ia.net",
+		"desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper."
     ),
     "speaker_janina-woods" => array(
         "photo" => "speaker_janina-woods.jpeg",
         "name" => "Janina Woods",
         "twitter" => "Kaori_Ino",
         "url" => "http://www.ateo.ch/",
-        "site" => "ateo.ch"
+        "site" => "ateo.ch",
+		"desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper."
     ),
     "speaker_ryan-rumsey" => array(
         "photo" => "speaker_ryan-rumsey.jpg",
         "name" => "Ryan Rumsey",
         "twitter" => "ryanrumsey",
         "url" => "http://ryanrumsey.com",
-        "site" => "ryanrumsey.com"
+        "site" => "ryanrumsey.com",
+		"desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper."
+    ),
+    "speaker_birgit-geiberger" => array(
+        "photo" => "speaker_birgit-geiberger.jpg",
+        "name" => "Birgit Geiberger",
+        "twitter" => "birgitcom",
+        "url" => "http://www.birgitg.com/",
+        "site" => "birgitg.com",
+		"desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper."
+    ),
+    "speaker_peter-boersma" => array(
+        "photo" => "speaker_peter-boersma.jpg",
+        "name" => "Peter Boersma",
+        "twitter" => "pboersma",
+        "url" => "http://www.linkedin.com/in/pboersma",
+        "site" => "LinkedIn",
+		"desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper."
+    ),
+    "speaker_fabian-hemmert" => array(
+        "photo" => "speaker_fabian-hemmert.jpg",
+        "name" => "Fabian Hemmert",
+        "twitter" => "fabianhemmert",
+        "url" => "http://www.fabianhemmert.com/",
+        "site" => "fabianhemmert.com",
+		"desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper."
+    ),
+    "speaker_anna-dahlstrom" => array(
+        "photo" => "speaker_anna-dahlstrom.jpg",
+        "name" => "Anna Dahlstrom",
+        "twitter" => "annadahlstrom.com",
+        "url" => "http://www.annadahlstrom.com",
+        "site" => "annadahlstrom.com",
+		"desc" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper."
     )
 );
 
