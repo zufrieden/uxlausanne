@@ -11,23 +11,47 @@
         <meta name="keywords" content="<?php echo ($this->keywords() != '') ? $this->keywords() : '' ; ?>" />
         <title><?php echo $this->title(); ?></title>
         <script src="<?php echo URL_PUBLIC; ?>public/themes/current/uxlausanne/assets/js/modernizr.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/jbq6ddu.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     </head>
-    <body>
+    <body class="<?php echo $this->slug() == "" ? 'homepage' : $this->slug() ; ?>">
 
         <div id="outer-wrap">
             <div id="inner-wrap">
-                <header class="section">
+                <header>
                     <div id="top">
                         <a class="nav-btn" id="nav-open-btn" href="#nav">Menu</a>
                     </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-2 hidden-xs">
+                                <img src="<?php echo URL_PUBLIC; ?>public/themes/current/uxlausanne/assets/img/logo_uxls.svg" alt="" width="100%" class="isolated">
+                            </div>
+                            <div class="col-sm-8">
+                                <nav id="nav" class="main-nav" role="navigation">
+                                    <div class="header-v-center">
+                                        <ul class="nav nav-pills nav-centered">
+                                        <li><a<?php echo url_match('/') ? ' class="current"': ''; ?> href="<?php echo URL_PUBLIC; ?>">Home</a></li>
+                                        <?php foreach($this->find('/')->children() as $menu): ?>
+                                        <li><?php echo $menu->link($menu->title, (in_array($menu->slug, explode('/', $this->url)) ? ' class="current"': null)); ?></li>
+                                        <?php endforeach; ?> 
+                                        </ul>
+                                        <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="col-sm-2 hidden-xs">
+                                <div class="header-v-center-sm text-center">
+                                    <a href="http://register.uxlausanne.com/" target="_blank" class="btn btn-primary btn-lg">
+                                        Buy tickets
+                                        
+                                    </a>
+                                    <p>
+                                        <small>special infos like the date</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </header>
-                <nav id="nav" class="main-nav" role="navigation">
-                    <ul class="nav nav-pills nav-centered">
-                        <li><a<?php echo url_match('/') ? ' class="current"': ''; ?> href="<?php echo URL_PUBLIC; ?>">Home</a></li>
-                        <?php foreach($this->find('/')->children() as $menu): ?>
-                        <li><?php echo $menu->link($menu->title, (in_array($menu->slug, explode('/', $this->url)) ? ' class="current"': null)); ?></li>
-                        <?php endforeach; ?> 
-                        <li class="register highlight"><a href="http://register.uxlausanne.com/" target="_blank">Buy tickets</a></li>
-                    </ul>
-                    <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
-                </nav>
