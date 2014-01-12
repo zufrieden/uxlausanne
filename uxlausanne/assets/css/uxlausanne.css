@@ -298,11 +298,11 @@ img {
   border-radius: 4px;
 }
 .img-thumbnail {
-  padding: 4px;
+  padding: 1px;
   line-height: 1.428571429;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
+  border: 1px solid #323c4f;
+  border-radius: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
@@ -2733,12 +2733,12 @@ input[type="button"].btn-block {
 }
 .thumbnail {
   display: block;
-  padding: 4px;
+  padding: 1px;
   margin-bottom: 20px;
   line-height: 1.428571429;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
+  border: 1px solid #323c4f;
+  border-radius: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -3351,7 +3351,7 @@ Inner-isolated put 20px padding top/bottom inside element
 ## On Grey background
 ````
 <div class="on-grey">
- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
 </div>
 ````
 */
@@ -3362,7 +3362,21 @@ Inner-isolated put 20px padding top/bottom inside element
 ## On Dark background
 ````
 <div class="on-dark">
- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="text-center isolated">What is UX Lausanne</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="lead">UX Lausanne is the first Western Switzerland event dedicated exclusively to User Experience Design & how to design delightful user experiences.</p>
+    </div>
+    <div class="col-sm-8">
+      <p>After 2 years of monthly UXRomandie meetups, UX Lausanne will take place for the first time in 2014.</p>
+      <p>The 2 day format will bring together local & international UX professionals to share knowledge and gain expertise in the User Experience field.</p>
+      <p>The conference will be held at Arsenic Theater, one of Lausanne's most vibrant cultural spots.</p>
+    </div>
+  </div>
 </div>
 ````
 */
@@ -3488,6 +3502,15 @@ h6 {
     font-size: 14px;
   }
 }
+.lead {
+  font-size: 15px;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .lead {
+    font-size: 18.2px;
+  }
+}
 /* 
 ## Link
 ````
@@ -3555,7 +3578,7 @@ hr.short {
 */
 .logo {
   background: url("../img/logo_uxls_grey.svg") 0 0 no-repeat;
-  display: block;
+  display: inline-block;
   width: 160px;
   height: 60px;
   border-bottom: none;
@@ -3563,6 +3586,11 @@ hr.short {
 }
 .logo strong {
   display: none;
+}
+.logo-big {
+  background-image: url("../img/logo_uxls_white_big.svg");
+  width: 400px;
+  height: 120px;
 }
 /*
 ## Page title section 
@@ -3582,6 +3610,25 @@ hr.short {
 }
 h5 + h5 {
   margin-top: 0;
+}
+/*
+## Homepage header
+````
+<section class="on-pink photoed text-center inner-isolated">
+  <p><small><a href="#">:ratio</a> & <a href="#">UXRomandie</a> present</small></p>
+  <div class="logo logo-big"><strong>UX Lausanne 2014</strong></div>
+  <h4>Creating delightful User Experiences</h4>
+  <h6>2 days - 8 talks - 8 workshops</h6>
+  <h3>May 22–23, 2014</h3>
+  <a href="#">@ Arsenic - Lausanne, Switzerland</a>
+</section>  
+````
+*/
+.photoed {
+  background-image: url('../img/banner.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*
 # Navigation

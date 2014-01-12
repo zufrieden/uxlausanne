@@ -8,7 +8,7 @@
 */
 .logo{
   background: url("../img/logo_uxls_grey.svg") 0 0 no-repeat;
-  display: block;
+  display: inline-block;
   width: 160px;
   height: 60px;
   border-bottom: none;
@@ -16,6 +16,11 @@
   strong{
     display: none;
   }
+}
+.logo-big{
+  background-image: url("../img/logo_uxls_white_big.svg");
+  width: 400px;
+  height: 120px;
 }
 
 /*
@@ -36,4 +41,24 @@
 }
 h5 + h5{
   margin-top: 0;
+}
+
+/*
+## Homepage header
+````
+<section class="on-pink photoed text-center inner-isolated">
+  <p><small><a href="#">:ratio</a> & <a href="#">UXRomandie</a> present</small></p>
+  <div class="logo logo-big"><strong>UX Lausanne 2014</strong></div>
+  <h4>Creating delightful User Experiences</h4>
+  <h6>2 days - 8 talks - 8 workshops</h6>
+  <h3>May 22–23, 2014</h3>
+  <a href="#">@ Arsenic - Lausanne, Switzerland</a>
+</section>  
+````
+*/
+.photoed{
+  background-image: url('../img/banner.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
