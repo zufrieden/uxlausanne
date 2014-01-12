@@ -1,61 +1,52 @@
-.homepage{
-    background: @ux_grey url('../img/banner.jpg') top center;
-    background-size: contain;
-    background-repeat: no-repeat;
+body{
+    // background: url("../img/overlay.png") 0 0 repeat;
 }
 
+/* 
+# Theme related element
+*/
 
-.btn-register{
-    /*background: @ux_grey;*/
-    font-size: 1.6em;
-    span{
-        display: block;
-        font-size: 12px;
-    }
+
+/* 
+## On pink background
+````
+<div class="on-pink">
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+</div>
+````
+*/
+.on-pink{
+  background-color: @ux_pink;
+  color: @white;
+  a{
+    color: @white;
+  }
 }
 
-.inverse-section{
-    background: @white url('../img/overlay.png');
-    color: @ux_pink;
-
-    .section-title{
-        h1{
-            background: @white url('../img/overlay.png');
-            color: @ux_grey;
-        }
-    }
-    a{
-        color: @ux_grey;
-        border-bottom-color: @ux_grey;
-    }
-    .thumbnail{
-        background-color: @white;
-    }
+/* 
+## On Grey background
+````
+<div class="on-grey">
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+</div>
+````
+*/
+.on-grey{
+  background-color: @ux_grey_lighter;
 }
 
-.title-section{
-    h2, h3{
-        color: @ux_pink;
-    }
-}
-
-.btn-default{
-	// box-shadow: 10px 10px 12px rbga(255,255,255,1);
-	background-color: @white;
-	color:@ux_grey;
-	
-	&.btn-lg{
-		.font-size(26);
-	}
-	
-	&:hover{
-		background-color: @white;
-		color: darken(@ux_grey, 50%);
-		color: @ux_pink;
-		border-color: @white;
-	}
-}
-
-p{
-	font-size: 1.3em;
+/* 
+## On Dark background
+````
+<div class="on-dark">
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+</div>
+````
+*/
+.on-dark{
+  background-color: @ux_grey;
+  color: @white;
+  a{
+    color: @white;
+  }
 }

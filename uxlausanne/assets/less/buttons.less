@@ -1,0 +1,89 @@
+/*
+  # Buttons
+  -----------------
+  */
+
+/*
+## Button colors
+````
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-info">Info</button>
+````
+*/
+// redefine button bootstrap mixins to add .box-shadow effect
+
+// Button variants
+// -------------------------
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+.button-variant(@color; @background; @border) {
+	color: @color;
+	background-color: @background;
+	border-color: @border;
+	.box-shadow(0 3px darken(@border, 8%));
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		color: @color;
+		background-color: darken(@background, 5%);
+		border-color: darken(@border, 5%);
+		.box-shadow(0 3px darken(@border, 20%));
+	}
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		background-image: none;
+	}
+	&:active{
+		.box-shadow(0 0px darken(@border, 8%));
+		margin-top: 2px;
+		margin-bottom: -3px;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			background-color: @background;
+			border-color: @border;
+		}
+	}
+
+	.badge {
+		color: @background;
+		background-color: #fff;
+	}
+}
+
+
+/*
+## Button size
+````
+<p>
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-default btn-lg">Large button</button>
+</p>
+<p>
+<button type="button" class="btn btn-primary">Default button</button>
+<button type="button" class="btn btn-default">Default button</button>
+</p>
+<p>
+<button type="button" class="btn btn-primary btn-sm">Small button</button>
+<button type="button" class="btn btn-default btn-sm">Small button</button>
+</p>
+<p>
+<button type="button" class="btn btn-primary btn-xs">Extra small button</button>
+<button type="button" class="btn btn-default btn-xs">Extra small button</button>
+</p>
+````
+*/

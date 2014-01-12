@@ -2,10 +2,11 @@
  *  UX Lausanne 2014 variables
  */
 
-@ux_pink:       #ef745c;
+@ux_pink:       #D47C67; //#ef745c;
 @ux_pink_white: #FEB3A8;
 @ux_red:        #cb1425;
-@ux_grey:       #333d51;/*#212735*/
+@ux_grey:       #323c4f;
+@ux_grey_lighter: #EEEEEE;
 @ux_grey_light: #737b89;
 @ux_grey_dark:  #242730;
 @white:         #ffffff;
@@ -14,8 +15,8 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         @ux_grey_dark;
-@brand-success:         @white; // #5cb85c
+@brand-primary:         @ux_pink;
+@brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 @brand-info:            #5bc0de;
@@ -23,28 +24,44 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               @ux_grey;
-@text-color:            @white;
+@body-bg:               @white;
+@text-color:            @ux_grey;
 @hr-border:             @ux_grey_light;
 
-@btn-default-color:              @ux_grey;
-@btn-default-bg:                 @white;
-@btn-default-border:             @ux_pink;
+@btn-default-color:              @white;
+@btn-default-bg:                 @ux_grey;
+@btn-default-border:             @ux_grey_dark;
+
+@btn-primary-border:             @btn-primary-bg;
+@btn-success-border:             @btn-success-bg;
+@btn-warning-border:             @btn-warning-bg;
+@btn-danger-border:              @btn-danger-bg;
+@btn-info-border:                @btn-info-bg;
 
 @padding-large-vertical:         10px;
 @padding-large-horizontal:       16px;
 
+@border-radius-base:             3px;
+@border-radius-large:            4px;
+@border-radius-small:            2px;
+
 // Links
 // -------------------------
 
-@link-color:            @white;
-@link-hover-color:      darken(@link-color, 15%);
+@link-color:            @ux_grey_dark;
+@link-hover-color:      darken(@link-color, 6%);
+
+// Navs
+// -------------------------
+
+// @nav-pills-border-radius:                   0;
+@nav-pills-active-link-hover-bg:            transparent;
+@nav-pills-active-link-hover-color:         @ux_pink;
+@nav-link-padding:                          18px 9px;
+@nav-link-hover-bg:                         @ux_grey_lighter;
 
 // Typography
 // -------------------------
 
-@font-family-sans-serif: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-@border-radius-base:             0px;
-@border-radius-large:            10px;
-@border-radius-small:            0px;
+@font-family-sans-serif: "ProximaNova-Regular", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif-bold: "ProximaNova-bold", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;

@@ -1,4 +1,3 @@
-app/cache/*
-bckp
-vendor
 .DS_store
+uxlausanne/assets/less/bootstrap
+uxlausanne/assets/img/_Assets

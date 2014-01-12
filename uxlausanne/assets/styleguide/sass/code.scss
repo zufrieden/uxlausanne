@@ -1,0 +1,85 @@
+/*=============================================================================
+ * SYNTAX HIGHLIGHT THEME
+ *============================================================================*/
+
+$blue:            #66D9EF;
+$green:           #A6E22E;
+$orange:          #FD971F;
+$pink:            #F92672;
+$yellow:          #e6db74;
+$background:      lighten(#191919, 2.5%);
+$foreground:      lighten(#ededed, 2.5%);
+$selected:        lighten(#4a4a4a, 2.5%);
+
+$lineHeight:       1.4em;
+
+$syntax:          Monaco, monospace;
+
+pre {
+  background: $background;
+  word-wrap: break-word;
+  margin: 0px 0px 30px 0px;
+  padding: 25px;
+  padding-left: 15px;
+  color: $foreground;
+  font-size: 14px;
+  overflow-x: auto;
+  position: relative;
+  line-height: $lineHeight;
+  white-space:pre;
+}
+
+pre, code {font-family: $syntax}
+pre .comment {color: $foreground}
+pre .constant.numeric {color: $orange}
+pre .constant {color: $blue;}
+pre .constant.symbol, pre .constant.language {color: $orange}
+pre .storage {color: $orange}
+pre .string {color: $green;}
+pre .string.regexp {color: $orange}
+pre .keyword, pre .selector, pre .storage {color: $pink;}
+pre .inherited-class {color: $orange}
+pre .entity {color: $pink}
+pre .support {color: $blue;}
+pre .support.magic {color: $orange}
+pre .variable {color: $blue;}
+pre .function {color: $orange}
+pre .entity.class {color: $green}
+pre .support.class-name, pre .support.type {color: $blue;}
+pre .tag, pre .operator {color: $foreground;}
+pre .tag-name {color: $pink;}
+pre .quote, pre .value {color: $yellow;}
+pre .attribute{color: $green;}
+
+.rainbow-header {display: none;}
+
+
+.rainbow-line {
+  display: block;
+  width: auto;
+  span {white-space:pre;}
+  &:hover {
+    background-color: lighten($background, 10%);
+    .rainbow-line-number {
+        background-color: lighten($background, 10%);
+    }
+  }
+  .rainbow-line-number {
+    text-align: right;
+    display: block;
+    width: 20px;
+    float: left;
+    vertical-align: top;
+    &::before {
+      content: attr(data-number);
+      color: $selected;
+    }
+  }
+  .rainbow-line-code {
+    padding-left: 1em;
+    display: block;
+    width: 100%;
+    height: $lineHeight;
+    margin-left: 25px;
+  }
+}
