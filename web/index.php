@@ -68,7 +68,7 @@ Prior to working at Nestlé, he was Sr. Manager of User Experience at Electronic
         "twitter" => "pboersma",
         "url" => "http://www.linkedin.com/in/pboersma",
         "site" => "LinkedIn",
-		"desc" => "Peter is an Interaction Designer and Design Process Consultant at UX Team of Two, he studied computer science and ergonomics, and has been working in the UX field since 1995. Worked for clients such as info.nl, Adaptive Path, acted as Director of the Information Architecture Institute, Interaction Design Director for Blast Radius and chairman at The Web and Beyond. Self-proclaimed beer lover, he’s the host of the Amsterdam UX Cocktail Hours."
+		"desc" => "Peter is the Interaction Design Director at Blast Radius. He studied computer science and ergonomics, and has been working in the UX field since 1995 for the agencies Satama, EzGov, User Intelligence, Info.nl and Adaptive Path, and clients such ABN Amro, the UK Inland Revenue, Shutterstock and Nokia. He has acted as Director of the Information Architecture Institute, and was program chair of the The Web and Beyond conferences. Self-proclaimed beer lover, he is the host of the Amsterdam UX Cocktail Hours."
     ),
     "speaker_fabian-hemmert" => array(
         "photo" => "speaker_fabian-hemmert.jpg",
@@ -76,7 +76,7 @@ Prior to working at Nestlé, he was Sr. Manager of User Experience at Electronic
         "twitter" => "fabianhemmert",
         "url" => "http://www.fabianhemmert.com/",
         "site" => "fabianhemmert.com",
-		"desc" => "Young researcher, Fabian has nevertheless an impressive record, as he’s already worked for Nintendo Europe et Marvel Comics. His performance talks have been noticed and much commented on during SXSW 2012 & 2013 and TEDxBerlin, especially the one devoted to shape-shifiting cell phones. Fascinated with the non-visual communication techniques, he explores the impact of feeling, weight, touch and movement. He currently works for Deutsche Telekom."
+		"desc" => "Young researcher, Fabian has nevertheless an impressive record, as he’s already worked for Nintendo Europe et Marvel Comics. His performance talks have been noticed and much commented on during SXSW 2012 & 2013 and TEDxBerlin, especially the one devoted to shape-shifiting cell phones. Fascinated with the non-visual communication techniques, he explores the impact of feeling, weight, touch and movement. He currently finishes his PhD at the Berlin University of the Arts."
     ),
     "speaker_anna-dahlstrom" => array(
         "photo" => "speaker_anna-dahlstrom.jpg",
