@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 
-$app->get('/', function () use ($app, $athletes) {
+$app->get('/', function () use ($app) {
     return $app['twig']->render('index.html.twig');
 })
 ->bind('homepage')

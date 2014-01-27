@@ -1,16 +1,41 @@
-/* Mixins */
+// Mixins
 .font-size(@sizeValue) {
   @remValue: (@sizeValue/10);
   @pxValue: (@sizeValue);
   font-size: ~"@{pxValue}px"; 
-  font-size: ~"@{remValue}rem";
+  // font-size: ~"@{remValue}rem";
 }
 
-body{
-    background: @body-bg url('../img/overlay.png');
-}
+/*
+# Utilities
+*/
 
+/*
+Isolated put 20px over and under the element
+````
+<div class="isolated"></div>
+````
+*/
 .isolated{
-    margin-top: 20px;
-	margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+
+/*
+Inner-isolated put 20px padding top/bottom inside element
+````
+<div class="isolated"></div>
+<div class="inner-isolated"></div>
+<div class="semi-inner-isolated"></div>
+````
+*/
+.inner-isolated{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.semi-inner-isolated{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+

@@ -1,45 +1,66 @@
-.inverse-section{
-    background: @white url('../img/overlay.png');
-    color: @ux_pink;
-
-    .section-title{
-        h1{
-            background: @white url('../img/overlay.png');
-            color: @ux_grey;
-        }
-    }
-    a{
-        color: @ux_grey;
-        border-bottom-color: @ux_grey;
-    }
-    .thumbnail{
-        background-color: @white;
-    }
+body{
+    // background: url("../img/overlay.png") 0 0 repeat;
 }
 
-.title-section{
-    h2, h3{
-        color: @ux_pink;
-    }
+/* 
+# Theme related element
+*/
+
+
+/* 
+## On pink background
+````
+<div class="on-pink">
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+</div>
+````
+*/
+.on-pink{
+  background-color: @ux_pink;
+  color: @white;
+  a{
+    color: @white;
+  }
 }
 
-.btn-default{
-	// box-shadow: 10px 10px 12px rbga(255,255,255,1);
-	background-color: @white;
-	color:@ux_grey;
-	
-	&.btn-lg{
-		.font-size(26);
-	}
-	
-	&:hover{
-		background-color: @white;
-		color: darken(@ux_grey, 50%);
-		color: @ux_pink;
-		border-color: @white;
-	}
+/* 
+## On Grey background
+````
+<div class="on-grey">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+</div>
+````
+*/
+.on-grey{
+  background-color: @ux_grey_lighter;
 }
 
-p{
-	font-size: 1.3em;
+/* 
+## On Dark background
+````
+<div class="on-dark">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="text-center isolated">What is UX Lausanne</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="lead">UX Lausanne is the first Western Switzerland event dedicated exclusively to User Experience Design & how to design delightful user experiences.</p>
+    </div>
+    <div class="col-sm-8">
+      <p>After 2 years of monthly UXRomandie meetups, UX Lausanne will take place for the first time in 2014.</p>
+      <p>The 2 day format will bring together local & international UX professionals to share knowledge and gain expertise in the User Experience field.</p>
+      <p>The conference will be held at Arsenic Theater, one of Lausanne's most vibrant cultural spots.</p>
+    </div>
+  </div>
+</div>
+````
+*/
+.on-dark{
+  background-color: @ux_grey;
+  color: @white;
+  a{
+    color: @white;
+  }
 }
