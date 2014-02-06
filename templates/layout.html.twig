@@ -3,8 +3,35 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title '' %}</title>
+    <link href="/assets/css/uxlausanne.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+{% block nav %}
+<div class="container">
+    <div class="pull-right semi-inner-isolated">
+        <div class="btn btn-link btn-lg">
+            May 22-23, 2014
+        </div>
+        <a href="#" class="btn btn-primary btn-lg">Buy ticket</a>
+    </div>    
+    <ul class="main-nav nav nav-pills text-stronger">
+        <li class="verical-divider"><a href="#" class="logo"><strong>UX Lausanne 2014</strong></a></li>
+        <li><a href="#">Speakers</a></li>
+        {# <li><a href="#">Schedule</a></li> #}
+        {# <li><a href="#">Venue</a></li> #}
+        <li><a href="#">Sponsors</a></li>
+        {# <li><a href="#">About</a></li> #}
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
 </body>
 </html>
