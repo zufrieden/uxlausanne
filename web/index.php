@@ -88,6 +88,29 @@ Prior to working at Nestlé, he was Sr. Manager of User Experience at Electronic
     )
 );
 
+$sponsors = array(
+    "sqli" => array(
+        "logo" => "sponsor_sqli.png",
+        "name" => "SQLI",
+        "url" => "http://www.sqli.ch/"
+    ),
+    "mailchimp" => array(
+        "logo" => "sponsor_mailchimp.png",
+        "name" => "Mailchimp",
+        "url" => "http://mailchimp.com/"
+    ),
+    "freshjobs" => array(
+        "logo" => "sponsor_freshjobs.png",
+        "name" => "Freshjobs",
+        "url" => "http://freshjobs.ch/"
+    ),
+    "telono" => array(
+        "logo" => "sponsor_telono.png",
+        "name" => "Telono",
+        "url" => "http://www.telono.com/"
+    ),
+);
+
 $team = array(
     "gilles" => array(
         "photo" => "team_gilles.jpg",
@@ -124,5 +147,6 @@ $team = array(
 
 echo $twig->render('index.html.twig', array(
     'team' => $team, 
+	'sponsors' => $sponsors,
     'speakers' => $speakers
 ));

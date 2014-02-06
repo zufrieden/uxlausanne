@@ -2956,6 +2956,25 @@ body {
 .inverse-section .thumbnail {
   background-color: #ffffff;
 }
+.sponsors-section {
+  background: #ef745c url('../img/overlay.png');
+  color: #ffffff;
+  padding-bottom: 7em;
+}
+.sponsors-section .section-title h1 {
+  background: #ef745c url('../img/overlay.png');
+  color: #ffffff;
+}
+.sponsors-section a {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.sponsors-section .thumbnail {
+  background-color: #ffffff;
+}
+.sponsors-section .btn {
+  color: #ef745c;
+}
 .title-section h2,
 .title-section h3 {
   color: #ef745c;
