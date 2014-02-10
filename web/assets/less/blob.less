@@ -1,0 +1,27 @@
+/*
+# Blob element
+
+## Blob element
+````
+<div class="blob blob_1"><span>1</span></div>
+````
+*/
+.blob{
+    margin: 15px;
+    min-width: 120px;
+    min-height: 120px;
+    background: url('../img/blob1.svg') 50% 50% no-repeat;
+    background-size: contain;
+    text-align: center;
+    span{
+        color: @white;
+        font-size: 100px;
+        font-weight: bold;
+    }
+    &.blob_2{
+        background-image: url('../img/blob2.svg');
+    }
+    &.blob_3{
+        background-image: url('../img/blob3.svg');
+    }
+}

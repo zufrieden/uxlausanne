@@ -1,5 +1,7 @@
 {% extends "layout.html.twig" %}
 
+{% block title 'UX Lausanne 2014' %}
+
 {% block header %}
 <section class="on-pink photoed text-center inner-isolated">
     <p><small><a href="#">:ratio</a> & <a href="#">UXRomandie</a> present</small></p>
@@ -13,7 +15,7 @@
 
 {% block content %}
 <div class="on-dark">
-    <div class="container">
+    <div class="container inner-isolated">
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="text-center isolated">What is UX Lausanne</h2>
@@ -28,7 +30,125 @@
                 <p>The 2 day format will bring together local & international UX professionals to share knowledge and gain expertise in the User Experience field.</p>
                 <p>The conference will be held at Arsenic Theater, one of Lausanne's most vibrant cultural spots.</p>
             </div>
-        </div>    
+        </div>
     </div>
 </div>
+
+{# Speaker #}
+{% if app.promoted_speakers %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text-center isolated">Some of our speakers</h1>
+        </div>
+    </div>
+    <div class="row">
+    {% for speaker in app.promoted_speakers %}
+        <div class="col-sm-3 col-xs-6 card">
+            {% if speaker.photo %}
+                <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
+            {% endif %}
+            <h4>{{ speaker.title }}</h4>
+            <p>{{ speaker.company }}</p>
+            <hr class="short">
+            <p>
+                <a href="{{ speaker.company_url }}">{{ speaker.company }}</a><br/>
+                {% for url in speaker.speaker_urls %}
+                    <a href="{{ url.url }}">{{ url.label }}</a>
+                    {% if not loop.last %}<br>{% endif %}
+                {% endfor %}
+            </p>
+        </div>
+        {% if loop.index is divisibleby(4) %}
+        </div>
+        <div class="row isolated">
+        {% else %}
+            {% if loop.index is divisibleby(2) %}
+                <div class="clearfix visible-xs"></div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div class="text-center isolated">
+        <a href="#" class="btn btn-default btn-lg">View all speakers</a>
+    </div>
+</div>
+{% endif %}
+
+{# specials #}
+{% if app.specials %}
+<div class="on-pink">
+    <div class="container inner-isolated">
+        <div class="row">
+            {% for special in app.specials %}
+             <div class="col-sm-4 col-xs-12">
+                <div class="semi-inner-isolated">
+                    <h2>{{ special.title | raw }}</h2>
+                    <img src="{{ special.image }}" alt="" width="100%" class="img-thumbnail semi_isolated">
+                    <p>{{ special.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{# Reasons #}
+{% if app.reasons %}
+<div class="on-grey">
+    <div class="container">
+        <div class="isolated">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="text-center isolated">
+                        3 reasons to attend
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                {% for reason in app.reasons %}
+                 <div class="col-sm-4 col-xs-12">
+                    <div class="semi-inner-isolated">
+                        <div class="blob blob_{{ loop.index }}"><span>{{ loop.index }}</span></div>
+                        <h4>{{ reason.description | raw }}</h4>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="text-center isolated"><a href="#" class="btn btn-lg btn-primary">Buy your ticket</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if app.organizers %}
+<div class="container isolated">
+    <div class="row">
+    {% for organizer in app.organizers %}
+        <div class="col-xs-4 col-sm-2">
+            <div class="on-grey">
+                <a href="{{ organizer.url }}" class="no-underline"><img src="{{ organizer.logo }}" alt="{{ organizer.label }}" width="100%"></a>
+            </div>
+        </div>
+        <div class="col-xs-8 col-sm-4">
+            <h4>{{ organizer.title }}</h4>
+            <p>
+                {{ organizer.description }}
+            </p>
+            <p>
+                <a href="{{ organizer.url }}">{{ organizer.label }}</a>
+            </p>
+        </div>
+        <div class="clearfix visible-xs isolated">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
 {% endblock %}

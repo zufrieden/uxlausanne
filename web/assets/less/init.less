@@ -2,7 +2,7 @@
 .font-size(@sizeValue) {
   @remValue: (@sizeValue/10);
   @pxValue: (@sizeValue);
-  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{pxValue}px";
   // font-size: ~"@{remValue}rem";
 }
 
@@ -14,11 +14,16 @@
 Isolated put 20px over and under the element
 ````
 <div class="isolated"></div>
+<div class="semi-isolated"></div>
 ````
 */
 .isolated{
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.semi_isolated{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 
