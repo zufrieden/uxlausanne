@@ -13,6 +13,18 @@ $app->get('/', function () use ($app) {
 ->bind('homepage')
 ;
 
+$app->get('/speakers', function () use ($app) {
+    return $app['twig']->render('speakers.html.twig');
+})
+->bind('speakers')
+;
+
+$app->get('/sponsors', function () use ($app) {
+    return $app['twig']->render('sponsors.html.twig');
+})
+->bind('sponsors')
+;
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
