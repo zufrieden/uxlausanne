@@ -4,7 +4,8 @@
 ## Main navigation
 ````
 <ul class="main-nav nav nav-pills text-stronger">
-  <li class="verical-divider"><a href="#" class="logo"><strong>UX Lausanne 2014</strong></a></li>
+  <li><a href="#" class="logo"><strong>UX Lausanne 2014</strong></a></li>
+  <li class="verical-divider"></li>
   <li class="active"><a href="#">Speakers</a></li>
   <li><a href="#">Schedule</a></li>
   <li><a href="#">Venue</a></li>
@@ -30,9 +31,14 @@
   }
 }
 .verical-divider{
-  border-right: 1px solid @ux_grey_light;
-  padding-right: 20px;
-  margin-right: 10px;
+  span{
+    width: 1px;
+    background-color: @ux_grey_lighter;
+    position: relative;
+    display: block;
+    padding: 18px 0;
+    margin: 0.75em 0.9em;
+  }
 }
 
 

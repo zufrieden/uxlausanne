@@ -19,18 +19,23 @@
 }
 .logo-big{
   background-image: url("../img/logo_uxls_white_big.svg");
-  width: 400px;
-  height: 120px;
+  background-position: 50% 50%;
+  width: 80%;
+  height: 100px;
+  max-width: 400px;
+  max-height: 120px;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
 /*
-## Page title section 
+## Page title section
 ````
 <section class="on-pink circled text-center inner-isolated">
   <h1>Will Evans</h1>
   <h5>UX Designer – New York, USA</h5>
   <h5><a href="#">@sematicwill</a> / <a href="#">sematicfoundry.com</a></h5>
-</section>  
+</section>
 ````
 */
 .circled{
@@ -53,7 +58,7 @@ h5 + h5{
   <h6>2 days - 8 talks - 8 workshops</h6>
   <h3>May 22–23, 2014</h3>
   <a href="#">@ Arsenic - Lausanne, Switzerland</a>
-</section>  
+</section>
 ````
 */
 .photoed{
