@@ -1,3 +1,5 @@
+{% set navigation_bar = [['speakers', 'Speakers'], ['sponsors', 'Sponsors']] %}
+{% set active_page = active_page|default() %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,11 +20,11 @@
     <ul class="main-nav nav nav-pills text-stronger">
         <li><a href="{{ path('homepage') }}" class="logo"><strong>UX Lausanne 2014</strong></a></li>
         <li class="verical-divider"><span></span></li>
-        <li><a href="{{ path('speakers') }}">Speakers</a></li>
-        {# <li><a href="#">Schedule</a></li> #}
-        {# <li><a href="#">Venue</a></li> #}
-        <li><a href="{{ path('sponsors') }}">Sponsors</a></li>
-        {# <li><a href="#">About</a></li> #}
+        {% for item in navigation_bar %}
+        <li{% if item[0] == active_page %} class="active"{% endif%}>
+            <a href="{{ app.url_generator.generate(item[0]) }}">{{item[1]}}</a>
+        </li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}
@@ -186,7 +188,7 @@
                 </p>
                 <p>
                     <a href="https://www.dropbox.com/sh/k6abdavcz1jkgi5/SYylOrL9hW" target="_blank">Download our press kit</a>
-                    
+
                 </p>
             </div>
         </div>

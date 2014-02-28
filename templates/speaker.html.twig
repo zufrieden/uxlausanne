@@ -1,0 +1,65 @@
+{% extends "layout.html.twig" %}
+{% set active_page = "speakers" %}
+
+{% block title 'Speakers – UX Lausanne 2014' %}
+
+{% block header %}
+<section class="on-pink circled text-center inner-isolated">
+  <h1>{{ talk.title }}</h1>
+  <h3>By {{ speaker.title }}</h3>
+  <h5>{{ speaker.role }} at <a href="{{ speaker.company_url }}">{{ speaker.company }}</a></h5>
+</section>
+{% endblock %}
+
+{% block content %}
+
+{# Speaker #}
+{% if app.speakers %}
+<div class="container isolated">
+    <div class="row">
+        <div class="col-sm-6 col-xs-12">
+            {% for talk in app.talks %}
+                {% if talk.speaker == speaker %}
+                    <h2>
+                        {{ talk.kind }}:
+                        <span class="go-pink">
+                            {{ talk.title }}
+                        </span>
+                    </h2>
+                    <p class="go-pink">
+                        {{ talk.when }}
+                    </p>
+                    <h3>{{ talk.teaser }}</h3>
+                    <p></p>
+                    <p>{{ talk.description }}</p>
+                {% endif %}
+
+            {% endfor %}
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            {% if speaker.photo %}
+                <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
+            {% endif %}
+            <h3 class="go-pink">{{ speaker.title }}</h3>
+            <p>{{ speaker.company }}</p>
+            <hr class="short">
+            <h4>
+                {{ speaker.teaser }}
+            </h4>
+            <p></p>
+            <p>
+                {{ speaker.body | raw }}
+            </p>
+            <p>
+                <a href="{{ speaker.company_url }}">{{ speaker.company }}</a><br/>
+                {% for url in speaker.speaker_urls %}
+                    <a href="{{ url.url }}">{{ url.label }}</a>
+                    {% if not loop.last %}<br>{% endif %}
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

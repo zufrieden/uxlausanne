@@ -1,4 +1,5 @@
 {% extends "layout.html.twig" %}
+{% set active_page = "speakers" %}
 
 {% block title 'Speakers – UX Lausanne 2014' %}
 
@@ -20,11 +21,11 @@
             {% if speaker.photo %}
                 <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
             {% endif %}
-            <h4>{{ speaker.title }}</h4>
+            <h3 class="go-pink"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h3>
             <p>{{ speaker.company }}</p>
             <hr class="short">
             <p>
-                {{ speaker.body }}
+                {{ speaker.teaser }}
             </p>
             <p>
                 <a href="{{ speaker.company_url }}">{{ speaker.company }}</a><br/>
@@ -33,6 +34,17 @@
                     {% if not loop.last %}<br>{% endif %}
                 {% endfor %}
             </p>
+            {% for talk in app.talks %}
+                {% if talk.speaker == speaker %}
+                    <h4>
+                        {{ talk.kind }}:
+                        <span class="go-pink">
+                            <a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ talk.title }}</a>
+                        </span>
+                    </h4>
+                    <p>{{ talk.teaser }}</p>
+                {% endif %}
+            {% endfor %}
         </div>
         {% if loop.index is divisibleby(2) %}
         </div>
