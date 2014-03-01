@@ -27,13 +27,7 @@
             <p>
                 {{ speaker.teaser }}
             </p>
-            <p>
-                <a href="{{ speaker.company_url }}">{{ speaker.company }}</a><br/>
-                {% for url in speaker.speaker_urls %}
-                    <a href="{{ url.url }}">{{ url.label }}</a>
-                    {% if not loop.last %}<br>{% endif %}
-                {% endfor %}
-            </p>
+
             {% for talk in app.talks %}
                 {% if talk.speaker == speaker %}
                     <h4>
