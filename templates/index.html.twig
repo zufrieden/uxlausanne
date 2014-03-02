@@ -49,15 +49,7 @@
                 <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
             {% endif %}
             <h4>{{ speaker.title }}</h4>
-            <p>{{ speaker.company }}</p>
-            <hr class="short">
-            <p>
-                <a href="{{ speaker.company_url }}">{{ speaker.company }}</a><br/>
-                {% for url in speaker.speaker_urls %}
-                    <a href="{{ url.url }}">{{ url.label }}</a>
-                    {% if not loop.last %}<br>{% endif %}
-                {% endfor %}
-            </p>
+            <p><a href="{{ speaker.company_url }}">{{ speaker.company }}</a></p>
         </div>
         {% if loop.index is divisibleby(4) %}
         </div>
