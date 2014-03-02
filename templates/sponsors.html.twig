@@ -20,26 +20,30 @@
                 <h2 class="text-center">Lead Sponsor</h2>
             </div>
         </div>
+
+        {% for sponsor in app.sponsors_lead %}
         <div class="isolated">
             <div class="row">
                 <div class="col-xs-3 col-sm-6">
                     <div class="inner-isolated">
-                        <img src="http://lorempixel.com/800/450/sports/" alt="" width="100%">
+                        <img src="{{ sponsor.photo }}" alt="" width="100%">
                     </div>
                 </div>
                 <div class="col-xs-9 col-sm-6">
-                    <h3>Super duper sponsor</h3>
-                    <h5>Awesome field of action</h5>
+                    <h3>{{ sponsor.title }}</h3>
+                    <h5>{{ sponsor.teaser }}</h5>
                     <hr class="short">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <p>{{ sponsor.description }}</p>
                     <p>
-                        <a href="#">semanticfoundry.com</a><br/>
-                        <a href="#">@twitter</a><br/>
-                        <a href="#">Facebook</a>
+                        {% for url in sponsor.urls %}
+                        <a href="{{ url.url }}">{{ url.label }}</a>
+                        {% if not loop.last %}<br>{% endif %}
+                        {% endfor %}
                     </p>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
 
