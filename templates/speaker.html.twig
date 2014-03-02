@@ -31,7 +31,7 @@
                     </p>
                     <h3>{{ talk.teaser }}</h3>
                     <p></p>
-                    <p>{{ talk.description }}</p>
+                    <p>{{ talk.description | raw }}</p>
                 {% endif %}
 
             {% endfor %}
