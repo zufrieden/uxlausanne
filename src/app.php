@@ -32,7 +32,7 @@ $app->speakers = array(
         'photo' => '/assets/img/speaker_janina_woods.jpeg',
         'thumbnail' => '',
         'role' => 'Game Designer',
-        'e' => array(
+        'speaker_urls' => array(
             array(
                 'url' => 'http://wotokah.makegames.ch/',
                 'label' => 'makegames.ch'
