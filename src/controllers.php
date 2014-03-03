@@ -23,16 +23,16 @@ $app->get('/speakers/{slug}', function ($slug) use ($app) {
     if (!isset($app->speakers[$slug])) {
         $app->abort(404, "Speaker $slug does not exist.");
     }
-    if (!isset($app->talks[$slug])) {
-        $app->abort(404, "Speaker $slug does not have any talk.");
-    }
 
     $speaker = $app->speakers[$slug];
-    $talk = $app->talks[$slug];
+    $talks = array();
+    foreach ($app->talks as $talk) {
+        $talks[] = $talk;
+    }
 
     return $app['twig']->render('speaker.html.twig', array(
         'speaker' => $speaker,
-        'talk' => $talk,
+        'talks' => $talks,
         ));
 })
 ->bind('speaker')

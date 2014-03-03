@@ -22,7 +22,7 @@
                 <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
             {% endif %}
             <h3 class="go-pink"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h3>
-            <p>{{ speaker.company }}</p>
+            <h5>{{ speaker.company }}</h5>
             <hr class="short">
             <p>
                 {{ speaker.teaser }}
@@ -33,7 +33,7 @@
                     <h4>
                         {{ talk.kind }}:
                         <span class="go-pink">
-                            <a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ talk.title }}</a>
+                            <a href="{{ path('speaker', {'slug': speaker.slug })}}#{{ talk.slug }}">{{ talk.title }}</a>
                         </span>
                     </h4>
                     <p>{{ talk.teaser }}</p>
