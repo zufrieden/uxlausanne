@@ -49,6 +49,7 @@
                 <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
             {% endif %}
             <h4>{{ speaker.title }}</h4>
+            <p>{{ speaker.role }} &ndash; {{ speaker.location }} </p>
             <p><a href="{{ speaker.company_url }}">{{ speaker.company }}</a></p>
         </div>
         {% if loop.index is divisibleby(4) %}

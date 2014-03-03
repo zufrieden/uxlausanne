@@ -7,11 +7,12 @@ $app->speakers = array(
         'title' => 'Janina Woods',
         'body' => 'Janina works in Zurich, where she’s the Game Designer behind Black Island, a horror game for PC and Oculus Rift, in which she tries to exploit fully the immersive quality of the VR headset. After her studies at the ZHdK, she got involved in Game Design at YouRehab, a leading provider of interactive therapy systems for patients with movement disorders, where she was responsible for all aspects of game design.',
         'teaser' => 'Janina works in Zurich, where she’s the Game Designer behind Black Island.',
-        'company' => 'Wotokah, Zurich',
+        'company' => 'Wotokah',
         'company_url' => 'http://wotokah.makegames.ch/',
         'photo' => '/assets/img/speaker_janina_woods.jpeg',
         'thumbnail' => '',
         'role' => 'Game Designer',
+        'location' => 'Zurich, Switzerland',
         'speaker_urls' => array(
             array(
                 'url' => 'http://wotokah.makegames.ch/',
@@ -30,6 +31,7 @@ $app->speakers = array(
         'photo' => '/assets/img/speaker_anna_dahlstrom.jpg',
         'thumbnail' => '',
         'role' => 'Founder, byflock Ltd.',
+        'location' => 'London, UK',
         'speaker_urls' => array(
             array(
                 'url' => 'http://annadahlstrom.com/',
@@ -43,11 +45,12 @@ $app->speakers = array(
         'title' => 'Fabian Hemmert',
         'body' => 'Young researcher, Fabian has nevertheless an impressive record, as he’s already worked for Nintendo Europe et Marvel Comics. His performance talks have been noticed and much commented on during SXSW 2012 & 2013 and TEDxBerlin, especially the one devoted to shape-shifiting cell phones. Fascinated with the non-visual communication techniques, he explores the impact of feeling, weight, touch and movement. He currently works for Deutsche Telekom.',
         'teaser' => 'Young researcher, Fabian has nevertheless an impressive record.',
-        'company' => 'Researcher, Design Research Lab, Berlin',
+        'company' => 'Researcher, Design Research Lab',
         'company_url' => 'http://www.fabianhemmert.com/',
-        'photo' => '',
+        'photo' => '/assets/img/speaker_fabian-emmert.jpg',
         'thumbnail' => '',
         'role' => 'PhD Candidate',
+        'location' => 'Berlin, Germany',
         'speaker_urls' => array(
             array(
                 'url' => 'http://www.fabianhemmert.com/',
@@ -63,9 +66,10 @@ $app->speakers = array(
         'teaser' => 'Birgit is a Creative Director UX, Design Manager and Visual & Interaction Designer.',
         'company' => 'Team of Two, Hamburg & Blast Radius, Amsterdam',
         'company_url' => 'http://birgitg.com/',
-        'photo' => '',
+        'photo' => '/assets/img/speaker_peter-birgit.jpg',
         'thumbnail' => '',
         'role' => 'Creative Director UX & Interaction Design Director',
+        'location' => 'Amsterdam, Netherland',
         'speaker_urls' => array(
             array(
                 'url' => 'http://birgitg.com/',
@@ -79,11 +83,12 @@ $app->speakers = array(
         'title' => 'Oliver Reichenstein',
         'body' => 'Oliver is the CEO & Founder of the Information Architects design agency, based in Tokyo & Zürich. He studied Philosophy, before noticing that handling abstract concepts was essential for Information Architecture Design. In 2005, he founded IA, that has had clients such as Firefox, Tamedia, Yandex, UBS and Ringier. Ambassador of simplicity and structure, he defends sleek design, with opinions. Admired, often envied and imitated, we are very happy to welcome him for our first edition.',
         'teaser' => 'Oliver is the CEO & Founder of the Information Architects design agency.',
-        'company' => 'Information Architects Inc, Tokyo',
+        'company' => 'Information Architects Inc',
         'company_url' => 'http://ia.net/',
-        'photo' => '/assets/img/speaker_oliver-reichenstein.jpg',
+        'photo' => '/assets/img/speaker_oliver-reichenstein.jpeg',
         'thumbnail' => '',
         'role' => 'CEO & Founder',
+        'location' => 'Tokyo, Japan',
         'speaker_urls' => null
     ),
     'valerie_vuillerat' => array(
@@ -92,11 +97,12 @@ $app->speakers = array(
         'title' => 'Valerie Vuillerat',
         'body' => 'Valérie is the Managing Director for Ginetta, a Digital Agency based in Zürich, who can boast of Swiss Government, Swiss Post, Doodle, Raiffeisen bank, local.ch and the University of Basel as its clients. An experienced UX practitioner, used to simplifying complex systems, Valérie has taught User-Oriented Design at the Swiss Marketing Institute in Bern and at somexcloud. She loves Andalucia, long bicycling trips and vanilla ice cream.',
         'teaser' => 'Valérie is the Managing Director for Ginetta, a Digital Agency based in Zürich.',
-        'company' => 'Ginetta, Zurich',
+        'company' => 'Ginetta',
         'company_url' => 'http://ginetta.ch',
         'photo' => '/assets/img/speaker_valerie-vuillerat.jpg',
         'thumbnail' => '',
         'role' => 'Managing Director ',
+        'location' => 'Zurich, Switzerland',
         'speaker_urls' => array(
             array(
                 'url' => 'http://twitter.com/valeriewow',
@@ -115,6 +121,7 @@ $app->speakers = array(
         'photo' => '/assets/img/speaker_ryan-rumsey.jpg',
         'thumbnail' => '',
         'role' => 'User Experience Leader',
+        'location' => 'Morges, Switzerland',
         'speaker_urls' => array(
             array(
                 'url' => 'http://ryanrumsey.com',
@@ -132,17 +139,41 @@ $app->speakers = array(
         'title' => 'Will Evans',
         'body' => 'Essential member of the UX and design thinking communities, Will Evans is a specialist in Interaction and User Experience Design for more than 15 years.  After having worked for Lotus/IBM, TheLadders, Kayak.com and MIT, he manages now his own studio, Semantic Foundry, in New York. His works have been published in Business Week, The Economist, Fast Company, Time Magazine, Fortune, MSNBC, The Wall Street Journal.',
         'teaser' => 'Essential member of the UX and design thinking.',
-        'company' => 'Semantic Foundry, New York',
+        'company' => 'Semantic Foundry',
         'company_url' => 'http://semanticfoundry.com',
         'photo' => '/assets/img/speaker_will-evans.jpg',
         'thumbnail' => '',
         'role' => 'Founder & Social Experience Designer',
+        
         'speaker_urls' => array(
             array(
                 'url' => 'http://twitter.com/semanticwill',
                 'label' => '@semanticwill'
             )
         )
+    ),
+    'nicolas_nova' => array(
+        'slug' => 'nicolas_nova',
+        'promoted' => true,
+        'title' => 'Nicolas Nova',
+        'body' => 'Nicolas is a researcher, ethnographer and writer. He undertakes desk research and field studies to inform and evaluate the creation of innovative products and services. His work is about identifying weak signals as well as exploring people’s needs, motivations and contexts to map new design opportunities and chart potential futures. He is also Professor at the Geneva University of Arts and Design (HEAD–Geneva).',
+        'teaser' => 'Essential member of the UX and design thinking.',
+        'company' => 'Near Future Laboratory, Geneva',
+        'company_url' => 'http://nearfuturelaboratory.com',
+        'photo' => '/assets/img/speaker_nicolas-nova.jpg',
+        'thumbnail' => '',
+        'role' => 'Principal',
+        'location' => 'Geneva, Switzerland',
+        'speaker_urls' => array(
+            array(
+                'url' => 'http://twitter.com/nicolasnova',
+                'label' => '@nicolasnova'
+            )
+        ),
+        array(
+                'url' => 'http://nearfuturelaboratory.com/pasta-and-vinegar/',
+                'label' => 'Blog'
+            )
     ),
 );
 
