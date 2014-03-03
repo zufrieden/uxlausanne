@@ -4,25 +4,26 @@ $app->sponsors_kinds = array(
     'lead' => "Lead",
     'major' => "Major",
     'executive' => "Executive",
+    'media' => "Media Partner",
 );
 
 $app->sponsors_lead = array(
     'first_sponsor' => array(
         'slug' => "acme",
-        'title' => "ACME Inc",
-        'teaser' => "Awesome company",
-        'description' => "More about this company in one or more sentences",
+        'title' => "Become our official sponsor",
+        'teaser' => "This space could be yours",
+        'description' => "",
         'urls' => array(
             array(
-                'url' => 'http://exemple.org/',
-                'label' => 'exemple.org'
+                'url' => '../assets/pdf/uxlausanne_sponsorkit_general.pdf',
+                'label' => 'Download our sponsor kit'
             ),
             array(
-                'url' => 'http://twitter.com/twitter',
-                'label' => '@twitter'
+                'url' => 'email:sponsoring@uxromandie.ch',
+                'label' => 'sponsoring@uxromandie.ch'
             )
         ),
-        'photo' => '/assets/img/speaker_janina_woods.jpeg',
+        'photo' => '/assets/img/sponsor_lead_you.png',
         'kind' => $app->sponsors_kinds['lead']
     ),
 );
@@ -42,7 +43,25 @@ $app->sponsors_major = array(
                 'label' => '@sqliagency_ch'
             )
         ),
-        'photo' => '/assets/img/sponsor_major_sqliagencych.jpeg',
+        'photo' => '/assets/img/sponsor_major_sqli.png',
+        'kind' => $app->sponsors_kinds['major']
+    ),
+    'liip' => array(
+        'slug' => "liip",
+        'title' => "Liip",
+        'teaser' => "Agile Web development",
+        'description' => "Agile Web development",
+        'urls' => array(
+            array(
+                'url' => 'http://www.liip.ch/en',
+                'label' => 'www.liip.ch/en'
+            ),
+            array(
+                'url' => 'https://twitter.com/liip',
+                'label' => '@liip'
+            )
+        ),
+        'photo' => '/assets/img/sponsor_major_liip.png',
         'kind' => $app->sponsors_kinds['major']
     ),
 );
@@ -50,8 +69,8 @@ $app->sponsors_executive = array(
     'balsamiq' => array(
         'slug' => "balsamiq",
         'title' => "Balsamiq",
-        'teaser' => "",
-        'description' => "Rapid, effective and fun wireframing software",
+        'teaser' => "Rapid, effective and fun wireframing ",
+        'description' => "Rapid, effective and fun wireframing ",
         'urls' => array(
             array(
                 'url' => 'http://balsamiq.com',
@@ -68,7 +87,7 @@ $app->sponsors_executive = array(
     'harvest' => array(
         'slug' => "harvest",
         'title' => "Harvest",
-        'teaser' => "",
+        'teaser' => "Simple online time tracking software",
         'description' => "Simple online time tracking software",
         'urls' => array(
             array(
@@ -86,7 +105,7 @@ $app->sponsors_executive = array(
     'mailchimp' => array(
         'slug' => "mailchimp",
         'title' => "Mailchimp",
-        'teaser' => "",
+        'teaser' => "Send better email",
         'description' => "Send better email",
         'urls' => array(
             array(
@@ -104,7 +123,7 @@ $app->sponsors_executive = array(
     'telono' => array(
         'slug' => "telono",
         'title' => "Telono",
-        'teaser' => "",
+        'teaser' => "Strategic user-centred design",
         'description' => "User experience (UX) | usability | web accessibility | Geneva",
         'urls' => array(
             array(
@@ -122,7 +141,7 @@ $app->sponsors_executive = array(
     'freshjobs' => array(
         'slug' => "freshjobs",
         'title' => "Freshjobs",
-        'teaser' => "",
+        'teaser' => "The fresh job platform",
         'description' => "Die frische Job-Plattform - arbeiten mit Internet.",
         'urls' => array(
             array(
@@ -136,5 +155,37 @@ $app->sponsors_executive = array(
         ),
         'photo' => '/assets/img/sponsor_executive_freshjobs.png',
         'kind' => $app->sponsors_kinds['executive']
+    ),
+);
+
+
+$app->partners_media = array(
+    'ict' => array(
+        'slug' => "ict",
+        'title' => "ICT Journal",
+        'teaser' => "The Swiss magazine of information technologies for the entreprise",
+        'description' => "The Swiss magazine of information technologies for the entreprise",
+        'urls' => array(
+            array(
+                'url' => 'http://www.ictjournal.ch',
+                'label' => 'ictjournal.ch'
+            )
+        ),
+        'photo' => '/assets/img/partner_ict.png',
+        'kind' => $app->sponsors_kinds['media']
+    ),
+    'cominmag' => array(
+        'slug' => "cominmag",
+        'title' => "Cominmag",
+        'teaser' => "The B2B of marketing, communication and medias",
+        'description' => "",
+        'urls' => array(
+            array(
+                'url' => 'http://www.COMINMAG.ch',
+                'label' => 'COMINMAG.ch'
+            )
+        ),
+        'photo' => '/assets/img/partner_cominmag.png',
+        'kind' => $app->sponsors_kinds['media']
     ),
 );

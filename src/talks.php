@@ -42,7 +42,7 @@ $app->talks = array(
         'position' => 0,
         'when' => "Friday",
         'kind' => $app->talk_kinds['talk'],
-        'title' => "Do the right thing",
+        'title' => "UX sells, but not by itself",
         'teaser' => "People in the field of User Experience are taught that having empathy for the end-user is the holy grail. We believe that, by studying the way your fellow project team members work, what their needs are, and what & how they deliver, you can develop another type of empathy, one that may prove to be more important for business success and results in a delightful work environment.",
         'description' => "There was a time when we did pretty page designs and when those designs were pretty much what we saw in our desktop browsers. With the introduction and rise of smartphones, tablets, phablets - as well as a bigger variety in larger and smaller screens - there isn’t one view of our designs anymore. Instead, what we design need to be able to adapt so that it’s displayed in a way that is suitable for the device that is being used. <br>With responsive design we’ve learnt the basics of how to adapt content, interactions and layouts so that it works across devices. But with further developments in technology and screens, our content is going to go anywhere and we need to move away from designing for specific devices. For us as UX designers this means means letting content rather than devices guide layouts, but also increasingly moving away from designing and wireframing pages and instead focusing on the modules that those pages are made up of. <br>The device agnostic design approach places a bigger weight on our shoulders in terms of ensuring that what we design will in fact work across devices, irrespectively of what device that is used. As a result we need to be clever in how we approach design, development and specification to ensure we spend our resources appropriately, but also that we build something that can adapt to as many different platforms and screen sizes as possible. <br />In this workshop you’ll get a thorough understanding of and hands on experience with:<ul><li>why we should do device agnostic design</li><li>the basics of modular and device agnostic design</li><li>what it means to approach a project in a modular way</li><li>how to go about doing it </li><li>module libraries and how to use them using content as the basis for responsive design breakpoints</li></ul>",
     ),
@@ -65,6 +65,16 @@ $app->talks = array(
         'title' => "Bodily Experiences of the Digital",
         'teaser' => "An interactive overview of current state of the virtual reality interactions",
         'description' => "How our body treats digital information like physical stuff, information consumption like food consumption, and technical devices like social, living beings. <br>For many people, the digital world is still hard to grasp. It leaves us cognitively overwhelmed, and bodily unchallenged.   In this session Fabian will develop how our experience of the digital world is metaphorically physical and impacts on our body.  He will demonstrate  ways to make us physically embrace the digital world through industrial and interaction design - by giving life to objects based on their digital presence.   Finally, he will raise the fundamental question of whether we want devices that are behaving like humans, or - worse - humans that are becoming robots. ",
+    ),
+    'nicolas_nova' => array(
+        'slug' => 'nicolas_nova',
+        'speaker' => $app->speakers['nicolas_nova'],
+        'position' => 0,
+        'when' => "Friday",
+        'kind' => $app->talk_kinds['workshop'],
+        'title' => "Design Ethnography and User-Centered Design : The missing link",
+        'teaser' => "An interactive overview of current state of the virtual reality interactions",
+        'description' => "One of the premise of User-Centered Design is that documenting people’s practices through field work (observation, interviews, etc.) is relevant to inspire and frame design or innovation.  <br /> However - more often than not - this premise corresponds to a form of wishful thinking, as opposed to an actual approach used by designers. This problem is quite prevalent when it comes to explaining how to transfer results from field research to design purposes. This phase is indeed very briefly dealt with, or presented very quickly without a thorough explanation of the different sets of solution possibilities. This workshop focuses on how to use results and collected data from field research in order to turn them as a design output. <br /> The attendee will go through several activities to understand the different kind of insights that exist in field research and how they can be turned into design decisions for each steps of a project.",
     )
 
 );
