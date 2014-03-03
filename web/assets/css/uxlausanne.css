@@ -3132,8 +3132,7 @@ Inner-isolated put 20px padding top/bottom inside element
 .on-dark a {
   color: #ffffff;
 }
-.on-dark h5 {
-  color: #ef745c;
+.on-dark h6 {
   margin-top: 0.2em;
   margin-bottom: 1em;
 }
@@ -3192,25 +3191,25 @@ Responsive title
 ````
 */
 h1 {
-  font-size: 28px;
+  font-size: 32px;
   text-transform: uppercase;
   font-family: "ProximaNova-bold", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 h2 {
-  font-size: 24px;
+  font-size: 26px;
   text-transform: uppercase;
   font-family: "ProximaNova-bold", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 h3 {
-  font-size: 20px;
+  font-size: 24px;
 }
 h4 {
-  font-size: 16px;
+  font-size: 18px;
 }
 h5 {
-  font-size: 14px;
+  font-size: 16px;
 }
 h3,
 h2,
@@ -3224,36 +3223,36 @@ h6 {
 }
 @media (min-width: 992px) {
   h1 {
-    font-size: 30px;
+    font-size: 42px;
   }
   h2 {
-    font-size: 24px;
+    font-size: 36px;
   }
   h3 {
-    font-size: 20px;
+    font-size: 28px;
   }
   h4 {
-    font-size: 18px;
+    font-size: 24px;
   }
   h5 {
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
   h1 {
-    font-size: 36px;
+    font-size: 48px;
   }
   h2 {
-    font-size: 28px;
+    font-size: 36px;
   }
   h3 {
-    font-size: 22px;
+    font-size: 32px;
   }
   h4 {
-    font-size: 18px;
+    font-size: 28px;
   }
   h5 {
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 .lead {
@@ -3305,12 +3304,17 @@ p {
 ## Strong
 ````
 <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit</strong>
+<h3 class="unbold">Title not strong</h3>
 ````
 */
 strong,
 .text-stronger {
   font-family: "ProximaNova-bold", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
+}
+.unbold {
+  font-family: "ProximaNova-Regular", "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 /*
 ## Line
@@ -3356,9 +3360,9 @@ hr.light {
   background-image: url("../img/logo_uxls_white_big.svg");
   background-position: 50% 50%;
   width: 80%;
-  height: 100px;
-  max-width: 400px;
-  max-height: 120px;
+  height: 150px;
+  max-width: 500px;
+  max-height: 180px;
   -webkit-background-size: contain;
   background-size: contain;
 }
@@ -3437,6 +3441,11 @@ h5 + h5 {
   display: block;
   padding: 18px 0;
   margin: 0.75em 0.9em;
+}
+@media (max-width: 480px) {
+  .verical-divider span {
+    display: none;
+  }
 }
 .nav a {
   border-bottom: none;
@@ -3547,3 +3556,59 @@ h5 + h5 {
 </div>
 ````
 */
+/*! responsive-nav.js 1.0.30 by @viljamis */
+@media screen and (max-width: 40em) {
+  .nav-collapse {
+    clear: both;
+  }
+  .nav-collapse ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+  }
+  .nav-collapse li {
+    width: 100%;
+    display: block;
+  }
+  .js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+  }
+}
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+.nav-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 50px;
+  height: 60px;
+  float: right;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: #f4421a url("../img/hamburger.gif") no-repeat 50% 50%;
+  border-bottom: none;
+}
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}

@@ -14,18 +14,18 @@ Responsive title
 ````
 */
 h1{
-  .font-size(28);
+  .font-size(32);
   text-transform: uppercase;
   .text-stronger();
 }
 h2{
-  .font-size(24);
+  .font-size(26);
   text-transform: uppercase;
   .text-stronger();
 }
-h3{ .font-size(20); }
-h4{ .font-size(16); }
-h5{ .font-size(14); }
+h3{ .font-size(24); }
+h4{ .font-size(18); }
+h5{ .font-size(16); }
 h3, h2, h3, h4, h5, h6{
   margin-top: 0.6em;
   margin-bottom: 0.05em;
@@ -33,18 +33,18 @@ h3, h2, h3, h4, h5, h6{
 }
 
 @media (min-width: @screen-md){
-  h1{ .font-size(30); }
-  h2{ .font-size(24); }
-  h3{ .font-size(20); }
-  h4{ .font-size(18); }
-  h5{ .font-size(14); }
+  h1{ .font-size(42); }
+  h2{ .font-size(36); }
+  h3{ .font-size(28); }
+  h4{ .font-size(24); }
+  h5{ .font-size(20); }
 }
 @media (min-width: @screen-lg){
-  h1{ .font-size(36); }
-  h2{ .font-size(28); }
-  h3{ .font-size(22); }
-  h4{ .font-size(18); }
-  h5{ .font-size(14); }
+  h1{ .font-size(48); }
+  h2{ .font-size(36); }
+  h3{ .font-size(32); }
+  h4{ .font-size(28); }
+  h5{ .font-size(20); }
 }
 .lead {
   font-size: floor(@font-size-base * 1.1);
@@ -101,11 +101,16 @@ em{
 ## Strong
 ````
 <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit</strong>
+<h3 class="unbold">Title not strong</h3>
 ````
 */
 strong, .text-stronger{
   font-family: @font-family-sans-serif-bold;
   font-weight: 400;
+}
+.unbold{
+  font-family: @font-family-sans-serif;
+  font-weight: normal;
 }
 
 

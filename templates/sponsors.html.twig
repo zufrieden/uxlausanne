@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-xs-3 col-sm-6">
                     <div class="inner-isolated">
-                        <img src="{{ sponsor.photo }}" alt="" width="100%">
+                        <a href="{{ sponsor.urls[0].url }}"><img src="{{ sponsor.photo }}" alt="" width="100%"></a>
                     </div>
                 </div>
                 <div class="col-xs-9 col-sm-6">
@@ -47,4 +47,65 @@
     </div>
 </div>
 
+<div class="container inner-isolated">
+    <div class="row">
+        <div class="col-xs-12">
+        <h2 class="text-center">Major Sponsor</h2>
+        </div>
+    </div>
+    <div class="row inner-isolated">
+        {% for sponsor in app.sponsors_major %}
+            <div class="col-xs-6 col-sm-4">
+                <div class="text-center">
+                    <a href="{{ sponsor.urls[0].url }}"><img src="{{ sponsor.photo }}" alt="" width="100%"></a>
+                    <h5>{{ sponsor.title }}</h5>
+                    <h6>{{ sponsor.teaser }}</h6>
+                </div>
+            </div>
+            {% if loop.index is divisibleby(3) %}
+            </div>
+            <div class="row isolated">
+            {% else %}
+                {% if loop.index is divisibleby(2) %}
+                    <div class="clearfix visible-xs"></div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="on-grey">
+    <div class="container inner-isolated">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center">Executive Sponsor</h2>
+            </div>
+        </div>
+        <div class="row inner-isolated">
+            {% for sponsor in app.sponsors_executive %}
+                <div class="col-xs-6 col-sm-3">
+                    <div class="text-center">
+                        <a href="{{ sponsor.urls[0].url }}"><img src="{{ sponsor.photo }}" alt="" width="100%" class="img-thumbnail" ></a>
+                        <h5>{{ sponsor.title }}</h5>
+                        <h6>{{ sponsor.teaser }}</h6>
+                    </div>
+                </div>
+                {% if loop.index is divisibleby(4) %}
+                </div>
+                <div class="row isolated">
+                {% else %}
+                    {% if loop.index is divisibleby(2) %}
+                        <div class="clearfix visible-xs"></div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    {% block organizer %}{{ parent() }}{% endblock %}
+    {% block footer_content %}{{ parent() }}{% endblock %}
 {% endblock %}

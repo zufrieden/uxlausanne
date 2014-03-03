@@ -33,10 +33,10 @@ $app->speakers = array(
         'role' => 'Founder, byflock Ltd.',
         'location' => 'London, UK',
         'speaker_urls' => array(
-            array(
+            /*array(
                 'url' => 'http://annadahlstrom.com/',
                 'label' => 'Personal website'
-            )
+            )*/
         )
     ),
     'fabian_hemmert' => array(
@@ -89,7 +89,12 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'CEO & Founder',
         'location' => 'Tokyo, Japan',
-        'speaker_urls' => null
+        'speaker_urls' => array(
+            array(
+                'url' => 'http://twitter.com/reichenstein',
+                'label' => '@reichenstein'
+            )
+        )
     ),
     'valerie_vuillerat' => array(
         'slug' => 'valerie_vuillerat',
@@ -112,7 +117,7 @@ $app->speakers = array(
     ),
     'ryan_rumsey' => array(
         'slug' => 'ryan_rumsey',
-        'promoted' => true,
+        'promoted' => false,
         'title' => 'Ryan Rumsey',
         'body' => 'Ryan lives and plays in Lausanne, Switzerland, where he is a User Experience Leader at Nestlé. Prior to working at Nestlé, he was Sr. Manager of User Experience at Electronic Arts and User Experience Lead at Apple, with his primary focus on building design teams and processes focused on enterprise level CRM, LMS, Portal and Performance Management tools. In his 14+ years leading interactive, creative and development solutions, Ryan Rumsey has designed and launched products in a wide variety of industries. From health to retail, gaming to customer service, media to gossip, he specializes in User Experience Design and Evangelization.',
         'teaser' => 'Ryan lives and plays in Lausanne, Switzerland, where he is a User Experience Leader at Nestlé.',
@@ -144,7 +149,6 @@ $app->speakers = array(
         'photo' => '/assets/img/speaker_will-evans.jpg',
         'thumbnail' => '',
         'role' => 'Founder & Social Experience Designer',
-        
         'speaker_urls' => array(
             array(
                 'url' => 'http://twitter.com/semanticwill',
@@ -158,7 +162,7 @@ $app->speakers = array(
         'title' => 'Nicolas Nova',
         'body' => 'Nicolas is a researcher, ethnographer and writer. He undertakes desk research and field studies to inform and evaluate the creation of innovative products and services. His work is about identifying weak signals as well as exploring people’s needs, motivations and contexts to map new design opportunities and chart potential futures. He is also Professor at the Geneva University of Arts and Design (HEAD–Geneva).',
         'teaser' => 'Essential member of the UX and design thinking.',
-        'company' => 'Near Future Laboratory, Geneva',
+        'company' => 'Near Future Laboratory',
         'company_url' => 'http://nearfuturelaboratory.com',
         'photo' => '/assets/img/speaker_nicolas-nova.jpg',
         'thumbnail' => '',

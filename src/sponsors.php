@@ -42,7 +42,7 @@ $app->sponsors_major = array(
                 'label' => '@sqliagency_ch'
             )
         ),
-        'photo' => '/assets/img/sponsor_major_sqliagencych.jpeg',
+        'photo' => '/assets/img/sponsor_major_sqliagencych.png',
         'kind' => $app->sponsors_kinds['major']
     ),
 );
