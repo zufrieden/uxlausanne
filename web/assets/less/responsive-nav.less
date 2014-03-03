@@ -1,12 +1,18 @@
 /*! responsive-nav.js 1.0.30 by @viljamis */
 
+.nav-action{
+  float: right;
+}
+
 @media screen and (max-width: 40em) {
   .nav-collapse{
     clear: both;
   }
   .nav-collapse ul {
     margin: 0;
+    margin-top: 10px;
     padding: 0;
+    padding-bottom: 10px;
     width: 100%;
     display: block;
     list-style: none;
@@ -15,6 +21,9 @@
   .nav-collapse li {
     width: 100%;
     display: block;
+    background-color: @ux_grey_lighter;
+    border-bottom: 1px solid @white;
+    margin-left: 0 !important;
   }
 
   .js .nav-collapse {
@@ -25,7 +34,12 @@
     overflow: hidden;
     zoom: 1;
   }
+  .nav-action{
+    float: none;
+  }
 }
+
+
 
 .nav-collapse.opened {
   max-height: 9999px;
