@@ -5,8 +5,7 @@
 
 {% block header %}
 <section class="on-pink circled text-center inner-isolated">
-  <h1>{{ talk.title }}</h1>
-  <h3>By {{ speaker.title }}</h3>
+  <h1>{{ speaker.title }}</h1>
   <h5>{{ speaker.role }} at <a href="{{ speaker.company_url }}">{{ speaker.company }}</a></h5>
 </section>
 {% endblock %}
@@ -18,12 +17,12 @@
 <div class="container isolated">
     <div class="row">
         <div class="col-sm-6 col-xs-12">
-            {% for talk in app.talks %}
+            {% for talk in talks %}
                 {% if talk.speaker == speaker %}
                     <h2>
                         {{ talk.kind }}:
                         <span class="go-pink">
-                            {{ talk.title }}
+                            <a name="{{ talk.slug }}"></a>{{ talk.title }}
                         </span>
                     </h2>
                     <p class="go-pink">
@@ -41,7 +40,7 @@
                 <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
             {% endif %}
             <h3 class="go-pink">{{ speaker.title }}</h3>
-            <p>{{ speaker.company }}</p>
+            <h5>{{ speaker.company }}</h5>
             <hr class="short">
             <h4>
                 {{ speaker.teaser }}

@@ -4,11 +4,13 @@
 
 {% block header %}
 <section class="on-pink photoed text-center inner-isolated">
-    <p><small><a href="http://8ratio.ch">:ratio</a> & <a href="http://uxromandie.ch">UXRomandie</a> present</small></p>
+    <p><a href="http://8ratio.ch">:ratio</a> & <a href="http://uxromandie.ch">UXRomandie</a> present</p>
     <div class="logo logo-big"><strong>UX Lausanne 2014</strong></div>
-    <h3>Creating delightful User Experiences</h3>
-    <h5>2 days - 8 talks - 8 workshops</h5>
-    <h2>May 22–23, 2014</h2>
+    <div class="inner-isolated">
+        <h3>Creating delightful User Experiences</h3>
+        <h4>2 days - 8 talks - 8 workshops</h4>
+    </div>
+    <h2 class="unbold">May 22–23, 2014</h2>
     <a href="http://www.arsenic.ch/">@ Arsenic - Lausanne, Switzerland</a>
 </section>
 {% endblock %}
@@ -75,7 +77,7 @@
             {% for special in app.specials %}
              <div class="col-sm-4 col-xs-12">
                 <div class="semi-inner-isolated">
-                    <h2>{{ special.title | raw }}</h2>
+                    <h3>{{ special.title | raw }}</h3>
                     <img src="{{ special.image }}" alt="" width="100%" class="img-thumbnail semi_isolated">
                     <p>{{ special.description }}</p>
                 </div>
