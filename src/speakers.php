@@ -13,6 +13,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Game Designer',
         'location' => 'Zurich, Switzerland',
+        'twitter' => '',
         'speaker_urls' => array(
             array(
                 'url' => 'http://wotokah.makegames.ch/',
@@ -32,6 +33,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Founder, byflock Ltd.',
         'location' => 'London, UK',
+        'twitter' => '',
         'speaker_urls' => array(
             /*array(
                 'url' => 'http://annadahlstrom.com/',
@@ -51,6 +53,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'PhD Candidate',
         'location' => 'Berlin, Germany',
+        'twitter' => '',
         'speaker_urls' => array(
             array(
                 'url' => 'http://www.fabianhemmert.com/',
@@ -70,6 +73,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Creative Director UX & Interaction Design Director',
         'location' => 'Amsterdam, Netherland',
+        'twitter' => '',
         'speaker_urls' => array(
             array(
                 'url' => 'http://birgitg.com/',
@@ -89,6 +93,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'CEO & Founder',
         'location' => 'Tokyo, Japan',
+        'twitter' => '',
         'speaker_urls' => array(
             array(
                 'url' => 'http://twitter.com/reichenstein',
@@ -108,11 +113,8 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Managing Director ',
         'location' => 'Zurich, Switzerland',
+        'twitter' => 'valeriewow',
         'speaker_urls' => array(
-            array(
-                'url' => 'http://twitter.com/valeriewow',
-                'label' => '@valeriewow'
-            )
         )
     ),
     'ryan_rumsey' => array(
@@ -127,6 +129,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'User Experience Leader',
         'location' => 'Morges, Switzerland',
+        'twitter' => '',
         'speaker_urls' => array(
             array(
                 'url' => 'http://ryanrumsey.com',
@@ -149,6 +152,9 @@ $app->speakers = array(
         'photo' => '/assets/img/speaker_will-evans.jpg',
         'thumbnail' => '',
         'role' => 'Founder & Social Experience Designer',
+        'location' => 'New York, USA',
+        'twitter' => 'semanticwill',
+        
         'speaker_urls' => array(
             array(
                 'url' => 'http://twitter.com/semanticwill',
@@ -168,16 +174,13 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Principal',
         'location' => 'Geneva, Switzerland',
+        'twitter' => 'nicolasnova',
         'speaker_urls' => array(
             array(
-                'url' => 'http://twitter.com/nicolasnova',
-                'label' => '@nicolasnova'
-            )
-        ),
-        array(
                 'url' => 'http://nearfuturelaboratory.com/pasta-and-vinegar/',
                 'label' => 'Blog'
             )
+        )
     ),
 );
 

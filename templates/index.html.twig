@@ -11,7 +11,7 @@
         <h4>2 days - 8 talks - 8 workshops</h4>
     </div>
     <h2 class="unbold">May 22–23, 2014</h2>
-    <a href="http://www.arsenic.ch/">@ Arsenic - Lausanne, Switzerland</a>
+    @ <a href="http://www.arsenic.ch/">Arsenic</a> - Lausanne, Switzerland
 </section>
 {% endblock %}
 
@@ -38,7 +38,7 @@
 
 {# Speaker #}
 {% if app.promoted_speakers %}
-<div class="container">
+<div class="container inner-isolated">
     <div class="row">
         <div class="col-xs-12">
             <h2 class="text-center isolated">Some of our speakers</h1>
@@ -48,11 +48,11 @@
     {% for speaker in app.promoted_speakers %}
         <div class="col-sm-3 col-xs-6 card">
             {% if speaker.photo %}
-                <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
+                <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
             {% endif %}
-            <h4>{{ speaker.title }}</h4>
-            <p>{{ speaker.role }} &ndash; {{ speaker.location }} </p>
-            <p><a href="{{ speaker.company_url }}">{{ speaker.company }}</a></p>
+            <h4 class="text-stronger"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h4>
+            <p>{{ speaker.company }}<br/>
+            {{ speaker.location }} </p>
         </div>
         {% if loop.index is divisibleby(4) %}
         </div>

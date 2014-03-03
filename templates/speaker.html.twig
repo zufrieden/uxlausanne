@@ -1,7 +1,9 @@
 {% extends "layout.html.twig" %}
 {% set active_page = "speakers" %}
 
-{% block title 'Speakers – UX Lausanne 2014' %}
+{% block title %}
+{{ speaker.title }} - Speaker – UX Lausanne 2014
+{% endblock %}
 
 {% block header %}
 <section class="on-pink circled text-center inner-isolated">
@@ -19,13 +21,13 @@
         <div class="col-sm-6 col-xs-12">
             {% for talk in talks %}
                 {% if talk.speaker == speaker %}
-                    <h2>
-                        {{ talk.kind }}:
+                    <h2 class="uncaps">
+                        {{ talk.kind }}:<br/>
                         <span class="go-pink">
                             <a name="{{ talk.slug }}"></a>{{ talk.title }}
                         </span>
                     </h2>
-                    <p class="go-pink">
+                    <p>
                         {{ talk.when }}
                     </p>
                     <h3>{{ talk.teaser }}</h3>
@@ -39,8 +41,13 @@
             {% if speaker.photo %}
                 <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
             {% endif %}
-            <h3 class="go-pink">{{ speaker.title }}</h3>
-            <h5{{ speaker.role }} at {{ speaker.company }} &ndash; {{ speaker.location }} </h5>
+            <h3 class="go-pink text-stronger">{{ speaker.title }}</h3>
+            <p>{{ speaker.role }} <br/>
+            <a href="{{speaker.company_url}}">{{ speaker.company }}</a><br/>
+            {{ speaker.location}}
+            </p>
+
+
             <hr class="short">
             <h4>
                 {{ speaker.teaser }}
@@ -51,6 +58,9 @@
             </p>
             <p>
                 <a href="{{ speaker.company_url }}">{{ speaker.company }}</a><br/>
+                {% if speaker.twitter %}
+                <a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a><br/>
+                {%endif%}
                 {% for url in speaker.speaker_urls %}
                     <a href="{{ url.url }}">{{ url.label }}</a>
                     {% if not loop.last %}<br>{% endif %}

@@ -6,12 +6,28 @@ body{
 # Theme related element
 */
 
+/*
+## Image On White Background
+````
+ <img class="img-thumbnail" src="http://lorempixel.com/400/200/" />
+ <img class="push-border" src="http://lorempixel.com/400/200/" />
+````
+*/
+
+.img-thumbnail {
+    padding:0;
+    border-color: @ux_grey_lighter;
+  }
+
+.push-border {
+    border: 1px solid @ux_grey_lighter;
+  }
 
 /*
 ## On pink background
 ````
 <div class="on-pink">
- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+ <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
 </div>
 ````
 */
@@ -20,10 +36,12 @@ body{
   color: @white;
   a{
     color: @white;
-  }
-  .img-thumbnail{
-    border-color: @white;
-  }
+    border-bottom: dotted 1px @white;
+    &:hover,
+    &:focus {
+      border-bottom-color: transparent;
+    }
+ }
 }
 
 /*
@@ -36,6 +54,9 @@ body{
 */
 .on-grey{
   background-color: @ux_grey_lighter;
+  .img-thumbnail{
+    border-width: 0;
+  }
 }
 
 /*
@@ -65,9 +86,14 @@ body{
   background-color: @ux_grey;
   color: @white;
   a{
-    color: @white;
+    color: @ux_pink;
+    &:hover,
+    &:focus {
+      color:white;
+    }
   }
   h6{
+    color:@white;
     margin-top: 0.2em;
     margin-bottom: 1em;
   }
