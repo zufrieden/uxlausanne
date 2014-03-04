@@ -20,28 +20,28 @@
     <div class="row">
         <div class="col-sm-6 col-xs-12">
             {% for talk in talks %}
-                {% if talk.speaker == speaker %}
-                    <h2 class="uncaps">
-                        {{ talk.kind }}:<br/>
-                        <span class="go-pink">
-                            <a name="{{ talk.slug }}"></a>{{ talk.title }}
-                        </span>
-                    </h2>
-                    <p>
-                        {{ talk.when }}
-                    </p>
-                    <h3>{{ talk.teaser }}</h3>
-                    <p></p>
-                    <p>{{ talk.description | raw }}</p>
+                {% if loop.index > 1 %}
+                    <div class="isolated">
+                        <hr>
+                    </div>
                 {% endif %}
-
+                <h2 class="uncaps">
+                    <span class="unbold">{{ talk.kind }}</span>:<br/>
+                        <a name="{{ talk.slug }}"></a>{{ talk.title }}
+                </h2>
+                <p>
+                    {{ talk.when }}
+                </p>
+                <h3>{{ talk.teaser }}</h3>
+                <p></p>
+                <p>{{ talk.description | raw }}</p>
             {% endfor %}
         </div>
         <div class="col-sm-6 col-xs-12">
             {% if speaker.photo %}
                 <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
             {% endif %}
-            <h3 class="go-pink text-stronger">{{ speaker.title }}</h3>
+            <h3 class="text-stronger">{{ speaker.title }}</h3>
             <p>{{ speaker.role }} <br/>
             <a href="{{speaker.company_url}}">{{ speaker.company }}</a><br/>
             {{ speaker.location}}

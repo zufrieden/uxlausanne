@@ -25,9 +25,12 @@ $app->get('/speakers/{slug}', function ($slug) use ($app) {
     }
 
     $speaker = $app->speakers[$slug];
+
     $talks = array();
     foreach ($app->talks as $talk) {
-        $talks[] = $talk;
+        if ($slug === $talk['speaker']['slug']) {
+            $talks[] = $talk;
+        }
     }
 
     return $app['twig']->render('speaker.html.twig', array(
