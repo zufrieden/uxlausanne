@@ -5,7 +5,7 @@ $app->speakers = array(
         'slug' => 'janina_woods',
         'promoted' => false,
         'title' => 'Janina Woods',
-        'body' => '"Janina works in Zurich, where she is the game designer behind Black Island, a horror game for PC and Oculus Rift, in which she tries to exploit fully the immersive quality of the VR headset. <br /> After her studies at the ZHdK, she got involved in Game Design at YouRehab, a leading provider of interactive therapy systems for patients with movement disorders, where she was responsible for all aspects of game design."',
+        'body' => 'Janina works in Zurich, where she is the game designer behind Black Island, a horror game for PC and Oculus Rift, in which she tries to exploit fully the immersive quality of the VR headset. <br /> After her studies at the ZHdK, she got involved in Game Design at YouRehab, a leading provider of interactive therapy systems for patients with movement disorders, where she was responsible for all aspects of game design.',
         'teaser' => 'Gamedesigner, Mostly Harmless. Black Island.',
         'company' => 'Ateo',
         'company_url' => 'http://www.ateo.ch/',
@@ -71,7 +71,7 @@ $app->speakers = array(
         'photo' => '/assets/img/speaker_peter-birgit.jpg',
         'thumbnail' => '',
         'role' => 'Digital Strategy Director & Interaction Design Director',
-        'location' => 'Amsterdam, Netherland',
+        'location' => 'Amsterdam, Netherlands',
         'twitter' => '',
         'linkedin' => '',
         'speaker_urls' => array(
@@ -81,14 +81,14 @@ $app->speakers = array(
                 'slug' => 'birgit_geiberger',
                 'promoted' => false,
                 'title' => 'Birgit Geiberger',
-                'body' => '"Birgit is a Digital Strategy Director at oSudio. br />Previously, she worked as a Design Manager and Visual & Interaction Designer, and has worked for clients such as Olympus Europ e, the EDEKA Group, ZEIT Online, Axel Springer Verlag, Monster Global, The Seattle Times and Toyota Europe. Birgit is IxDA\'s Regional Coordinator for Europe & Africa and founder and local leader of the IxDA Hamburg chapter. "',
+                'body' => 'Birgit is a Digital Strategy Director at oSudio. br />Previously, she worked as a Design Manager and Visual & Interaction Designer, and has worked for clients such as Olympus Europ e, the EDEKA Group, ZEIT Online, Axel Springer Verlag, Monster Global, The Seattle Times and Toyota Europe. Birgit is IxDA\'s Regional Coordinator for Europe & Africa and founder and local leader of the IxDA Hamburg chapter. ',
                 'teaser' => 'Birgit is a Creative Director UX, Design Manager and Visual & Interaction Designer.',
                 'company' => 'Osudio',
                 'company_url' => 'http://www.osudio.com/',
                 'photo' => '/assets/img/speaker_birgit-geiberger.jpg',
                 'thumbnail' => '',
                 'role' => 'Creative Director UX',
-                'location' => 'Amsterdam, Netherland',
+                'location' => 'Amsterdam, Netherlands',
                 'twitter' => 'birgitgcom',
                 'linkedin' => 'www.linkedin.com/in/birgitgeiberger',
                 'speaker_urls' => array(
@@ -109,8 +109,8 @@ $app->speakers = array(
                 'photo' => '/assets/img/speaker_peter-boersma.jpg',
                 'thumbnail' => '',
                 'role' => 'Creative Director UX & Interaction Design Director',
-                'location' => 'Amsterdam, Netherland',
-                'twitter' => 'pborshma',
+                'location' => 'Amsterdam, Netherlands',
+                'twitter' => 'pboersma',
                 'linkedin' => 'www.linkedin.com/in/pboersma',
                 'speaker_urls' => array(
                 ),
@@ -197,7 +197,7 @@ $app->speakers = array(
         'slug' => 'simon_raess',
         'promoted' => false,
         'title' => 'Simon Raess',
-        'body' => '"Simon is the founder and design strategist at Ginetta LCC, a Digital Agency based in Zürich, who can boast of Swiss Government, Swiss Post, Doodle, Raiffeisen bank, local.ch and the University of Basel as its clients. Formerly at Google, where he lead the design of new and existing Google products like Google Docs -  from the basic concept to the final visual design."',
+        'body' => 'Simon is the founder and design strategist at Ginetta LCC, a Digital Agency based in Zürich, who can boast of Swiss Government, Swiss Post, Doodle, Raiffeisen bank, local.ch and the University of Basel as its clients. Formerly at Google, where he lead the design of new and existing Google products like Google Docs -  from the basic concept to the final visual design.',
         'teaser' => 'Design Strategist at Ginetta Web/Mobile',
         'company' => 'GINETTA WEB/MOBILE',
         'company_url' => 'http://ginetta.ch',
@@ -227,7 +227,7 @@ $app->speakers = array(
         'speaker_urls' => array(
         )
     ),
- /*   'indi_young' => array(
+    'indi_young' => array(
         'slug' => 'indi_young',
         'promoted' => true,
         'title' => 'Indi Young',
@@ -243,7 +243,7 @@ $app->speakers = array(
         'linkedin' => 'www.linkedin.com/in/indiyoung',
         'speaker_urls' => array(
         )
-    ),*/
+    ),
 );
 
 // Select only promoted

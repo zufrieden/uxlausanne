@@ -10,12 +10,12 @@ $app->specials = array(
     'special_2' => array(
         'title' => "Between the Lake<br/>& the Alps",
         'image' => "/assets/img/special_2.jpg",
-        'description' => "Attending UX Lausanne is an excellent opportunity to meet fascinating, like-minded people and learn stuff. The conference is located in the Arsenic Theatre. In favour of informal exchanges, chance meetings and networking, the atrium is devoted to a relaxed atmosphere."
+        'description' => "Lausanne is a small, quirky and vibrant city, hosting a wide range of cultural activities. If you are visiting from abroad, you might want to spent a couple of days visiting the Unesco-classed vineyards, in the Lavaux, and the Chillon Castle, as well as a quick hike in the nearby mountains, or a trip to Gruyères, its Castle, and renowned HR Giger museum."
     ),
     'special_3' => array(
         'title' => "Delicious<br/>& tasty",
         'image' => "/assets/img/special_3.jpg",
-        'description' => "Attending UX Lausanne is an excellent opportunity to meet fascinating, like-minded people and learn stuff. The conference is located in the Arsenic Theatre. In favour of informal exchanges, chance meetings and networking, the atrium is devoted to a relaxed atmosphere."
+        'description' => "Local, tasty and fresh, this is our idea of the meals you will be served. Fresh fruit and vegetables will be bought at our local farmer's market and brought to your plate by our inventive catering team in healthy and savoury recipes. Every detail has been forethought so that you enjoy the most delightful moment in the Arsenic Theatre."
     )
 );
 
