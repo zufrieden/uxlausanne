@@ -1,0 +1,113 @@
+{% extends "layout.html.twig" %}
+{% set active_page = "speakers" %}
+
+{% block title %}
+{{ speaker.title }} - Speaker – UX Lausanne 2014
+{% endblock %}
+
+{% block header %}
+<section class="on-pink circled text-center inner-isolated">
+  <h1>{{ speaker.title }}</h1>
+  <h5>{{ speaker.role }} at {% if speaker.company_url %}<a href="{{ speaker.company_url }}">{% endif %}{{ speaker.company }}{% if speaker.company_url %}</a>{% endif %}</h5>
+</section>
+{% endblock %}
+
+{% block content %}
+
+{# Speaker #}
+{% if app.speakers %}
+<div class="container isolated">
+    <div class="row">
+        <div class="col-sm-6 col-xs-12">
+            {% for talk in talks %}
+                {% if loop.index > 1 %}
+                    <div class="isolated">
+                        <hr>
+                    </div>
+                {% endif %}
+                {% if talk.speaker == speaker %}
+                    <h2 >
+                        <strong>{{ talk.kind }}:</strong><br/>
+                        <a name="{{ talk.slug }}"></a><span class="uncaps">{{ talk.title }}</span>
+                    </h2>
+                    <p>
+                        {{ talk.when }}
+                    </p>
+                    <h3>{{ talk.teaser }}</h3>
+                    <p></p>
+                    <p>{{ talk.description | raw }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            {% if speaker.speakers is defined %}
+                {% for speaker2 in speaker.speakers %}
+                    {% if loop.index > 1 %}
+                        <div class="isolated">
+                            <hr>
+                        </div>
+                {% endif %}
+                    {% if speaker2.photo %}
+                        <img src="{{ speaker2.photo }}" alt="{{ speaker2.title }}" class="img-thumbnail" width="100%">
+                    {% endif %}
+                    <h3 class="text-stronger">{{ speaker2.title }}</h3>
+                    <p>{{ speaker2.role }} <br/>
+                    <a href="{{speaker.company_url}}">{{ speaker2.company }}</a><br/>
+                    {{ speaker2.location}}
+                    </p>
+
+                    <hr class="short">
+                    <h4>
+                        {{ speaker2.teaser }}
+                    </h4>
+                    <p></p>
+                    <p>
+                        {{ speaker2.body | raw }}
+                    </p>
+                    <p>
+                        {% if speaker2.twitter %}
+                        <a href="https://twitter.com/{{speaker2.twitter}}">@{{speaker2.twitter}}</a><br/>
+                        {%endif%}
+                        {% for url in speaker2.speaker_urls %}
+                            <a href="{{ url.url }}">{{ url.label }}</a>
+                            {% if not loop.last %}<br>{% endif %}
+                        {% endfor %}
+                    </p>
+                {% endfor %}
+            {% else %}
+                {% if speaker.photo %}
+                    <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
+                {% endif %}
+                <h3 class="text-stronger">{{ speaker.title }}</h3>
+                <p>{{ speaker.role }} <br/>
+                <a href="{{speaker.company_url}}">{{ speaker.company }}</a><br/>
+                {{ speaker.location}}
+                </p>
+
+
+                <hr class="short">
+                <h4>
+                    {{ speaker.teaser }}
+                </h4>
+                <p></p>
+                <p>
+                    {{ speaker.body | raw }}
+                </p>
+                <p>
+                    {% if speaker.twitter %}
+                    <a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a><br/>
+                    <a href="https://{{speaker.linkedin}}">Linkedin</a><br/>
+                    {%endif%}
+                    {% for url in speaker.speaker_urls %}
+                        <a href="{{ url.url }}">{{ url.label }}</a>
+                        {% if not loop.last %}<br>{% endif %}
+                    {% endfor %}
+                </p>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

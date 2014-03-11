@@ -1,70 +1,106 @@
-.inverse-section{
-    background: @white url('../img/overlay.png');
-    color: @ux_pink;
-
-    .section-title{
-        h1{
-            background: @white url('../img/overlay.png');
-            color: @ux_grey;
-        }
-    }
-    a{
-        color: @ux_grey;
-        border-bottom-color: @ux_grey;
-    }
-    .thumbnail{
-        background-color: @white;
-    }
+body{
+    // background: url("../img/overlay.png") 0 0 repeat;
 }
 
-.sponsors-section{
-    background: @ux_pink url('../img/overlay.png');
+/*
+# Theme related element
+*/
+
+/*
+## Image On White Background
+````
+ <img class="img-thumbnail" src="http://lorempixel.com/400/200/" />
+ <img class="push-border" src="http://lorempixel.com/400/200/" />
+````
+*/
+
+.img-thumbnail {
+    padding:0;
+    border-color: @ux_grey_lighter;
+  }
+
+.push-border {
+    border: 1px solid @ux_grey_lighter;
+  }
+
+/*
+## On pink background
+````
+<div class="on-pink">
+ <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+</div>
+````
+*/
+.on-pink{
+  background-color: @ux_pink;
+  color: @white;
+  a{
     color: @white;
-
-    .section-title{
-        h1{
-            background: @ux_pink url('../img/overlay.png');
-            color: @white;
-        }
+    border-bottom: dotted 1px @white;
+    &:hover,
+    &:focus {
+      border-bottom-color: transparent;
     }
-    a{
-        color: @white;
-        border-bottom-color: @white;
-    }
-    .thumbnail{
-        background-color: @white;
-    }
-	padding-bottom:7em;
-	
-	.btn{
-		color: @ux_pink;
-	}
+ }
 }
 
 
-.title-section{
-    h2, h3{
-        color: @ux_pink;
+/*
+## On Grey background
+````
+<div class="on-grey">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, nostrum, quis, beatae, nesciunt reprehenderit odit similique distinctio <a href="#">recusandae facilis nam</a> quisquam tempora ullam quo voluptatum cum laboriosam sit. Molestiae, porro.</p>
+</div>
+````
+*/
+.on-grey{
+  background-color: @ux_grey_lighter;
+  .img-thumbnail{
+    border-width: 0;
+  }
+}
+
+/*
+## On Dark background
+````
+<div class="on-dark">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="text-center isolated">What is UX Lausanne</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="lead">UX Lausanne is the first Western Switzerland event dedicated exclusively to User Experience Design & how to design delightful user experiences.</p>
+    </div>
+    <div class="col-sm-8">
+      <h5>Some title</h5>
+      <p>After 2 years of monthly UXRomandie meetups, UX Lausanne will take place for the first time in 2014.</p>
+      <p>The 2 day format will bring together local & international UX professionals to share knowledge and gain expertise in the User Experience field.</p>
+      <p>The conference will be held at Arsenic Theater, one of Lausanne's most vibrant cultural spots.</p>
+    </div>
+  </div>
+</div>
+````
+*/
+.on-dark{
+  background-color: @ux_grey;
+  color: @white;
+  a{
+    color: @ux_pink;
+    &:hover,
+    &:focus {
+      color:white;
     }
+  }
+  h6{
+    color:@white;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+  }
 }
 
-.btn-default{
-	// box-shadow: 10px 10px 12px rbga(255,255,255,1);
-	background-color: @white;
-	color:@ux_grey;
-	
-	&.btn-lg{
-		.font-size(26);
-	}
-	
-	&:hover{
-		background-color: @white;
-		color: darken(@ux_grey, 50%);
-		color: @ux_pink;
-		border-color: @white;
-	}
-}
 
-p{
-	font-size: 1.3em;
-}
+  .go-pink, .go-pink a{
+    color: @ux_pink;
+  }
