@@ -164,7 +164,7 @@ $app->partners_media = array(
         'slug' => "ict",
         'title' => "ICT Journal",
         'teaser' => "The Swiss magazine of information technologies for the entreprise",
-        'description' => "The Swiss magazine of information technologies for the entreprise",
+        'description' => "The Swiss magazine of information technology",
         'urls' => array(
             array(
                 'url' => 'http://www.ictjournal.ch',

@@ -28,36 +28,29 @@
                 {% if talk.speaker == speaker %}
                     <h2 class="uncaps">
                         {{ talk.kind }}:<br/>
-                        <span class="go-pink">
-                            <a name="{{ talk.slug }}"></a>{{ talk.title }}
-                        </span>
+                        <a name="{{ talk.slug }}"></a>{{ talk.title }}
                     </h2>
                     <p>
                         {{ talk.when }}
                     </p>
                     <h3>{{ talk.teaser }}</h3>
                     <p></p>
-                    <p class="room-bellow">{{ talk.description | raw }}</p>
+                    <p>{{ talk.description | raw }}</p>
                 {% endif %}
-                <h2 class="uncaps">
-                    <span class="unbold">{{ talk.kind }}</span>:<br/>
-                        <a name="{{ talk.slug }}"></a>{{ talk.title }}
-                </h2>
-                <p>
-                    {{ talk.when }}
-                </p>
-                <h3>{{ talk.teaser }}</h3>
-                <p></p>
-                <p>{{ talk.description | raw }}</p>
             {% endfor %}
         </div>
         <div class="col-sm-6 col-xs-12">
             {% if speaker.speakers is defined %}
                 {% for speaker2 in speaker.speakers %}
+                    {% if loop.index > 1 %}
+                        <div class="isolated">
+                            <hr>
+                        </div>
+                {% endif %}
                     {% if speaker2.photo %}
                         <img src="{{ speaker2.photo }}" alt="{{ speaker2.title }}" class="img-thumbnail" width="100%">
                     {% endif %}
-                    <h3 class="go-pink text-stronger">{{ speaker2.title }}</h3>
+                    <h3 class="text-stronger">{{ speaker2.title }}</h3>
                     <p>{{ speaker2.role }} <br/>
                     <a href="{{speaker.company_url}}">{{ speaker2.company }}</a><br/>
                     {{ speaker2.location}}
@@ -71,7 +64,7 @@
                     <p>
                         {{ speaker2.body | raw }}
                     </p>
-                    <p class="room-bellow">
+                    <p>
                         {% if speaker2.twitter %}
                         <a href="https://twitter.com/{{speaker2.twitter}}">@{{speaker2.twitter}}</a><br/>
                         {%endif%}
@@ -85,7 +78,7 @@
                 {% if speaker.photo %}
                     <img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%">
                 {% endif %}
-                <h3 class="go-pink text-stronger">{{ speaker.title }}</h3>
+                <h3 class="text-stronger">{{ speaker.title }}</h3>
                 <p>{{ speaker.role }} <br/>
                 <a href="{{speaker.company_url}}">{{ speaker.company }}</a><br/>
                 {{ speaker.location}}
