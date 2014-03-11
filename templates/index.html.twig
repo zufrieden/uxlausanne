@@ -1,0 +1,91 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'UX Lausanne 2014' %}
+
+{% block header %}
+<section class="on-pink photoed text-center inner-isolated">
+    <p><a href="http://8ratio.ch">:ratio</a> & <a href="http://uxromandie.ch">UXRomandie</a> present</p>
+    <div class="logo logo-big"><strong>UX Lausanne 2014</strong></div>
+    <div class="inner-isolated">
+        <h3>Creating delightful User Experiences</h3>
+        <h4>2 days - 8 talks - 8 workshops</h4>
+    </div>
+    <h2 class="unbold">May 22–23, 2014</h2>
+    @ <a href="http://www.arsenic.ch/">Arsenic</a> - Lausanne, Switzerland
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="on-dark">
+    <div class="container inner-isolated">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-center isolated">What is UX Lausanne</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <p class="lead">UX Lausanne is the first Western Switzerland event dedicated exclusively to User Experience Design & how to design delightful user experiences.</p>
+            </div>
+            <div class="col-sm-8">
+                <p>After 2 years of monthly UXRomandie meetups, UX Lausanne will take place for the first time in 2014.</p>
+                <p>The 2 day format will bring together local & international UX professionals to share knowledge and gain expertise in the User Experience field.</p>
+                <p>The conference will be held at Arsenic Theater, one of Lausanne's most vibrant cultural spots.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# Speaker #}
+{% if app.promoted_speakers %}
+<div class="container inner-isolated">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text-center isolated">Some of our speakers</h1>
+        </div>
+    </div>
+    <div class="row">
+    {% for speaker in app.promoted_speakers %}
+        <div class="col-sm-3 col-xs-6 card">
+            {% if speaker.photo %}
+                <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
+            {% endif %}
+            <h4 class="text-stronger"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h4>
+            <p>{{ speaker.company }}<br/>
+            {{ speaker.location }} </p>
+        </div>
+        {% if loop.index is divisibleby(4) %}
+        </div>
+        <div class="row isolated">
+        {% else %}
+            {% if loop.index is divisibleby(2) %}
+                <div class="clearfix visible-xs"></div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </div>
+    <div class="text-center isolated">
+        <a href="{{ path('speakers') }}" class="btn btn-default btn-lg">View all speakers</a>
+    </div>
+</div>
+{% endif %}
+
+{# specials #}
+{% if app.specials %}
+<div class="on-pink">
+    <div class="container inner-isolated">
+        <div class="row">
+            {% for special in app.specials %}
+             <div class="col-sm-4 col-xs-12">
+                <div class="semi-inner-isolated">
+                    <h3>{{ special.title | raw }}</h3>
+                    <img src="{{ special.image }}" alt="" width="100%" class="img-thumbnail semi_isolated">
+                    <p>{{ special.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

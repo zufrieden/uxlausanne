@@ -1,4 +1,4 @@
-app/cache/*
-bckp
+cache/*
 vendor
+web/assets/styleguide
 .DS_store

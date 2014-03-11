@@ -1,0 +1,74 @@
+{% extends "layout.html.twig" %}
+{% set active_page = "speakers" %}
+
+{% block title 'Speakers – UX Lausanne 2014' %}
+
+{% block header %}
+<section class="on-pink circled text-center inner-isolated">
+  <h1>Speakers</h1>
+  <h4>Discover our awesome speakers</h4>
+</section>
+{% endblock %}
+
+{% block content %}
+
+{# Speaker #}
+{% if app.speakers %}
+<div class="container isolated">
+    <div class="row">
+    {% for speaker in app.speakers %}
+        <div class="col-sm-6 col-xs-12 card">
+            {% if speaker.photo %}
+                <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
+            {% endif %}
+            <h3 class="go-pink text-stronger"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h3>
+            
+            <p>{{ speaker.role }} <br /> 
+            {% if speaker.company_url %}<a href="{{speaker.company_url}}">{% endif %}{{ speaker.company }}{% if speaker.company_url %}</a>{% endif %}<br/>
+            {{ speaker.location}}<br />
+            {% if speaker.twitter %}
+                <a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a><br/>
+                {%endif%}
+            </p>
+
+            <hr class="short">
+            <p>
+                {{ speaker.teaser }}
+            </p>
+
+            {% for talk in app.talks %}
+                {% if talk.speaker == speaker %}
+                    <h4>
+                        {{ talk.kind }}:
+                        <span class="go-pink">
+                            <a href="{{ path('speaker', {'slug': speaker.slug })}}#{{ talk.slug }}">{{ talk.title }}</a>
+                        </span>
+                    </h4>
+                    <p>{{ talk.teaser }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% if loop.index is divisibleby(2) %}
+        </div>
+        <div class="row isolated">
+        {% else %}
+            <div class="clearfix visible-xs">
+                <div class="isolated"></div>
+                <hr/>
+            </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+<div class="on-dark"> 
+    <div class="container inner-isolated">
+        <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="text-center isolated ">More speakers and topics to be announced soon &hellip;</h3>
+                </div>
+            </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
