@@ -3371,6 +3371,17 @@ hr.light {
   margin-bottom: 8px;
 }
 /*
+## Line
+````
+<hr>
+<p class="room-bellow">lorem ipsum dir amet </p>
+<p class="">lorem ipsum dir amet </p>
+````
+*/
+.room-bellow {
+  padding-bottom: 2em;
+}
+/*
 # Header
 
 ## Logo
