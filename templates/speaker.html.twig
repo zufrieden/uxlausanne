@@ -26,9 +26,9 @@
                     </div>
                 {% endif %}
                 {% if talk.speaker == speaker %}
-                    <h2 class="uncaps">
-                        {{ talk.kind }}:<br/>
-                        <a name="{{ talk.slug }}"></a>{{ talk.title }}
+                    <h2 >
+                        <strong>{{ talk.kind }}:</strong><br/>
+                        <a name="{{ talk.slug }}"></a><span class="uncaps">{{ talk.title }}</span>
                     </h2>
                     <p>
                         {{ talk.when }}
