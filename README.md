@@ -35,4 +35,25 @@ Don't forget to modify your hosts for uxl.dev
 ### All set
 Run : http://uxl.dev/index_dev.php
 
+## Deploy
+
+### Install Capistrano
+
+````
+$ gem install capistrano -v 2.15.5
+$ gem install railsless-deploy
+````
+
+### Deploy to staging dev/production
+````
+$ git push
+$ cap dev deploy
+````
+````
+$ git push
+$ cap production deploy
+````
+
+
+
 
