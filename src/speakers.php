@@ -205,7 +205,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Founder & Design Strategist',
         'location' => 'Zurich, CH',
-        'twitter' => 'simon_raess',
+        'twitter' => 'simonraess',
         'linkedin' => 'www.linkedin.com/in/raess',
         'speaker_urls' => array(
         )
