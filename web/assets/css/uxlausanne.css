@@ -1654,6 +1654,7 @@ input[type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9;
   /* IE8-9 */
+
   line-height: normal;
 }
 input[type="file"] {
@@ -3198,8 +3199,7 @@ Inner-isolated put 20px padding top/bottom inside element
 <button type="button" class="btn btn-default btn-xs">Extra small button</button>
 </p>
 ````
-*/
-/*
+*//*
 # Typography
 
 ## Titles

@@ -1,18 +1,20 @@
-set :application, "uxlausanne.zufrieden.io"
+set :stage_dir, 'app/config/deploy'
+set :application, '2014.uxlausanne.com'
 set :repository,  "git@github.com:zufrieden/uxlausanne.git"
 set :scm,         :git
-set :branch,      "silex"
+
+require 'capistrano/ext/multistage'
+set :stages, %w(dev production)
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-set :deploy_to,   "/home/uxlausanne/www/uxlausanne.zufrieden.io/"
 set :user,        "uxlausanne"
 set :domain,      "antistatique"
 set :use_sudo,    false
 
-role :app, 'uxlausanne.zufrieden.io'
-role :web, 'uxlausanne.zufrieden.io'
+role :app, '2014.uxlausanne.com'
+role :web, '2014.uxlausanne.com'
 
 
 set :ssh_options, { :forward_agent => true }

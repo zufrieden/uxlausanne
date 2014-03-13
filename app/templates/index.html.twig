@@ -1,0 +1,116 @@
+{% extends "base.html.twig" %}
+
+{% block title %}UX Lausanne 2014{% endblock %}
+
+{% block body %}
+<div class="about title-section section">
+	<div class="container section-title">
+		<h1>What is UX Lausanne</h1>
+	</div>
+	<div class="isolated">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 text-center">
+					<h2>UX Lausanne is a 2 day conference in Lausanne, Switzerland, about creating delightful User Experiences.
+					</h2>
+					<div class="isolated"><hr class="hidden-xs"></div>
+						
+					<p>After 2 years of monthly UX Romandie meetups, UX Lausanne will take place for the first time in 2014. The 2 day format will bring together local & international UX professionals to share knowledge and gain expertise in the User Experience field. The conference will be held at Arsenic Theater, one of Lausanne's most vibrant cultural spots.</p>
+					<p>UX Lausanne is the first event in western Switzerland dedicated to User Experience Design. We look forward to connecting you with some of the most influential UX practitioners, thought leaders, talented developers and innovative designers.</p>		
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="speaker inverse-section section">
+	<div class="container section-title">
+		<h1>Some of our inspiring speakers</h1>
+	</div>
+	<div class="isolated">
+		<div class="isolated">
+			<div class="container">
+				<div class="row">
+					{% for speaker in speakers %}
+					<div class="col-xs-12 col-sm-3 text-center">
+						<div class="isolated">
+							<img src="assets/img/{{ speaker.photo }}" alt="{{ speaker.name }}" class="img-responsive thumbnail text-center">
+							<h3>{{ speaker.name }}</h3>
+							<h4>
+								<a href="https://twitter.com/{{ speaker.twitter }}">@{{ speaker.twitter }}</a>
+								<br/>
+								<a href="{{ speaker.url }}">{{ speaker.site }}</a><br/>
+							</h4>
+							<h5 class="text-left">{{  speaker.desc  }}</h5><br/>
+						</div>
+					</div>
+					{% if loop.index is divisibleby(4) %}
+				</div>
+				<div class="row">
+					{% endif %}
+					{% endfor %}
+				</div>
+				<div class="row">
+					<div class="col-xs-12"><h3 class="text-center">And more speakers still to be announced...</h3></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="sponsors sponsors-section">
+	<div class="container section-title">
+		<h1>Our proud sponsors</h1>
+		<div class="isolated">
+			<div class="isolated">
+				<div class="container">
+					<div class="row">
+						{% for sponsor in sponsors %}
+						<div class="col-xs-12 col-sm-3 text-center">
+							<div class="isolated">
+								<a href="{{ sponsor.url }}"><img src="assets/img/{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="img-responsive thumbnail text-center"></a>
+								<h3><a href="{{ sponsor.url }}">{{ sponsor.name }}</a></h3>
+							</div>
+						</div>
+						{% if loop.index is divisibleby(4) %}
+					</div>
+					<div class="row">
+						{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+            <div class="col-xs-12">
+				<p class="isolated text-center">
+					<a href="http://2014.uxlausanne.com/assets/pdf/uxlausanne_sponsorkit_general.pdf" class="btn btn-default btn-lg" target="_blank">Become a sponsor</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+		
+<div class="team section">
+	<div class="container section-title">
+		<a name="about"></a>
+		<h1>About UX Romandie</h1>
+	</div>
+	<div class="isolated">
+		<div class="container">
+			<div class="row">
+				{% for member in team %}
+				<div class="col-xs-6 col-sm-4 col-md-2 text-center">
+					<div class="isolated">
+						<img src="assets/img/{{ member.photo }}" alt="{{ member.name }}" class="img-responsive thumbnail">
+						<h3>{{ member.name }}</h3>
+						<h4>
+							<a href="https://twitter.com/{{ member.twitter }}">@{{ member.twitter }}</a>
+						</h4>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
