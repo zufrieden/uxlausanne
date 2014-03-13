@@ -63,7 +63,7 @@ $app->talks = array(
         'when' => "Friday",
         'kind' => $app->talk_kinds['workshop'],
         'title' => "Design Ethnography and User-Centered Design : The missing link",
-        'teaser' => "Undesrtand how to make your design research actionable",
+        'teaser' => "Make your user research actionable",
         'description' => "One of the premises of User-Centered Design is that documenting people’s practices through field work (observation, interviews, etc.) is relevant to inspire and frame design or innovation.   <br />  However - more often than not - this premise corresponds to a form of wishful thinking, as opposed to an actual approach used by designers. This problem is quite prevalent when it comes to explaining how to transfer results from field research to design purposes. This phase is indeed very briefly dealt with, or presented very quickly without a thorough explanation of the different sets of solution possibilities. This workshop focuses on how to use results and collected data from field research in order to turn them as a design output.  <br />  The attendee will go through several activities to understand the different kind of insights that exist in field research and how they can be turned into design decisions for each steps of a project.",
     ),
     'oliver_reichenstein' => array(
