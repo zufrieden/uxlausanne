@@ -38,7 +38,7 @@ $app->organizers = array(
     'organizer_1' => array(
         'logo' => "assets/img/logo_ratio.svg",
         'title' => 'Presented by :ratio',
-        'description' => "Based in Lausanne, Switzerland, :ratio is a small and agile user experience web agency. We are passionate about Information Architecture, Usability and Interface Design.",
+        'description' => "A swiss web agency that specializes in the ergonomics and design of websites, mobile apps, intranets and machine interface.",
         'url' => 'http://8ratio.ch',
         'label' => "8ratio.ch"
     ),
