@@ -24,7 +24,7 @@ $app->speakers = array(
     ),
     'anna_dahlstrom' => array(
         'slug' => 'anna_dahlstrom',
-        'promoted' => true,
+        'promoted' => false,
         'title' => 'Anna Dahlström',
         'body' => 'Anna is a former Experience Lead with Dare, the Digital Communication Agency. <br/>After a couple of years, she decided to leave her position and go freelance, in order to pursue her own projects and focus more specifically on Information Architecture and User Experience, as well as getting more involved in the startup community. She’s worked for BBC News, Disney, Tropicana, Max Factor, Google, Vodafone and Johnson & Johnson. She’s also an instructor at General Assembly in London where she’s based.',
         'teaser' => 'Swedish IA+UX designer with a soft spot for cafes, challenges & flexible working.',
@@ -241,6 +241,23 @@ $app->speakers = array(
         'location' => 'San Fransisco, USA',
         'twitter' => 'indiyoung‎',
         'linkedin' => 'www.linkedin.com/in/indiyoung',
+        'speaker_urls' => array(
+        )
+    ),
+    'giles_colborne' => array(
+        'slug' => 'giles_colborne',
+        'promoted' => true,
+        'title' => 'Giles Colborne',
+        'body' => 'Giles’ book \'Simple and usable web mobile and interaction design\' published by New Riders is a best-seller in the US, UK and China. He has been working in usability and user centred design since 1991 and is actively involved in the community - most recently as co-chair of IA Summit 2013.<br/><br />He founded cxpartners with Richard Caddick in 2004, which has grown to become an international consultancy which works with companies all over the world to create web and mobile user experiences that make a measurable difference to their bottom line and their customers’ lives.<br /><br />Giles is a former President of the UK Usability Professionals’ Association and has worked with British Standards Institute in developing guidance on web accessibility.',
+        'teaser' => 'Managing Director of cxpartners. Author of \'Simple and Usable\'. Business Mentor. AKA 科尔伯恩 and 자일스 콜.',
+        'company' => 'Cx Partner',
+        'company_url' => 'http://cxpartners.co.uk',
+        'photo' => '/assets/img/speaker_giles-colborne.jpeg',
+        'thumbnail' => '',
+        'role' => 'Founder',
+        'location' => 'Bristol, UK',
+        'twitter' => 'gilescolborne' ,
+        'linkedin' => 'uk.linkedin.com/in/gilescolborne',
         'speaker_urls' => array(
         )
     ),
