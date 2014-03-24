@@ -20,9 +20,9 @@ $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
     return $twig;
 }));
 
+require('sponsors.php');
 require('speakers.php');
 require('talks.php');
 require('homepage.php');
-require('sponsors.php');
-
+require('schedule.php');
 return $app;

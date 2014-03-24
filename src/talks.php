@@ -2,7 +2,8 @@
 
 $app->talk_kinds = array(
     'workshop' => "Workshop",
-    'talk' => "Talk"
+    'talk' => "Talk",
+    'other' => ""
 );
 
 $app->talks = array(
@@ -75,6 +76,27 @@ $app->talks = array(
         'title' => "Information ↔ Entropy",
         'teaser' => "Will information technology affect our minds the same way the environment was affected by our analogue technology?",
         'description' => "Designers hold a key position in dealing with ever increasing data pollution. We are mostly focussed on speeding things up, on making sharing easier, faster, more accessible. But speed, usability, accessibility are not the main issue anymore. The main issues are not technological, they are structural, processual. <br/> What we lack is clarity, correctness, depth, time. Are there counter-techniques we can employ to turn data into information, information into knowledge, knowledge into wisdom?",
+    ),
+    'closing_party' => array(
+        'slug' => 'closing_party',
+        'position' => 0,
+        'when' => "Friday",
+        'kind' => $app->talk_kinds['other'],
+        'title' => "Closing Party",
+        'teaser' => "Find us there for an amazing party",
+        'description' => "",
+        'sponsor' => $app->sponsors_major['liip'],
+        'speaker' => "",   
+    ),
+    'lunch' => array(
+        'slug' => 'lunch',
+        'position' => 0,
+        'when' => "everytime",
+        'kind' => $app->talk_kinds['other'],
+        'title' => "Lunch",
+        'teaser' => "A tasty and local lunch will be served for all attendees",
+        'description' => "",
+        'sponsor' => "",
+        'speaker' => "",   
     )
-
 );
