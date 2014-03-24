@@ -3386,6 +3386,9 @@ hr.short {
 hr.light {
   border-color: #eaebed;
 }
+.schedule hr.light:last-child {
+  border-color: #323c4f;
+}
 .sm-form .form-group {
   margin-bottom: 8px;
 }

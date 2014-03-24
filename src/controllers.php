@@ -28,7 +28,7 @@ $app->get('/speakers/{slug}', function ($slug) use ($app) {
 
     $talks = array();
     foreach ($app->talks as $talk) {
-        if ($slug === $talk['speaker']['slug']) {
+        if ($talk['speaker'] != "" && $slug === $talk['speaker']['slug']) {
             $talks[] = $talk;
         }
     }
@@ -39,6 +39,12 @@ $app->get('/speakers/{slug}', function ($slug) use ($app) {
         ));
 })
 ->bind('speaker')
+;
+
+$app->get('/schedule', function () use ($app) {
+    return $app['twig']->render('schedule.html.twig');
+})
+->bind('schedule')
 ;
 
 
