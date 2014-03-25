@@ -23,8 +23,17 @@
             {% endif %}
             <h3 class="go-pink text-stronger"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h3>
             
-            <p>{{ speaker.role }} <br /> 
-            {% if speaker.company_url %}<a href="{{speaker.company_url}}">{% endif %}{{ speaker.company }}{% if speaker.company_url %}</a>{% endif %}<br/>
+            {% if speaker.speakers is defined %}
+                <p>
+                {% for speaker2 in speaker.speakers %}
+                    {{ speaker2.role }} at <a href="{{speaker2.company_url}}">{{ speaker2.company }}</a><br/>
+                {% endfor %}
+                </p>
+            {% else %}
+                <p>{{ speaker.role }} <br /> 
+                <a href="{{speaker.company_url}}">{{ speaker.company }}</a><br/>
+                </p>
+            {% endif %}
             {{ speaker.location}}<br />
             {% if speaker.twitter %}
                 <a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a><br/>
