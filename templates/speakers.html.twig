@@ -16,7 +16,7 @@
 {% if app.speakers %}
 <div class="container isolated">
     <div class="row">
-    {% for speaker in app.speakers %}
+    {% for speaker in app.speakers if speaker.display %}
         <div class="col-sm-6 col-xs-12 card">
             {% if speaker.photo %}
                 <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
