@@ -107,7 +107,11 @@
             </div>
         </div>
         {% endif %}
+        {% if loop.last %}
+        <hr />
+        {% else %}
         <hr class="light" />
+        {% endif %}
         {% endfor %}        
     </div>
 {% endfor %}
