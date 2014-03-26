@@ -2,6 +2,7 @@
 
 $app->speakers = array(
     'janina_woods' => array(
+        'display' => true,
         'slug' => 'janina_woods',
         'promoted' => false,
         'title' => 'Janina Woods',
@@ -24,6 +25,7 @@ $app->speakers = array(
     ),
     'anna_dahlstrom' => array(
         'slug' => 'anna_dahlstrom',
+        'display' => true,
         'promoted' => true,
         'title' => 'Anna Dahlström',
         'body' => 'Anna is a former Experience Lead with Dare, the Digital Communication Agency. <br/>After a couple of years, she decided to leave her position and go freelance, in order to pursue her own projects and focus more specifically on Information Architecture and User Experience, as well as getting more involved in the startup community. She’s worked for BBC News, Disney, Tropicana, Max Factor, Google, Vodafone and Johnson & Johnson. She’s also an instructor at General Assembly in London where she’s based.',
@@ -41,6 +43,7 @@ $app->speakers = array(
     ),
     'fabian_hemmert' => array(
         'slug' => 'fabian_hemmert',
+        'display' => true,
         'promoted' => false,
         'title' => 'Fabian Hemmert',
         'body' => 'Young researcher, Fabian has nevertheless an impressive record, as he’s already worked for Nintendo Europe et Marvel Comics. His performance talks have been noticed and much commented on during SXSW 2012 & 2013 and TEDxBerlin, especially the one devoted to shape-shifiting cell phones. Fascinated with the non-visual communication techniques, he explores the impact of feeling, weight, touch and movement. He currently works for Deutsche Telekom.',
@@ -61,11 +64,12 @@ $app->speakers = array(
         )
     ),
     'brigit_geiberger_and_peter_boersma' => array(
+        'display' => true,
         'slug' => 'brigit_geiberger_and_peter_boersma',
         'promoted' => false,
         'title' => 'Birgit Geiberger & Peter Boersma',
         'body' => '',
-        'teaser' => '“UX Team of Two” - 2 experienced UX Designers consulting to a global client base and organising workshops and events.',
+        'teaser' => '“UX Team of Two” - 2 experienced UX Designers consulting to a global client base, giving and organizing workshops & other UX design events.',
         'company' => 'Osudio & Blast Radius',
         'company_url' => '',
         'photo' => '/assets/img/speaker_peter-birgit.jpg',
@@ -81,13 +85,14 @@ $app->speakers = array(
                 'slug' => 'birgit_geiberger',
                 'promoted' => false,
                 'title' => 'Birgit Geiberger',
-                'body' => 'Birgit is a Digital Strategy Director at oSudio. br />Previously, she worked as a Design Manager and Visual & Interaction Designer, and has worked for clients such as Olympus Europ e, the EDEKA Group, ZEIT Online, Axel Springer Verlag, Monster Global, The Seattle Times and Toyota Europe. Birgit is IxDA\'s Regional Coordinator for Europe & Africa and founder and local leader of the IxDA Hamburg chapter. ',
-                'teaser' => 'Birgit is a Creative Director UX, Design Manager and Visual & Interaction Designer.',
+                'body' => 'Birgit is a Digital Strategy Director at oSudio. <br />Previously, she worked as a Design Manager and Visual & Interaction Designer, and has worked for clients such as Olympus Europ e, the EDEKA Group, ZEIT Online, Axel Springer Verlag, Monster Global, The Seattle Times and Toyota Europe. Birgit is IxDA\'s Regional Coordinator for Europe & Africa and founder and local leader of the IxDA Hamburg chapter. ',
+                'teaser' => 'Being an experienced UX designer herself, Birgit is passionate about improving (design) communication, both within teams and with clients.
+.',
                 'company' => 'Osudio',
-                'company_url' => 'http://www.osudio.com/',
+                'company_url' => 'http://www.osudio.com',
                 'photo' => '/assets/img/speaker_birgit-geiberger.jpg',
                 'thumbnail' => '',
-                'role' => 'Creative Director UX',
+                'role' => 'Digital Strategy Director ',
                 'location' => 'Amsterdam, Netherlands',
                 'twitter' => 'birgitgcom',
                 'linkedin' => 'www.linkedin.com/in/birgitgeiberger',
@@ -108,7 +113,7 @@ $app->speakers = array(
                 'company_url' => 'http://www.blastradius.com',
                 'photo' => '/assets/img/speaker_peter-boersma.jpg',
                 'thumbnail' => '',
-                'role' => 'Creative Director UX & Interaction Design Director',
+                'role' => 'Interaction Design Director',
                 'location' => 'Amsterdam, Netherlands',
                 'twitter' => 'pboersma',
                 'linkedin' => 'www.linkedin.com/in/pboersma',
@@ -118,6 +123,7 @@ $app->speakers = array(
         )
     ),
     'oliver_reichenstein' => array(
+        'display' => true,
         'slug' => 'oliver_reichenstein',
         'promoted' => true,
         'title' => 'Oliver Reichenstein',
@@ -135,6 +141,7 @@ $app->speakers = array(
         )
     ),
     'nicolas_nova' => array(
+        'display' => true,
         'slug' => 'nicolas_nova',
         'promoted' => true,
         'title' => 'Nicolas Nova',
@@ -156,6 +163,7 @@ $app->speakers = array(
         )
     ),
     'valerie_vuillerat' => array(
+        'display' => true,
         'slug' => 'valerie_vuillerat',
         'promoted' => false,
         'title' => 'Valerie Vuillerat',
@@ -173,6 +181,7 @@ $app->speakers = array(
         )
     ),
     'ryan_rumsey' => array(
+        'display' => true,
         'slug' => 'ryan_rumsey',
         'promoted' => false,
         'title' => 'Ryan Rumsey',
@@ -194,6 +203,7 @@ $app->speakers = array(
         )
     ),
     'simon_raess' => array(
+        'display' => true,
         'slug' => 'simon_raess',
         'promoted' => false,
         'title' => 'Simon Raess',
@@ -205,12 +215,13 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Founder & Design Strategist',
         'location' => 'Zurich, CH',
-        'twitter' => 'simon_raess',
+        'twitter' => 'simonraess',
         'linkedin' => 'www.linkedin.com/in/raess',
         'speaker_urls' => array(
         )
     ),
     'will_evans' => array(
+        'display' => true,
         'slug' => 'will_evans',
         'promoted' => false,
         'title' => 'Will Evans',
@@ -228,6 +239,7 @@ $app->speakers = array(
         )
     ),
     'indi_young' => array(
+        'display' => true,
         'slug' => 'indi_young',
         'promoted' => true,
         'title' => 'Indi Young',
@@ -241,6 +253,24 @@ $app->speakers = array(
         'location' => 'San Fransisco, USA',
         'twitter' => 'indiyoung‎',
         'linkedin' => 'www.linkedin.com/in/indiyoung',
+        'speaker_urls' => array(
+        )
+    ),
+    'giles_colborne' => array(
+        'display' => false,
+        'slug' => 'giles_colborne',
+        'promoted' => false,
+        'title' => 'Giles Colborne',
+        'body' => 'Giles’ book \'Simple and usable web mobile and interaction design\' published by New Riders is a best-seller in the US, UK and China. He has been working in usability and user centred design since 1991 and is actively involved in the community - most recently as co-chair of IA Summit 2013.<br/><br />He founded cxpartners with Richard Caddick in 2004, which has grown to become an international consultancy which works with companies all over the world to create web and mobile user experiences that make a measurable difference to their bottom line and their customers’ lives.<br /><br />Giles is a former President of the UK Usability Professionals’ Association and has worked with British Standards Institute in developing guidance on web accessibility.',
+        'teaser' => 'Managing Director of cxpartners. Author of \'Simple and Usable\'. Business Mentor. AKA 科尔伯恩 and 자일스 콜.',
+        'company' => 'Cx Partners',
+        'company_url' => 'http://cxpartners.co.uk',
+        'photo' => '/assets/img/speaker_giles-colborne.jpeg',
+        'thumbnail' => '',
+        'role' => 'Founder',
+        'location' => 'Bristol, UK',
+        'twitter' => 'gilescolborne' ,
+        'linkedin' => 'uk.linkedin.com/in/gilescolborne',
         'speaker_urls' => array(
         )
     ),
