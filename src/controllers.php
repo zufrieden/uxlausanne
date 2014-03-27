@@ -57,3 +57,9 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
     return new Response($app['twig']->render($page, array('code' => $code)), $code);
 });
+
+$app->get('/about', function () use ($app) {
+    return $app['twig']->render('about.html.twig');
+})
+->bind('about')
+;
