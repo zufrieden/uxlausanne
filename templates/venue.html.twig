@@ -1,0 +1,83 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'About - UX Lausanne 2014' %}
+
+{% block header %}
+<section class="on-pink circled text-center inner-isolated">
+  <h1>Venue</h1>
+  <h4>Find your way to Lausanne, and to the Venue</h4>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container inner-isolated">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text-center isolated">Getting to Lausanne</h1>
+        </div>
+    </div>
+    <div class="row">
+    {% for member in app.team %}
+        <div class="col-xs-6 col-sm-4 col-md-2 text-center">
+                    <div class="isolated">
+                        <img src="{{ member.photo }}" alt="{{ member.title }}" class="img-responsive thumbnail">
+                        <h5>{{ member.title  }}</h5>
+                        <p>
+                            {{ member.description | raw }}<br/>
+                            <a href="https://twitter.com/{{ member.twitter }}">@{{ member.twitter }}</a>
+                        </p>
+                    </div>
+                </div>
+    {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% if app.orgs %}
+<div class="on-dark">
+    <div class="container inner-isolated">
+        <div class="row">
+            {% for org in app.orgs %}
+            <div class="col-sm-6 ">           
+                <h2 class="text-center isolated">{{org.title}}</h2>
+                <div class="row">
+                    <div class="col-xs-3" >
+                        <div class="on-white">
+                            <a href="{{org.url}}" class="no-underline"><img src="{{org.image}}" alt="{{org.title}}" width="100%"></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-9"> {{org.description | raw}} </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+{# UXR Goals #}
+{% if app.uxrgoals %}
+<div class="on-pink">
+    <div class="container inner-isolated">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="text-center isolated">Our hidden agenda</h1>
+        </div>
+    </div>
+        <div class="row">
+            {% for goal in app.uxrgoals %}
+             <div class="col-sm-4 col-xs-12">
+                <div class="semi-inner-isolated">
+                    <img src="{{ goal.photo }}" alt="" width="100%" class="img-thumbnail semi_isolated">
+                    <h3>{{ goal.title }}</h3>
+                    <p>{{ goal.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
