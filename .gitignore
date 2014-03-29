@@ -2,3 +2,4 @@ cache/*
 vendor
 web/assets/styleguide
 .DS_store
+config-codekit
