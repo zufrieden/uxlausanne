@@ -3490,7 +3490,7 @@ h5 + h5 {
 ````
 */
 .main-nav {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .nav > li > a {
   color: #323c4f;
@@ -3547,6 +3547,18 @@ nav .btn-link:focus {
 .sub-nav li a {
   padding-top: 2px;
   padding-bottom: 2px;
+}
+@media (max-width: 767px) {
+  .nav-action {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 768px) {
+  .nav-action {
+    float: right !important;
+  }
 }
 /*
 # Blob element

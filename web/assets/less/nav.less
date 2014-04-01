@@ -21,7 +21,7 @@
 ````
 */
 .main-nav{
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .nav > li > a {
   color: @ux_grey;
@@ -86,5 +86,17 @@ nav .btn-link {
       padding-top: 2px;
       padding-bottom: 2px;
     }
+  }
+}
+
+@media (max-width: @screen-xs-max) { 
+  .nav-action {
+    .center-block();
+  }
+}
+
+@media (min-width: @screen-sm-min) { 
+  .nav-action {
+    .pull-right();
   }
 }

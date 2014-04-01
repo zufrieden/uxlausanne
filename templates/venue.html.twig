@@ -5,7 +5,7 @@
 {% block header %}
 <section class="on-pink circled text-center inner-isolated">
   <h1>Venue</h1>
-  <h4>Find your way to Lausanne, and to the Venue</h4>
+  <h4>Pratical information about the Venues</h4>
 </section>
 {% endblock %}
 
@@ -15,69 +15,71 @@
 <div class="container inner-isolated">
     <div class="row">
         <div class="col-xs-12">
-            <h2 class="text-center isolated">Getting to Lausanne</h1>
+            <h2 class="text-center isolated ">Conference</h2>
+            <img src="/assets/img/venue_arsenic_2.jpg" alt="L'arsenic" class="img-thumbnail" width="100%" />
         </div>
     </div>
-    <div class="row">
-    {% for member in app.team %}
-        <div class="col-xs-6 col-sm-4 col-md-2 text-center">
-                    <div class="isolated">
-                        <img src="{{ member.photo }}" alt="{{ member.title }}" class="img-responsive thumbnail">
-                        <h5>{{ member.title  }}</h5>
-                        <p>
-                            {{ member.description | raw }}<br/>
-                            <a href="https://twitter.com/{{ member.twitter }}">@{{ member.twitter }}</a>
-                        </p>
-                    </div>
+    <div class="row inner-isolated">
+        <div class="col-sm-6 ">
+            <h4>L'arsenic</h4>
+            The beautiful location of L'arsenic is the place where the first UX Lausanne will take place
+            L'Arsenic (compound of Art and Scenic) is an important space for dance and contemporary theater. Opened in 1990 in the old workshops of a professional training college, it alternates between presenting original performances and shows on tour. 
+            The management is full of often humorous ideas to liven up the venue.
+        </div>
+        <div class="col-sm-6">
+            <h4>Practical information</h4>
+            <div class="row">
+                <div class="col-md-4 ">
+                    <p><strong>Address</strong><br/>
+                        Rue de Genève 57<br/>
+                        1004 Lausanne
+                    </p>
+                
                 </div>
-    {% endfor %}
-    </div>
-</div>
-{% endif %}
-{% if app.orgs %}
-<div class="on-dark">
-    <div class="container inner-isolated">
-        <div class="row">
-            {% for org in app.orgs %}
-            <div class="col-sm-6 ">           
-                <h2 class="text-center isolated">{{org.title}}</h2>
-                <div class="row">
-                    <div class="col-xs-3" >
-                        <div class="on-white">
-                            <a href="{{org.url}}" class="no-underline"><img src="{{org.image}}" alt="{{org.title}}" width="100%"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-9"> {{org.description | raw}} </div>
+                <div class="col-md-8">
+                    <strong>Public transportation</strong>
+                    <ul>
+                        <li>metro M1 station Vigie (4 min walk)</li>
+                        <li>bus n°18, station EPSiC (6 min walk)</li>
+                        <li>bus n°17, station Chauderon (7 min walk)</li>
+                        <li>bus n°9, station Chauderon (7 min walk)</li>
+                        <li>bus n°3, station Cécil (10min walk)</li>
+                    </ul>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
-</div>
-{% endif %}
-
-
-{# UXR Goals #}
-{% if app.uxrgoals %}
-<div class="on-pink">
-    <div class="container inner-isolated">
     <div class="row">
         <div class="col-xs-12">
-            <h2 class="text-center isolated">Our hidden agenda</h1>
+            <h2 class="text-center isolated ">Other venues</h2>
         </div>
     </div>
-        <div class="row">
-            {% for goal in app.uxrgoals %}
-             <div class="col-sm-4 col-xs-12">
-                <div class="semi-inner-isolated">
-                    <img src="{{ goal.photo }}" alt="" width="100%" class="img-thumbnail semi_isolated">
-                    <h3>{{ goal.title }}</h3>
-                    <p>{{ goal.description }}</p>
-                </div>
-            </div>
-            {% endfor %}
+
+    <div class="row">
+        <div class="col-md-6">
+            
+            <img src="/assets/img/venue_dance.jpg" alt="L'arsenic" class="img-thumbnail" width="100%" />
+            <h3 >Thursday Evening <strong>Twerk</strong></h3>
+            <p>On thursdsay evening, UX Lausanne welcomes you for a Dance show named ALTERED NATIVE’S SAY YES TO ANOTHER EXCESS in the Arsenic Venue itself.</p>
+            <p>For altered Natives’ Say Yes To Another Excess ⎯ TWERK, they are collectively and intuitively make their way through a specific impure writing process, enlightened by graphic and organic devoured dances – beyond references. Together with Alex Mugler, Ana Pi and Elisa Yvelin, they have set themselves the challenge to trust dance, its expressive, brotherly, poetic, preconscious and discursive powers.</p>
+            <p>This work and this playful writing process are achieved in close relation to a musical investigation around Grime music. As an electro music that comes from East London in the early 2000s, Grime combines, mixes and transforms sounds from dancehall, hip-hop and UK garage.</p>
+            <p>The syncretic ferociousness of this style, which seems to be hanging between two contradictory speeds, between the abstraction of synthetic sounds and MCs’ sensual emergency, interacts with the various influences which have inspired the dances. It is the first time that DJs from the Grime scene (Elijah and Skilliam of London label Butterz) play in a theatre and collaborate with contemporary dancers.</p>
+
+        </div>
+        <div class="col-md-6">
+            
+            <img src="/assets/img/venue_bourgplage.jpg" alt="L'arsenic" class="img-thumbnail" width="100%" />
+            <h3 >Closing Party <strong>Le Bourg Plage</strong></h3>
+            <p>We decided to get you to the nicest place for the closing party.</p>
+            <p>In the middle of city center, this bar takes place under the Bessiere'sbridge.</p>
+            <p> This bar and theater/music venue is literally in the shadow of the cathedral. When the weather is nice and you want a cold beer to go with the warm summer sun, and possibly catch some live music, this is the place to be.</p>
+            <p>This place is really tucked away since it is built in between the two “tiers” of the city and uses a huge stone arch of Pont Bessières as its ceiling and walls. To get there, go to the cathedral-side of Pont Bessières on the south side of the street and take the stairs down under the bridge.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
         </div>
     </div>
 </div>
-{% endif %}
+
 {% endblock %}
