@@ -220,7 +220,7 @@ $app->speakers = array(
         'speaker_urls' => array(
         )
     ),
-    'will_evans' => array(
+    /*'will_evans' => array(
         'display' => true,
         'slug' => 'will_evans',
         'promoted' => false,
@@ -237,7 +237,7 @@ $app->speakers = array(
         'linkedin' => 'www.linkedin.com/in/semanticwill',
         'speaker_urls' => array(
         )
-    ),
+    ),*/
     'indi_young' => array(
         'display' => true,
         'slug' => 'indi_young',

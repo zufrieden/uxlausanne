@@ -3548,18 +3548,6 @@ nav .btn-link:focus {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-@media (max-width: 767px) {
-  .nav-action {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media (min-width: 768px) {
-  .nav-action {
-    float: right !important;
-  }
-}
 /*
 # Blob element
 
@@ -3705,5 +3693,14 @@ nav .btn-link:focus {
   }
   .nav-toggle {
     display: none;
+  }
+}
+@media (max-width: 767px) {
+  .nav-action .btn {
+    padding: 1px 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 2px;
+    margin-top: 7px;
   }
 }

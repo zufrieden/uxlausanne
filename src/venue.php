@@ -78,7 +78,7 @@ $app->hotels = array(
         'image' => "/assets/img/hotel_airbnb.jpg",
         'description' => "AirBNB is a great service that provides many possibilities of staying at an Lausanne flat for great price",
         'price' => '',
-        'url' => "http://www.airbnb.com",
+        'url' => "https://www.airbnb.fr/s/Lausanne--Suisse",
         'address' => "",
         'address_url' => "",
     ),
