@@ -1,4 +1,4 @@
-{% set navigation_bar = [['speakers', 'Speakers'], ['sponsors', 'Sponsors'], ['about', 'About']] %}
+{% set navigation_bar = [['speakers', 'Speakers'], ['venue', 'Venues'], ['lausanne', 'Lausanne'], ['sponsors', 'Sponsors'],  ['about', 'About']] %}
 {% set active_page = active_page|default() %}
 <!DOCTYPE html>
 <html>
@@ -17,6 +17,7 @@
         <li><a href="{{ path('homepage') }}" class="logo"><strong>UX Lausanne 2014</strong></a></li>
         <li class="verical-divider"><span></span></li>
     </ul>
+    
     <nav class="nav-collapse">
         <ul class="main-nav nav nav-pills text-stronger pull-left">
             {% for item in navigation_bar %}
@@ -25,13 +26,13 @@
             </li>
             {% endfor %}
         </ul>
-        
     </nav>
-    <div class="semi-inner-isolated nav-action pull-right">
-            <div class="btn btn-link btn-lg hidden-xs">
+    <div class="clearfix visible-xs">&nbsp;</div>
+    <div class="semi-inner-isolated nav-action">
+            <div class="btn btn-link hidden-xs hidden-sm">
                 May 22-23, 2014
             </div>
-            <a  href="http://register.uxlausanne.com/" class="btn btn-primary btn-lg" id="js-buy-ticket-header">Buy ticket</a>
+            <a href="http://register.uxlausanne.com/" class="btn btn-primary" id="js-buy-ticket-header">Buy ticket</a>
         </div>
 </div>
 {% endblock %}

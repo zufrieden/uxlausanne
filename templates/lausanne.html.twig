@@ -1,0 +1,115 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'About - UX Lausanne 2014' %}
+
+{% block header %}
+<section class="on-pink circled text-center inner-isolated">
+  <h1>Lausanne</h1>
+  <h4>Where to sleep, eat or have a drink</h4>
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container inner-isolated">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="isolated">Getting to Lausanne</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+        <p>The conference will be held in Lausanne, a unique melting pot nested between the Alps and Lake Geneva. </p>
+        </div>
+    </div>
+
+    {% if app.transportations %}
+    <div class="row">
+        {% for transport in app.transportations %}
+        <div class="{{transport.cols}}">
+        <h3 class="text-center">{{transport.title}}</h3>
+        <img src="{{transport.image}}" alt=""  class="center-block">
+        {{ transport.description | raw }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+<div class="container inner-isolated">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class=" isolated">Sleeping in Lausanne</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h3 class="semi-isolated">L'agora </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            <img src="/assets/img/hotel_agora_large.jpg" alt="" width="100%" class="center-block">
+        </div>
+        <div class="col-sm-4 col-md-6">
+            <p>L'agora is our conference hotel. </p>
+            <p>The Hotel Agora Swiss Night has been completely reconstructed in 2012. The newly designed Agora Swiss Night offers you a truly swiss experience with an international 4 stars standard. Though it is located in a very quiet neighbourhood Agora Swiss Night is only 280 meters from the main Railway station and in close proximity to the lake Geneva and the metro line(m2 Grancy at 90m). </p>
+            <p>The breakfast is served in a panoramic room at the last level of the hotel. From there you have a flabbergasting view on the Alps, the Lake Geneva and the Jura Mountains. A state of the art Fitness centre complete with Sauna is free of charge to our guests. Parking available on site.</p>
+            <p>We negociated a small discount, that you can access by requesting your room via <a href=""> this website</a></p>
+        </div>
+    </div>
+{% if app.hotels %}
+    <div class="row">
+        <div class="col-xs-12">
+            <h3 class="semi-isolated">The other sleeping options</h3>
+        </div>
+    </div>
+    <div class="row">
+        {% for hotel in app.hotels %}
+        <div class="col-sm-4 col-xs-6 isolated">
+            <img src="{{hotel.image}}" alt="{{hotel.title}}" width="100%" class="img-thumbnail ">
+            <h5><a href="{{hotel.address_url}}">{{hotel.title}}</a></h5>
+            <p>{{hotel.description}}</p>
+            {% if hotel.price %}
+            From {{hotel.price}}.- CHF
+            {% endif %}
+            {% if hotel.address %}
+            <p>Address:<br/> <a href="{{hotel.address_url}}">{{hotel.address | raw }}</a></p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+{% endif %}
+</div>
+<div class="container inner-isolated">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="isolated">Eat &amp; Drink &amp; Visit</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+        <p>We made the most important places available via a <a href="https://jauntful.com/xavier/e1yNIdXjs" >detailed printable guide</a>.</p> 
+
+        </div>
+    </div>
+</div>
+<div class="on-pink">
+    <div class="container inner-isolated">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="isolated">Approved by Xavier</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-sm-2" >
+                <img src="/assets/img/team_xavier.jpg" class="img-thumbnail"></div>
+            <div class="col-xs-8 col-sm-6">
+                <p>Xavier is our local Connoiseur. He takes very seriously the task of knowing and discovering the best places to enlight his (and his guests') palate.</p>
+                <p> From the best wineyard and local microbrewery to the best restaurant or coffeesshop, Xavier tried them them all. So you can go to those address eye closed.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
