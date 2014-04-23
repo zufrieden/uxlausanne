@@ -51,7 +51,7 @@
                 <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
             {% endif %}
             <h4 class="text-stronger"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h4>
-            <p>{{ speaker.company }}<br/>
+            <p>{% if speaker.company %}{{ speaker.company }}{% else %}{{speaker.role}}{% endif %}<br/>
             {{ speaker.location }} </p>
         </div>
         {% if loop.index is divisibleby(4) %}

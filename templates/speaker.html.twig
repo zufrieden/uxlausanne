@@ -8,7 +8,7 @@
 {% block header %}
 <section class="on-pink circled text-center inner-isolated">
   <h1>{{ speaker.title }}</h1>
-  <h5>{{ speaker.role }} at {% if speaker.company_url %}<a href="{{ speaker.company_url }}">{% endif %}{{ speaker.company }}{% if speaker.company_url %}</a>{% endif %}</h5>
+  <h5>{{ speaker.role }} {% if speaker.company %} at {% if speaker.company_url %}<a href="{{ speaker.company_url }}">{% endif %}{{ speaker.company }}{% if speaker.company_url %}</a>{% endif %}{% endif %}</h5>
 </section>
 {% endblock %}
 
@@ -68,6 +68,7 @@
                         {% if speaker2.twitter %}
                         <a href="https://twitter.com/{{speaker2.twitter}}">@{{speaker2.twitter}}</a><br/>
                         {%endif%}
+                        {% if not speaker2.company %}<a href="{{speaker.company_url}}">Website</a><br/>{% endif %}
                         {% for url in speaker2.speaker_urls %}
                             <a href="{{ url.url }}">{{ url.label }}</a>
                             {% if not loop.last %}<br>{% endif %}
@@ -80,7 +81,7 @@
                 {% endif %}
                 <h3 class="text-stronger">{{ speaker.title }}</h3>
                 <p>{{ speaker.role }} <br/>
-                <a href="{{speaker.company_url}}">{{ speaker.company }}</a><br/>
+                {% if speaker.company %}<a href="{{speaker.company_url}}">{{ speaker.company }}</a><br/>{% endif %}
                 {{ speaker.location}}
                 </p>
 
@@ -97,6 +98,7 @@
                     {% if speaker.twitter %}
                     <a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a><br/>
                     <a href="https://{{speaker.linkedin}}">Linkedin</a><br/>
+                    {% if not speaker.company %}<a href="{{speaker.company_url}}">Website</a><br/>{% endif %}
                     {%endif%}
                     {% for url in speaker.speaker_urls %}
                         <a href="{{ url.url }}">{{ url.label }}</a>
