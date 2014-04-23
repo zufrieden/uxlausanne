@@ -220,8 +220,8 @@ $app->speakers = array(
         'speaker_urls' => array(
         )
     ),
-    /*'will_evans' => array(
-        'display' => true,
+    'will_evans' => array(
+        'display' => false,
         'slug' => 'will_evans',
         'promoted' => false,
         'title' => 'Will Evans',
@@ -237,7 +237,7 @@ $app->speakers = array(
         'linkedin' => 'www.linkedin.com/in/semanticwill',
         'speaker_urls' => array(
         )
-    ),*/
+    ),
     'indi_young' => array(
         'display' => true,
         'slug' => 'indi_young',
@@ -257,7 +257,7 @@ $app->speakers = array(
         )
     ),
     'giles_colborne' => array(
-        'display' => false,
+        'display' => true,
         'slug' => 'giles_colborne',
         'promoted' => false,
         'title' => 'Giles Colborne',
