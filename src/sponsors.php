@@ -234,4 +234,18 @@ $app->partners_media = array(
         'photo' => '/assets/img/partner_offscreen.png',
         'kind' => $app->sponsors_kinds['media']
     ),
+    'smashing' => array(
+        'slug' => "smashing",
+        'title' => "Smashing Magazine",
+        'teaser' => "",
+        'description' => "",
+        'urls' => array(
+            array(
+                'url' => 'http://smashingmagazine.com',
+                'label' => 'smashingmagazine.com'
+            )
+        ),
+        'photo' => '/assets/img/partner_smashingmag.png',
+        'kind' => $app->sponsors_kinds['media']
+    ),
 );
