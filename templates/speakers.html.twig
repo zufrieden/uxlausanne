@@ -31,13 +31,14 @@
                 </p>
             {% else %}
                 <p>{{ speaker.role }} <br /> 
-                <a href="{{speaker.company_url}}">{{ speaker.company }}</a><br/>
+                {% if speaker.company %}<a href="{{speaker.company_url}}">{{ speaker.company }}</a><br/>{% endif %}
                 </p>
             {% endif %}
             {{ speaker.location}}<br />
             {% if speaker.twitter %}
                 <a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a><br/>
-                {%endif%}
+            {% endif %}
+            {% if not speaker.company %}<a href="{{speaker.company_url}}">Website</a><br/>{% endif %}
             </p>
 
             <hr class="short">

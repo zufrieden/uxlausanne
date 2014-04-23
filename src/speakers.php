@@ -143,7 +143,7 @@ $app->speakers = array(
     'nicolas_nova' => array(
         'display' => true,
         'slug' => 'nicolas_nova',
-        'promoted' => true,
+        'promoted' => false,
         'title' => 'Nicolas Nova',
         'body' => 'Nicolas is a researcher, ethnographer and writer. He undertakes desk research and field studies to inform and evaluate the creation of innovative products and services. His work is about identifying weak signals as well as exploring people’s needs, motivations and contexts to map new design opportunities and chart potential futures. He is also Professor at the Geneva University of Arts and Design (HEAD–Geneva).',
         'teaser' => 'Near Future Laboratory + HEAD–Geneve design research and ethnography in the field of digital technologies',
@@ -163,7 +163,7 @@ $app->speakers = array(
         )
     ),
     'valerie_vuillerat' => array(
-        'display' => true,
+        'display' => false,
         'slug' => 'valerie_vuillerat',
         'promoted' => false,
         'title' => 'Valerie Vuillerat',
@@ -221,7 +221,7 @@ $app->speakers = array(
         )
     ),
     'will_evans' => array(
-        'display' => true,
+        'display' => false,
         'slug' => 'will_evans',
         'promoted' => false,
         'title' => 'Will Evans',
@@ -245,11 +245,11 @@ $app->speakers = array(
         'title' => 'Indi Young',
         'body' => 'Indi Young consults in product, service, and process design based on an empathic understanding of the people involved. She also writes, speaks at various venues, and mentors teams through their first foray into empathic research. She was the first Rosenfeld Media author, and a founder of Adaptive Path.',
         'teaser' => 'Empathy researcher, writer, speaker ... creator of mental model diagrams ... on the roster of experts @rosenfeldmedia ... founding partner @adaptivepath',
-        'company' => 'Self-employed',
+        'company' => '',
         'company_url' => 'http://www.indiyoung.com',
         'photo' => '/assets/img/speaker_indi-young.jpg',
         'thumbnail' => '',
-        'role' => 'Consultant',
+        'role' => 'Consultant, Rosenfeld Media author',
         'location' => 'San Fransisco, USA',
         'twitter' => 'indiyoung‎',
         'linkedin' => 'www.linkedin.com/in/indiyoung',
@@ -257,9 +257,9 @@ $app->speakers = array(
         )
     ),
     'giles_colborne' => array(
-        'display' => false,
+        'display' => true,
         'slug' => 'giles_colborne',
-        'promoted' => false,
+        'promoted' => true,
         'title' => 'Giles Colborne',
         'body' => 'Giles’ book \'Simple and usable web mobile and interaction design\' published by New Riders is a best-seller in the US, UK and China. He has been working in usability and user centred design since 1991 and is actively involved in the community - most recently as co-chair of IA Summit 2013.<br/><br />He founded cxpartners with Richard Caddick in 2004, which has grown to become an international consultancy which works with companies all over the world to create web and mobile user experiences that make a measurable difference to their bottom line and their customers’ lives.<br /><br />Giles is a former President of the UK Usability Professionals’ Association and has worked with British Standards Institute in developing guidance on web accessibility.',
         'teaser' => 'Managing Director of cxpartners. Author of \'Simple and Usable\'. Business Mentor. AKA 科尔伯恩 and 자일스 콜.',

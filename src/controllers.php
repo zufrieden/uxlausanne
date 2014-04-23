@@ -57,3 +57,18 @@ $app->error(function (\Exception $e, $code) use ($app) {
 
     return new Response($app['twig']->render($page, array('code' => $code)), $code);
 });
+
+$app->get('/about', function () use ($app) {
+    return $app['twig']->render('about.html.twig');
+})
+->bind('about');
+
+$app->get('/venue', function () use ($app) {
+    return $app['twig']->render('venue.html.twig');
+})
+->bind('venue');
+
+$app->get('/lausanne', function () use ($app) {
+    return $app['twig']->render('lausanne.html.twig');
+})
+->bind('lausanne');

@@ -24,5 +24,7 @@ require('speakers.php');
 require('talks.php');
 require('homepage.php');
 require('sponsors.php');
+require('about.php');
+require('venue.php');
 
 return $app;

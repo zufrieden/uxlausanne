@@ -156,6 +156,24 @@ $app->sponsors_executive = array(
         'photo' => '/assets/img/sponsor_executive_freshjobs.png',
         'kind' => $app->sponsors_kinds['executive']
     ),
+    'teambook' => array(
+        'slug' => "teambook",
+        'title' => "Teambook",
+        'teaser' => "Real-time visual planning app for Professional Services",
+        'description' => "Real-time visual planning app for Professional Services",
+        'urls' => array(
+            array(
+                'url' => 'http://teambookapp.com',
+                'label' => 'teambookapp.com'
+            ),
+            array(
+                'url' => 'http://twitter.com/teambookapp',
+                'label' => '@teambookapp'
+            )
+        ),
+        'photo' => '/assets/img/sponsor_executive_teambook.png',
+        'kind' => $app->sponsors_kinds['executive']
+    ),
 );
 
 
