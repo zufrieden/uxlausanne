@@ -159,8 +159,8 @@ $app->sponsors_executive = array(
     'teambook' => array(
         'slug' => "teambook",
         'title' => "Teambook",
-        'teaser' => "Real-time visual planning app for Professional Services",
-        'description' => "Real-time visual planning app for Professional Services",
+        'teaser' => "Plan your team success",
+        'description' => "Plan your team success",
         'urls' => array(
             array(
                 'url' => 'http://teambookapp.com',
