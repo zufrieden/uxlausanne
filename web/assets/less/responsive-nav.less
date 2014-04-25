@@ -79,16 +79,28 @@
 
 
 
-@media (max-width: @screen-xs-max) { 
+@media (max-width: @screen-desktop) {
+  .container{
+    position: relative;
+  }
   .nav-action {
     .btn {
-      .btn-xs;
-      margin-top:7px;
+      .btn-sm;
+      margin-top: 2px;
+      position: absolute;
+      top: 10px;
+      right: 75px;
     }
   }
 }
-
-@media (min-width: @screen-sm-min) { 
+@media (max-width: @screen-sm-min) {
   .nav-action {
+    .btn {
+      .btn-xs;
+      margin-top: 6px;
+      }
   }
+}
+
+@media (min-width: @screen-sm-min) {
 }
