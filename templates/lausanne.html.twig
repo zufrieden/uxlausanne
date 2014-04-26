@@ -20,7 +20,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-        <p>The conference will be held in Lausanne, a fascinating mixture of influences, nested between the Alps and Lake Geneva.</p>
+            <p>The conference will be held in Lausanne, a fascinating mixture of influences, nested between the Alps and Lake Geneva.</p>
         </div>
     </div>
 
@@ -28,9 +28,9 @@
     <div class="row">
         {% for transport in app.transportations %}
         <div class="{{transport.cols}}">
-        <h3 class="text-center">{{transport.title}}</h3>
-        <img src="{{transport.image}}" alt=""  class="center-block">
-        {{ transport.description | raw }}
+            <h3 class="text-center">{{transport.title}}</h3>
+            <img src="{{transport.image}}" alt=""  class="center-block">
+            {{ transport.description | raw }}
         </div>
         {% endfor %}
     </div>
@@ -58,7 +58,7 @@
             <p>Attendees can enjoy a discount, that you can access by requesting your room via this website <a href=""> this website</a></p>
         </div>
     </div>
-{% if app.hotels %}
+    {% if app.hotels %}
     <div class="row">
         <div class="col-xs-12">
             <h3 class="semi-isolated">The other sleeping options</h3>
@@ -79,7 +79,7 @@
         </div>
         {% endfor %}
     </div>
-{% endif %}
+    {% endif %}
 </div>
 <div class="container inner-isolated">
     <div class="row">
@@ -89,7 +89,8 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-        <p>We made the most important places available via a <a href="https://jauntful.com/xavier/e1yNIdXjs" >detailed printable guide</a>.</p> 
+            <p>We made the most important places available via a <a href="https://jauntful.com/xavier/e1yNIdXjs" >detailed printable guide</a>.</p>
+        </div>
     </div>
 </div>
 <div class="on-pink">
@@ -101,7 +102,8 @@
         </div>
         <div class="row">
             <div class="col-xs-4 col-sm-2" >
-                <img src="/assets/img/team_xavier.jpg" class="img-thumbnail"></div>
+                <img src="/assets/img/team_xavier.jpg" class="img-thumbnail">
+            </div>
             <div class="col-xs-8 col-sm-6">
                 <p>Xavier is our local connoisseur. He takes taste very seriously, and hunts for the best places to enlight his (and his guests') palate, all year long.</p>
                 <p>From the best wine producers and local microbrewers to the best place for brunch, hearty meal or cute coffee shops, Xavier knows them all. We encourage you to trust his advice and discover these handpicked places yourself.</p>
@@ -109,5 +111,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
