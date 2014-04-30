@@ -281,7 +281,7 @@ $app->speakers = array(
         'promoted' => false,
         'title' => 'Adrian Zumbrunnen',
         'body' => '',
-        'teaser' => 'Creating memorable experiences at iA Zurich',
+        'teaser' => "User Experience Designer, Writer, Speaker and Coffee Enthusiast working in the beautiful city of Zurich. He creates memorable product and communication experiences by consequently putting the user in the center of all creative efforts.",
         'company' => 'iA',
         'company_url' => 'http://ia.net',
         'photo' => '/assets/img/speaker_adrian-zumbrunnen.jpg',
@@ -306,7 +306,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Playful pixel crafter',
         'location' => 'Zurich, Switzerland',
-        'twitter' => 'webchaeschtli' ,
+        'twitter' => 'rominadesigner' ,
         'linkedin' => 'ch.linkedin.com/in/rominakavcic/en',
         'speaker_urls' => array(
         )
