@@ -202,24 +202,7 @@ $app->speakers = array(
             ),
         )
     ),
-    'simon_raess' => array(
-        'display' => true,
-        'slug' => 'simon_raess',
-        'promoted' => false,
-        'title' => 'Simon Raess',
-        'body' => 'Simon is the founder and design strategist at Ginetta LCC, a Digital Agency based in Zürich, who can boast of Swiss Government, Swiss Post, Doodle, Raiffeisen bank, local.ch and the University of Basel as its clients. Formerly at Google, where he lead the design of new and existing Google products like Google Docs -  from the basic concept to the final visual design.',
-        'teaser' => 'Design Strategist at Ginetta Web/Mobile',
-        'company' => 'GINETTA WEB/MOBILE',
-        'company_url' => 'http://ginetta.ch',
-        'photo' => '/assets/img/speaker_simon-raess.jpg',
-        'thumbnail' => '',
-        'role' => 'Founder & Design Strategist',
-        'location' => 'Zurich, CH',
-        'twitter' => 'simonraess',
-        'linkedin' => 'www.linkedin.com/in/raess',
-        'speaker_urls' => array(
-        )
-    ),
+    
     'will_evans' => array(
         'display' => false,
         'slug' => 'will_evans',
@@ -256,6 +239,24 @@ $app->speakers = array(
         'speaker_urls' => array(
         )
     ),
+    'simon_raess' => array(
+        'display' => true,
+        'slug' => 'simon_raess',
+        'promoted' => false,
+        'title' => 'Simon Raess',
+        'body' => 'Simon is the founder and design strategist at Ginetta LCC, a Digital Agency based in Zürich, who can boast of Swiss Government, Swiss Post, Doodle, Raiffeisen bank, local.ch and the University of Basel as its clients. Formerly at Google, where he lead the design of new and existing Google products like Google Docs -  from the basic concept to the final visual design.',
+        'teaser' => 'Design Strategist at Ginetta Web/Mobile',
+        'company' => 'GINETTA WEB/MOBILE',
+        'company_url' => 'http://ginetta.ch',
+        'photo' => '/assets/img/speaker_simon-raess.jpg',
+        'thumbnail' => '',
+        'role' => 'Founder & Design Strategist',
+        'location' => 'Zurich, CH',
+        'twitter' => 'simonraess',
+        'linkedin' => 'www.linkedin.com/in/raess',
+        'speaker_urls' => array(
+        )
+    ),
     'giles_colborne' => array(
         'display' => true,
         'slug' => 'giles_colborne',
@@ -271,6 +272,42 @@ $app->speakers = array(
         'location' => 'Bristol, UK',
         'twitter' => 'gilescolborne' ,
         'linkedin' => 'uk.linkedin.com/in/gilescolborne',
+        'speaker_urls' => array(
+        )
+    ),
+    'adrian_zumbrunnen' => array(
+        'display' => true,
+        'slug' => 'adrian_zumbrunnen',
+        'promoted' => false,
+        'title' => 'Adrian Zumbrunnen',
+        'body' => '',
+        'teaser' => 'Creating memorable experiences at iA Zurich',
+        'company' => 'iA',
+        'company_url' => 'http://ia.net',
+        'photo' => '/assets/img/speaker_adrian-zumbrunnen.jpg',
+        'thumbnail' => '',
+        'role' => 'IA / UX / UI Designer',
+        'location' => 'Zurich, Switzerland',
+        'twitter' => 'webchaeschtli' ,
+        'linkedin' => 'ch.linkedin.com/pub/adrian-zumbrunnen/41/844/8a5/fr',
+        'speaker_urls' => array(
+        )
+    ),
+    'romira_kavcic' => array(
+        'display' => true,
+        'slug' => 'romira_kavcic',
+        'promoted' => false,
+        'title' => 'Romina Kavcic',
+        'body' => 'Romina is curious and playful pixel crafter, grew up in Slovenia, and is now based in Zürich, where she works as Interaction designer. She is passionate about improving the world near you with user-centered and pixel-perfect designs. Loves pandas, exploring online/offline space and technology. When not thinking about design she’s sleeping.',
+        'teaser' => 'Playful pixel crafter. Passionate about improving the world near you with user-centered designs. Loves pandas, exploring online/offline space, technology.',
+        'company' => 'GINETTA WEB/MOBILE',
+        'company_url' => 'http://ginetta.ch',
+        'photo' => '/assets/img/speaker_romina-kavcic.jpg',
+        'thumbnail' => '',
+        'role' => 'Playful pixel crafter',
+        'location' => 'Zurich, Switzerland',
+        'twitter' => 'webchaeschtli' ,
+        'linkedin' => 'ch.linkedin.com/in/rominakavcic/en',
         'speaker_urls' => array(
         )
     ),
