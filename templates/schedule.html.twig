@@ -26,7 +26,7 @@
     </div>
 
     {% for timeslot in day.timeslots %}
-        {% if timeslot.kind == app.talk_kinds['talk'] %}
+        {% if timeslot.kind == app.talk_kinds['talk'] or  timeslot.kind == app.talk_kinds['keynote'] %}
         <div class="row">
             <div class="col-sm-3 col-xs-12">
                 <h3 class="unbold">{{timeslot.title}}</h3>
@@ -34,9 +34,9 @@
             
             <div class="col-sm-6 col-xs-12">
                     <h3>{{timeslot.kind}}: {{timeslot.talk.title}}</h3>
-                    <small>Entrance hall</small>
-                    <hr class="short">
-                    <p>{{timeslot.talk.teaser}}</p>
+                    <small>{{timeslot.talk.location}}</small>
+                    {% if timeslot.talk.teaser %}<hr class="short">
+                    <p>{{timeslot.talk.teaser | raw }}</p>{%endif%}
             </div>
             <div class="col-sm-3 col-xs-12">
                 {% set speaker = timeslot.talk.speaker %}
@@ -69,9 +69,9 @@
                     <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
                 {% endif %}
                 <h5>{{ workshop.title }}</h5>
-                <small>Some small room</small>
+                <small>{{workshop.location}}</small>
                 <hr class="short">
-                <p>{{workshop.teaser}}</p>
+                <p>{{workshop.teaser | raw }}</p>
                 <hr class="short">
                 <h5 class="go-pink text-stronger"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h5>
                 
@@ -89,9 +89,9 @@
             
             <div class="col-sm-6 col-xs-12">
                     <h3>{{timeslot.talk.title}}</h3>
-                    <small>Entrance hall</small>
-                    <hr class="short">
-                    <p>{{timeslot.talk.teaser}}</p>
+                    <small>{{timeslot.talk.location}}</small>
+                    {% if timeslot.talk.teaser %}<hr class="short">
+                    <p>{{timeslot.talk.teaser | raw }}</p>{% endif %}
             </div>
             <div class="col-sm-3 col-xs-12">
                 
