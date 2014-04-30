@@ -306,7 +306,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Playful pixel crafter',
         'location' => 'Zurich, Switzerland',
-        'twitter' => 'webchaeschtli' ,
+        'twitter' => 'rominadesigner' ,
         'linkedin' => 'ch.linkedin.com/in/rominakavcic/en',
         'speaker_urls' => array(
         )
