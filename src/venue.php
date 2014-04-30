@@ -7,19 +7,19 @@ $app->transportations = array(
         'title' => "By Train",
         'cols' => 'col-sm-12 col-md-4',
         'image' => "/assets/img/icon_train.svg",
-        'description' => "<p>If you come from Europe, consider coming to Lausanne by train. Lausanne has fast and direct connections from Paris & Milano and from all Europe with a stop via Geneva, Basel, Zürich, Bern or Milano. <br/> Enjoy the stress-free travel using the excellent system of Swiss railways known for its efficiency. </p><p><strong>From Geneva</strong> you can reach the city centre in 35min for 26.- CHF and it will take you 2h15min and 74.- CHF if you are coming <strong>from Zurich</strong>. </p><p>You can find a complete timetable on the <a href='http://cff.com'>CFF/SBB/FFS website</a> .</p>",
+        'description' => "<p>If you are arriving from Europe, consider coming to Lausanne by train. Lausanne has fast and direct connections from Paris & Milano and most European capital through Geneva, Basel, Zürich, Bern or Milano. </p> <p>Enjoy a stress-free travel and enjoy a gorgeous landscape using the excellent system of Swiss railways, renowned for its efficiency.</p><p>From Geneva, you can reach the city centre in 35 min for 26.- CHF and it will take you 2h15 min and 74.- CHF if you are coming from Zurich.</p><p>You will find a complete timetable on the CFF/SBB/FFS website .</p>",
     ),
     'plane' => array(
         'title' => "By plane",
         'cols' => 'col-sm-6 col-md-4',
         'image' => "/assets/img/icon_plane.svg",
-        'description' => "<p>Geneva as well as Zurich Airport will welcome you with open hands whether coming from Europe or further away. They both have very convenient direct train connections with Lausanne.</p><p>We recommend <a href='http://kayak.com'>Kayak</a> or <a href='http://www.booking.com'>Booking</a> to find best rates for your flight.</p>",
+        'description' => "<p>Geneva as well as Zurich Airport will welcome you whether you are coming from Europe or further away. They both have very convenient and direct train connections with Lausanne.</p><p>We recommend Kayak or Booking to find the best rates for your flight.</p>",
     ),
     'car' => array(
         'title' => "By Car",
         'cols' => 'col-sm-6 col-md-4',
         'image' => "/assets/img/icon_car.svg",
-        'description' => "<p><strong>From Geneva</strong> take the highway A1, follow the signs Lausanne-Sud/Lausanne-Ouchy/Lausanne-Centre and exit at Lausanne-Malley toward Lausanne-Centre. </p><p><strong>From Zurich</strong> follow highway A1/E25, follow the signs for E62/Genève/Lausanne-Sud/Lausanne-Crissier and exit at Lausanne-Malley toward Lausanne-Centre.</p><p>To drive on Swiss highways you will need to get have a vignette (toll sticker) which costs CHF40.-. You can buy it at the border.</p>",
+        'description' => "<p>From Geneva take the highway A1, follow the signs Lausanne-Sud/Lausanne-Ouchy/Lausanne-Centre and exit at Lausanne-Malley toward Lausanne-Centre.</p><p>From Zurich follow highway A1/E25, follow the signs for E62/Genève/Lausanne-Sud/Lausanne-Crissier and exit at Lausanne-Malley toward Lausanne-Centre.</p><p>To drive on Swiss highways you will need to get have a vignette (toll sticker) which costs CHF 40.-. You may buy it at the border.</p>",
     ),
     
 );
@@ -40,7 +40,7 @@ $app->hotels = array(
     'guesthouse' => array(
         'title' => "Lausanne Guesthouse",
         'image' => "/assets/img/hotel_guesthouse.jpg",
-        'description' => "Cheap and tasteful, this Guesthouse is perfect for the thighter budgets",
+        'description' => "Cheap and tasteful, this Guesthouse is perfect for tighter budgets.",
         'price' => '60',
         'url' => "http://www.lausanne-guesthouse.ch/",
         'address' => "Ch. des Epinettes 4, Lausanne",
@@ -49,7 +49,7 @@ $app->hotels = array(
     'ibis' => array(
         'title' => "IBIS Hotel",
         'image' => "/assets/img/hotel_ibis.jpg",
-        'description' => "This IBIS hotel is the closest to the venue. You can get there in 10 minutes",
+        'description' => "This IBIS hotel is the closest to the venue. You can get there in 10 minutes.",
         'price' => '140',
         'url' => "http://www.accorhotels.com/gb/hotel-6772-ibis-lausanne-centre/index.shtml",
         'address' => "Rue du Maupas 20, Lausanne",
@@ -59,7 +59,7 @@ $app->hotels = array(
         'title' => "Hotel de la paix",
         'image' => "/assets/img/hotel_paix.jpg",
         'price' => '180',
-        'description' => "This hotel is located in an ideal location with a beautiful view on the lake and provide the typical swiss hosiptality.",
+        'description' => "Located next to the St-François square, this hotel boasts a breathtaking view on the lake.",
         'url' => "http://www.hoteldelapaix.net/",
         'address' => "Av. B. Constant 5, Lausanne",
         'address_url' => "https://goo.gl/maps/tof7Z",
@@ -67,7 +67,7 @@ $app->hotels = array(
     'ouchy' => array(
         'title' => "Chateau d'Ouchy",
         'image' => "/assets/img/hotel_ouchy.jpg",
-        'description' => "Idealy located on the lakeshore, this castle is 5 minutes away from the citycenter by metro.",
+        'description' => "Situated on the lakeshore, this small castle is 5 minutes away from the City Center by metro.",
         'price' => '300',
         'url' => "http://www.chateaudouchy.ch/uk/index.php",
         'address' => "Place du port, Lausanne",
@@ -76,9 +76,9 @@ $app->hotels = array(
     'airbnb' => array(
         'title' => "AirBNB",
         'image' => "/assets/img/hotel_airbnb.jpg",
-        'description' => "AirBNB is a great service that provides many possibilities of staying at an Lausanne flat for great price",
+        'description' => "AirBnB is a great way to find new possibilities of staying at an Lausanne flat for a great price.",
         'price' => '',
-        'url' => "http://www.airbnb.com",
+        'url' => "https://www.airbnb.fr/s/Lausanne--Suisse",
         'address' => "",
         'address_url' => "",
     ),

@@ -156,6 +156,24 @@ $app->sponsors_executive = array(
         'photo' => '/assets/img/sponsor_executive_freshjobs.png',
         'kind' => $app->sponsors_kinds['executive']
     ),
+    'teambook' => array(
+        'slug' => "teambook",
+        'title' => "Teambook",
+        'teaser' => "Plan your team success",
+        'description' => "Plan your team success",
+        'urls' => array(
+            array(
+                'url' => 'http://teambookapp.com',
+                'label' => 'teambookapp.com'
+            ),
+            array(
+                'url' => 'http://twitter.com/teambookapp',
+                'label' => '@teambookapp'
+            )
+        ),
+        'photo' => '/assets/img/sponsor_executive_teambook.png',
+        'kind' => $app->sponsors_kinds['executive']
+    ),
 );
 
 
@@ -186,6 +204,48 @@ $app->partners_media = array(
             )
         ),
         'photo' => '/assets/img/partner_cominmag.png',
+        'kind' => $app->sponsors_kinds['media']
+    ),
+    'rosenfeld' => array(
+        'slug' => "rosenfeld",
+        'title' => "Rosenfeld Media",
+        'teaser' => "",
+        'description' => "",
+        'urls' => array(
+            array(
+                'url' => 'http://rosenfeldmedia.com',
+                'label' => 'rosenfeldmedia.com'
+            )
+        ),
+        'photo' => '/assets/img/partner_rosenfeld.png',
+        'kind' => $app->sponsors_kinds['media']
+    ),
+    'offscreen' => array(
+        'slug' => "offscreen",
+        'title' => "Offscreen magazine",
+        'teaser' => "",
+        'description' => "",
+        'urls' => array(
+            array(
+                'url' => 'http://www.offscreenmag.com',
+                'label' => 'www.offscreenmag.com'
+            )
+        ),
+        'photo' => '/assets/img/partner_offscreen.png',
+        'kind' => $app->sponsors_kinds['media']
+    ),
+    'smashing' => array(
+        'slug' => "smashing",
+        'title' => "Smashing Magazine",
+        'teaser' => "",
+        'description' => "",
+        'urls' => array(
+            array(
+                'url' => 'http://smashingmagazine.com',
+                'label' => 'smashingmagazine.com'
+            )
+        ),
+        'photo' => '/assets/img/partner_smashingmag.png',
         'kind' => $app->sponsors_kinds['media']
     ),
 );

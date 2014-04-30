@@ -13,6 +13,7 @@
 {% block content %}
 
 {# Sponsors #}
+{% if false %}
 <div class="on-dark">
     <div class="container inner-isolated">
         <div class="row">
@@ -46,11 +47,12 @@
         {% endfor %}
     </div>
 </div>
+{% endif %}
 
 <div class="container inner-isolated">
     <div class="row">
         <div class="col-xs-12">
-        <h2 class="text-center">Major Sponsor</h2>
+        <h2 class="text-center">Major Sponsors</h2>
         </div>
     </div>
     <div class="row inner-isolated">
@@ -78,7 +80,7 @@
     <div class="container inner-isolated">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="text-center">Executive Sponsor</h2>
+                <h2 class="text-center">Executive Sponsors</h2>
             </div>
         </div>
         <div class="row inner-isolated">
@@ -111,7 +113,6 @@
                     <div class="text-center">
                         <a href="{{ sponsor.urls[0].url }}"><img src="{{ sponsor.photo }}" alt="" width="100%" class="img-thumbnail" ></a>
                         <h5><a href="{{ sponsor.urls[0].url }}">{{ sponsor.title }}</a></h5>
-                        <h6>{{ sponsor.teaser }}</h6>
                     </div>
                 </div>
                 {% if loop.index is divisibleby(4) %}

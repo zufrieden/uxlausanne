@@ -143,7 +143,7 @@ $app->speakers = array(
     'nicolas_nova' => array(
         'display' => true,
         'slug' => 'nicolas_nova',
-        'promoted' => true,
+        'promoted' => false,
         'title' => 'Nicolas Nova',
         'body' => 'Nicolas is a researcher, ethnographer and writer. He undertakes desk research and field studies to inform and evaluate the creation of innovative products and services. His work is about identifying weak signals as well as exploring people’s needs, motivations and contexts to map new design opportunities and chart potential futures. He is also Professor at the Geneva University of Arts and Design (HEAD–Geneva).',
         'teaser' => 'Near Future Laboratory + HEAD–Geneve design research and ethnography in the field of digital technologies',
@@ -163,7 +163,7 @@ $app->speakers = array(
         )
     ),
     'valerie_vuillerat' => array(
-        'display' => true,
+        'display' => false,
         'slug' => 'valerie_vuillerat',
         'promoted' => false,
         'title' => 'Valerie Vuillerat',
@@ -202,26 +202,9 @@ $app->speakers = array(
             ),
         )
     ),
-    'simon_raess' => array(
-        'display' => true,
-        'slug' => 'simon_raess',
-        'promoted' => false,
-        'title' => 'Simon Raess',
-        'body' => 'Simon is the founder and design strategist at Ginetta LCC, a Digital Agency based in Zürich, who can boast of Swiss Government, Swiss Post, Doodle, Raiffeisen bank, local.ch and the University of Basel as its clients. Formerly at Google, where he lead the design of new and existing Google products like Google Docs -  from the basic concept to the final visual design.',
-        'teaser' => 'Design Strategist at Ginetta Web/Mobile',
-        'company' => 'GINETTA WEB/MOBILE',
-        'company_url' => 'http://ginetta.ch',
-        'photo' => '/assets/img/speaker_simon-raess.jpg',
-        'thumbnail' => '',
-        'role' => 'Founder & Design Strategist',
-        'location' => 'Zurich, CH',
-        'twitter' => 'simonraess',
-        'linkedin' => 'www.linkedin.com/in/raess',
-        'speaker_urls' => array(
-        )
-    ),
+    
     'will_evans' => array(
-        'display' => true,
+        'display' => false,
         'slug' => 'will_evans',
         'promoted' => false,
         'title' => 'Will Evans',
@@ -245,21 +228,39 @@ $app->speakers = array(
         'title' => 'Indi Young',
         'body' => 'Indi Young consults in product, service, and process design based on an empathic understanding of the people involved. She also writes, speaks at various venues, and mentors teams through their first foray into empathic research. She was the first Rosenfeld Media author, and a founder of Adaptive Path.',
         'teaser' => 'Empathy researcher, writer, speaker ... creator of mental model diagrams ... on the roster of experts @rosenfeldmedia ... founding partner @adaptivepath',
-        'company' => 'Self-employed',
+        'company' => '',
         'company_url' => 'http://www.indiyoung.com',
         'photo' => '/assets/img/speaker_indi-young.jpg',
         'thumbnail' => '',
-        'role' => 'Consultant',
+        'role' => 'Consultant, Rosenfeld Media author',
         'location' => 'San Fransisco, USA',
         'twitter' => 'indiyoung‎',
         'linkedin' => 'www.linkedin.com/in/indiyoung',
         'speaker_urls' => array(
         )
     ),
-    'giles_colborne' => array(
-        'display' => false,
-        'slug' => 'giles_colborne',
+    'simon_raess' => array(
+        'display' => true,
+        'slug' => 'simon_raess',
         'promoted' => false,
+        'title' => 'Simon Raess',
+        'body' => 'Simon is the founder and design strategist at Ginetta LCC, a Digital Agency based in Zürich, who can boast of Swiss Government, Swiss Post, Doodle, Raiffeisen bank, local.ch and the University of Basel as its clients. Formerly at Google, where he lead the design of new and existing Google products like Google Docs -  from the basic concept to the final visual design.',
+        'teaser' => 'Design Strategist at Ginetta Web/Mobile',
+        'company' => 'GINETTA WEB/MOBILE',
+        'company_url' => 'http://ginetta.ch',
+        'photo' => '/assets/img/speaker_simon-raess.jpg',
+        'thumbnail' => '',
+        'role' => 'Founder & Design Strategist',
+        'location' => 'Zurich, CH',
+        'twitter' => 'simonraess',
+        'linkedin' => 'www.linkedin.com/in/raess',
+        'speaker_urls' => array(
+        )
+    ),
+    'giles_colborne' => array(
+        'display' => true,
+        'slug' => 'giles_colborne',
+        'promoted' => true,
         'title' => 'Giles Colborne',
         'body' => 'Giles’ book \'Simple and usable web mobile and interaction design\' published by New Riders is a best-seller in the US, UK and China. He has been working in usability and user centred design since 1991 and is actively involved in the community - most recently as co-chair of IA Summit 2013.<br/><br />He founded cxpartners with Richard Caddick in 2004, which has grown to become an international consultancy which works with companies all over the world to create web and mobile user experiences that make a measurable difference to their bottom line and their customers’ lives.<br /><br />Giles is a former President of the UK Usability Professionals’ Association and has worked with British Standards Institute in developing guidance on web accessibility.',
         'teaser' => 'Managing Director of cxpartners. Author of \'Simple and Usable\'. Business Mentor. AKA 科尔伯恩 and 자일스 콜.',
@@ -271,6 +272,42 @@ $app->speakers = array(
         'location' => 'Bristol, UK',
         'twitter' => 'gilescolborne' ,
         'linkedin' => 'uk.linkedin.com/in/gilescolborne',
+        'speaker_urls' => array(
+        )
+    ),
+    'adrian_zumbrunnen' => array(
+        'display' => true,
+        'slug' => 'adrian_zumbrunnen',
+        'promoted' => false,
+        'title' => 'Adrian Zumbrunnen',
+        'body' => '',
+        'teaser' => 'Creating memorable experiences at iA Zurich',
+        'company' => 'iA',
+        'company_url' => 'http://ia.net',
+        'photo' => '/assets/img/speaker_adrian-zumbrunnen.jpg',
+        'thumbnail' => '',
+        'role' => 'IA / UX / UI Designer',
+        'location' => 'Zurich, Switzerland',
+        'twitter' => 'webchaeschtli' ,
+        'linkedin' => 'ch.linkedin.com/pub/adrian-zumbrunnen/41/844/8a5/fr',
+        'speaker_urls' => array(
+        )
+    ),
+    'romira_kavcic' => array(
+        'display' => true,
+        'slug' => 'romira_kavcic',
+        'promoted' => false,
+        'title' => 'Romina Kavcic',
+        'body' => 'Romina is curious and playful pixel crafter, grew up in Slovenia, and is now based in Zürich, where she works as Interaction designer. She is passionate about improving the world near you with user-centered and pixel-perfect designs. Loves pandas, exploring online/offline space and technology. When not thinking about design she’s sleeping.',
+        'teaser' => 'Playful pixel crafter. Passionate about improving the world near you with user-centered designs. Loves pandas, exploring online/offline space, technology.',
+        'company' => 'GINETTA WEB/MOBILE',
+        'company_url' => 'http://ginetta.ch',
+        'photo' => '/assets/img/speaker_romina-kavcic.jpg',
+        'thumbnail' => '',
+        'role' => 'Playful pixel crafter',
+        'location' => 'Zurich, Switzerland',
+        'twitter' => 'webchaeschtli' ,
+        'linkedin' => 'ch.linkedin.com/in/rominakavcic/en',
         'speaker_urls' => array(
         )
     ),
