@@ -56,7 +56,7 @@ $app->schedule = array(
             ),
             'thd12:15' => array ( 
                     'slug' => 'thd12:15',
-                    'title' => '12:15 - 13:30',
+                    'title' => '12:15 – 13:30',
                     'kind' => $app->talk_kinds['other'],
                     'talk' => $app->talks['lunch'],  
             ),
@@ -83,9 +83,91 @@ $app->schedule = array(
                     'kind' => $app->talk_kinds['talk'],
                     'talk' => $app->talks['fabian_hemmert'],  
             ),
+            'th18:00' => array ( 
+                    'slug' => 'th18:00',
+                    'title' => '18:00 – 19:00',
+                    'kind' => $app->talk_kinds['other'],
+                    'talk' => $app->talks['thursdaydrinks'],  
+            ),
+            'th19:00' => array ( 
+                    'slug' => 'th19:00',
+                    'title' => '19:00 – 20:00',
+                    'kind' => $app->talk_kinds['other'],
+                    'talk' => $app->talks['thursdaydance'],  
+            ),
         )
     ),
-
-
-
+    'friday' => array(
+        'slug' => 'friday',
+        'title' => "Friday, May 23rd",
+        'timeslots' => array (
+            'fr8:00' => array ( 
+                    'slug' => 'fr8:00',
+                    'title' => '08:00 – 09:00',
+                    'kind' => $app->talk_kinds['other'],
+                    'talk' => $app->talks['breakfast'],  
+            ),
+            'fr9:00' => array ( 
+                    'slug' => 'fr9:00',
+                    'title' => '09:00 – 12:30',
+                    'kind' => $app->talk_kinds['workshop'],
+                    'workshops' => array(
+                            $app->talks['nicolas_nova'],
+                            $app->talks['anna_dahlstrom'],
+                            $app->talks['ryan_rumsey'],
+                            $app->talks['romira_kavcic'],
+                            
+                        ),  
+            ),
+            'fr12:30' => array ( 
+                    'slug' => 'fr12:30',
+                    'title' => '12:30 – 14:00',
+                    'kind' => $app->talk_kinds['other'],
+                    'talk' => $app->talks['lunch'],  
+            ),        
+            'fr14:00' => array ( 
+                    'slug' => 'fr14:00',
+                    'title' => '14:00 – 14:40',
+                    'kind' => $app->talk_kinds['talk'],
+                    'talk' => $app->talks['adrian_zumbrunnen'],  
+            ),
+            'fr14:40' => array ( 
+                    'slug' => 'fr14:40',
+                    'title' => '14:45 – 15:25',
+                    'kind' => $app->talk_kinds['talk'],
+                    'talk' => $app->talks['janina_woods'],  
+            ),
+            'fr15:25' => array ( 
+                    'slug' => 'fr15:25',
+                    'title' => '15:25 – 16:00',
+                    'kind' => $app->talk_kinds['other'],
+                    'talk' => $app->talks['afternoonbreak'],  
+            ),
+            'fr16:00' => array ( 
+                    'slug' => 'fr16:00',
+                    'title' => '16:00 – 16:40',
+                    'kind' => $app->talk_kinds['talk'],
+                    'talk' => $app->talks['simon_raess'],  
+            ),
+            'fr16:45' => array ( 
+                    'slug' => 'fr16:45',
+                    'title' => '16:45 – 17:25',
+                    'kind' => $app->talk_kinds['talk'],
+                    'talk' => $app->talks['oliver_reichenstein'],  
+            ),
+            
+            'fr17:25' => array ( 
+                    'slug' => 'fr17:25',
+                    'title' => '17:25 – 17:40',
+                    'kind' => $app->talk_kinds['other'],
+                    'talk' => $app->talks['closingremarks'],  
+            ),
+            'fr18:00' => array ( 
+                    'slug' => 'fr18:00',
+                    'title' => '19:00 – 22:00',
+                    'kind' => $app->talk_kinds['other'],
+                    'talk' => $app->talks['closing'],  
+            ),
+        )
+    ),
 );
