@@ -1,5 +1,11 @@
 <?php
 
+$app->daynames = array(
+    'full' => "Full Program",
+    'wednesday' => "Wednesday",
+    'thursday' => "Thursday",
+    'friday' => "Friday",
+);
 
 $app->schedule = array(
     'wednesday' => array(

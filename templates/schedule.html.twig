@@ -6,7 +6,6 @@
 {% block header %}
 <section class="on-pink circled text-center inner-isolated">
   <h1>Schedule</h1>
-  <h4>Full Schedule</h4>
 </section>
 {% endblock %}
 
@@ -14,10 +13,23 @@
 
 {% if app.schedule %}
 {# Schedule Filter #}
-
+<div class="on-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                    <ul class="nav nav-pills">
+                    <li {% if slug == app.daynames.full %} class="active"{% endif%}><a href="{{ path('schedule') }}"> Full Schedule</a></li>
+                {% for day in app.schedule %}
+                    <li {% if slug == day.slug %} class="active"{% endif%}><a href="{{ path('schedule_detail', {'slug': day.slug })}}">{{day.title}}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 {# Schedule per day#}
 
-    {% for day in app.schedule %}
+    {% for day in days  %}
 <div class="container isolated schedule">
     <div class="row">
         <div class="col-xs-12 card">
@@ -82,13 +94,13 @@
             {% endfor %}
         </div>
         {% elseif timeslot.kind == app.talk_kinds['other']  %}
-        <div class="row">
+        <div class="row text_grey">
             <div class="col-sm-3 col-xs-12">
-                <h3 class="unbold">{{timeslot.title}}</h3>
+                <h5 class="unbold">{{timeslot.title}}</h5>
             </div>
             
             <div class="col-sm-6 col-xs-12">
-                    <h3>{{timeslot.talk.title}}</h3>
+                    <h5>{{timeslot.talk.title}}</h5>
                     <small>{{timeslot.talk.location}}</small>
                     {% if timeslot.talk.teaser %}<hr class="short">
                     <p>{{timeslot.talk.teaser | raw }}</p>{% endif %}

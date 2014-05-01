@@ -119,9 +119,22 @@ Enforce the white background.
     margin-top: 0.2em;
     margin-bottom: 1em;
   }
+  .nav > li > a {
+    color:@white;
+    &:hover,
+    &:focus,
+    .active {
+      color:@ux_pink;
+    }
+  }
+  .nav > li.active > a {
+    color:@ux_pink;
+  }
 }
-
-
   .go-pink, .go-pink a{
     color: @ux_pink;
+  }
+
+  .text_grey  {
+    color:@ux_grey_light;
   }
