@@ -11,6 +11,7 @@ $app->schedule = array(
     'wednesday' => array(
         'slug' => 'wednesday',
         'title' => "Wednesday, May 21st",
+        'menu' => "Wednesday",
         'timeslots' => array (
             'wed21:30' => array ( 
                     'slug' => 'wed18:00',
@@ -23,6 +24,7 @@ $app->schedule = array(
     'thursday' => array(
         'slug' => 'thursday',
         'title' => "Thursday, May 22nd",
+        'menu' => "Thursday",
         'timeslots' => array (
             'th8:00' => array ( 
                     'slug' => 'th8:00',
@@ -74,6 +76,7 @@ $app->schedule = array(
                             $app->talks['brigit_geiberger_and_peter_boersma_workshop'],
                             $app->talks['indi_young_workshop'],
                             $app->talks['giles_colborne_workshop'],
+                            $app->talks['nicolas_nova'],
                             
                         ),  
             ),
@@ -106,6 +109,7 @@ $app->schedule = array(
     'friday' => array(
         'slug' => 'friday',
         'title' => "Friday, May 23rd",
+        'menu' => "Friday",
         'timeslots' => array (
             'fr8:00' => array ( 
                     'slug' => 'fr8:00',
@@ -118,11 +122,9 @@ $app->schedule = array(
                     'title' => '09:00 – 12:30',
                     'kind' => $app->talk_kinds['workshop'],
                     'workshops' => array(
-                            $app->talks['nicolas_nova'],
                             $app->talks['anna_dahlstrom'],
                             $app->talks['ryan_rumsey'],
                             $app->talks['romira_kavcic'],
-                            
                         ),  
             ),
             'fr12:30' => array ( 
@@ -177,3 +179,18 @@ $app->schedule = array(
         )
     ),
 );
+
+/*foreach ($app->schedule as $day) {
+    foreach ($day['timeslots'] as $timeslot)
+        switch ($timeslot['kind']) {
+            case $app->talk_kinds['workshop']:
+                foreach ( $timeslot['workshops'] as $workshop) {
+                    $workshop['when'] = $day['title'].", ".$timeslot['title'];
+                }
+                break;
+            
+            default:
+                $timeslot['talk']['when'] = $day['title'].", ".$timeslot['title'];
+                break;
+        }
+}*/

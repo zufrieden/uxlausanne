@@ -20,7 +20,7 @@
                     <ul class="nav nav-pills">
                     <li {% if slug == app.daynames.full %} class="active"{% endif%}><a href="{{ path('schedule') }}"> Full Schedule</a></li>
                 {% for day in app.schedule %}
-                    <li {% if slug == day.slug %} class="active"{% endif%}><a href="{{ path('schedule_detail', {'slug': day.slug })}}">{{day.title}}</a></li>
+                    <li {% if slug == day.slug %} class="active"{% endif%}><a href="{{ path('schedule_detail', {'slug': day.slug })}}">{{day.menu}}</a></li>
                 {% endfor %}
                 </ul>
             </div>
@@ -39,24 +39,24 @@
 
     {% for timeslot in day.timeslots %}
         {% if timeslot.kind == app.talk_kinds['talk'] or  timeslot.kind == app.talk_kinds['keynote'] %}
+        {% set speaker = timeslot.talk.speaker %}
         <div class="row">
             <div class="col-sm-3 col-xs-12">
                 <h3 class="unbold">{{timeslot.title}}</h3>
             </div>
             
             <div class="col-sm-6 col-xs-12">
-                    <h3>{{timeslot.kind}}: {{timeslot.talk.title}}</h3>
+                    <h3>{{timeslot.kind}}: <a href="{{ path('speaker', {'slug': speaker.slug })}}#{{ timeslot.talk.slug }}">{{timeslot.talk.title}}</a></h3>
                     <small>{{timeslot.talk.location}}</small>
                     {% if timeslot.talk.teaser %}<hr class="short">
                     <p>{{timeslot.talk.teaser | raw }}</p>{%endif%}
             </div>
             <div class="col-sm-3 col-xs-12">
-                {% set speaker = timeslot.talk.speaker %}
+                
                 {% if speaker.photo %}
                     <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
                 {% endif %}
-                <h5 class="go-pink text-stronger"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h5>
-                
+                <h5 class="text-stronger">{{ speaker.title }}</a></h5>
                     {% if speaker.twitter %}
                         <p><a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a></p>
                     {%endif%}
@@ -80,12 +80,12 @@
                 {% if speaker.photo %}
                     <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
                 {% endif %}
-                <h5>{{ workshop.title }}</h5>
+                <h5><a href="{{ path('speaker', {'slug': speaker.slug })}}#{{ workshop.slug }}">{{ workshop.title }}</a></h5>
                 <small>{{workshop.location}}</small>
                 <hr class="short">
                 <p>{{workshop.teaser | raw }}</p>
                 <hr class="short">
-                <h5 class="go-pink text-stronger"><a href="{{ path('speaker', {'slug': speaker.slug })}}">{{ speaker.title }}</a></h5>
+                <h5>{{ speaker.title }}</h5>
                 
                     {% if speaker.twitter %}
                         <p><a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a></p>
