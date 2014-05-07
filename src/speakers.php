@@ -311,6 +311,24 @@ $app->speakers = array(
         'speaker_urls' => array(
         )
     ),
+    'bonny' => array(
+        'display' => true,
+        'slug' => 'bonny',
+        'promoted' => false,
+        'title' => 'Bonny Colville-Hyde',
+        'body' => '<p>Bonny is a User Experience consultant at Rockpool Digital. She has worked with a wide range of clients including eBay, Expedia and The Samaritans. She works closely with client teams to help change their approach to digital, not just make cosmetic changes to their websites. By encouraging clients think of their service users differently, she believes digital services can be designed to better meet user needs. Bonny is known for making comics to help clients empathise with their audiences, and she regularly runs UX comic making workshops for peers.</p><p>Bonny loves visiting Scandinavian countries, dreams of living in the Pacific Northwest and has a slightly unhealthy obsession with Twin Peaks.</p>',
+        'teaser' => 'UX Consultant who goes on adventures, dreams of Scandinavia, crafter & proud Girl Geek. I make UX comics too.',
+        'company' => 'Rockpool Digital',
+        'company_url' => 'http://rockpooldigital.com/',
+        'photo' => '/assets/img/speaker_bonny.jpeg',
+        'thumbnail' => '',
+        'role' => 'User Experience Consultant',
+        'location' => 'Bristol, UK',
+        'twitter' => 'almostexact' ,
+        'linkedin' => 'uk.linkedin.com/in/bonny99/fr',
+        'speaker_urls' => array(
+        )
+    ),
 );
 
 // Select only promoted

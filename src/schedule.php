@@ -54,13 +54,13 @@ $app->schedule = array(
                     'slug' => 'th10:50',
                     'title' => '10:50 – 11:30',
                     'kind' => $app->talk_kinds['talk'],
-                    'talk' => $app->talks['indi_young_talk'],  
+                    'talk' => $app->talks['brigit_geiberger_and_peter_boersma_talk'],  
             ),
             'th11:35' => array ( 
                     'slug' => 'th11:35',
                     'title' => '11:35 – 12:15',
                     'kind' => $app->talk_kinds['talk'],
-                    'talk' => $app->talks['brigit_geiberger_and_peter_boersma_talk'],  
+                    'talk' => $app->talks['adrian_zumbrunnen'],  
             ),
             'thd12:15' => array ( 
                     'slug' => 'thd12:15',
@@ -75,7 +75,7 @@ $app->schedule = array(
                     'workshops' => array(
                             $app->talks['brigit_geiberger_and_peter_boersma_workshop'],
                             $app->talks['indi_young_workshop'],
-                            $app->talks['giles_colborne_workshop'],
+                            $app->talks['ryan_rumsey'],
                             $app->talks['nicolas_nova'],
                             
                         ),  
@@ -123,8 +123,9 @@ $app->schedule = array(
                     'kind' => $app->talk_kinds['workshop'],
                     'workshops' => array(
                             $app->talks['anna_dahlstrom'],
-                            $app->talks['ryan_rumsey'],
+                            $app->talks['giles_colborne_workshop'],
                             $app->talks['romira_kavcic'],
+                            $app->talks['bonny'],
                         ),  
             ),
             'fr12:30' => array ( 
@@ -137,13 +138,13 @@ $app->schedule = array(
                     'slug' => 'fr14:00',
                     'title' => '14:00 – 14:40',
                     'kind' => $app->talk_kinds['talk'],
-                    'talk' => $app->talks['adrian_zumbrunnen'],  
+                    'talk' => $app->talks['simon_raess'],  
             ),
             'fr14:40' => array ( 
                     'slug' => 'fr14:40',
                     'title' => '14:45 – 15:25',
                     'kind' => $app->talk_kinds['talk'],
-                    'talk' => $app->talks['janina_woods'],  
+                    'talk' => $app->talks['indi_young_talk'],  
             ),
             'fr15:25' => array ( 
                     'slug' => 'fr15:25',
@@ -155,7 +156,7 @@ $app->schedule = array(
                     'slug' => 'fr16:00',
                     'title' => '16:00 – 16:40',
                     'kind' => $app->talk_kinds['talk'],
-                    'talk' => $app->talks['simon_raess'],  
+                    'talk' => $app->talks['janina_woods'],  
             ),
             'fr16:45' => array ( 
                     'slug' => 'fr16:45',
