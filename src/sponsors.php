@@ -174,6 +174,38 @@ $app->sponsors_executive = array(
         'photo' => '/assets/img/sponsor_executive_teambook.png',
         'kind' => $app->sponsors_kinds['executive']
     ),
+    'leshop' => array(
+        'slug' => "leshop",
+        'title' => "LeShop",
+        'teaser' => "My Online Supermarket",
+        'description' => "My Online Supermarket",
+        'urls' => array(
+            array(
+                'url' => 'http://www.leshop.ch/',
+                'label' => 'leshop.ch'
+            ),
+        ),
+        'photo' => '/assets/img/sponsor_executive_leshop.png',
+        'kind' => $app->sponsors_kinds['executive']
+    ),
+    'urturn' => array(
+        'slug' => "urturn",
+        'title' => "UrTurn",
+        'teaser' => "Get Inspired !",
+        'description' => "Get Inspired !",
+        'urls' => array(
+            array(
+                'url' => 'http://www.urturn.ch/',
+                'label' => 'urturn.ch'
+            ),
+            array(
+                'url' => 'http://twitter.com/UrturnOfficial',
+                'label' => '@UrturnOfficial'
+            ),
+        ),
+        'photo' => '/assets/img/sponsor_executive_urturn.png',
+        'kind' => $app->sponsors_kinds['executive']
+    ),
 );
 
 
