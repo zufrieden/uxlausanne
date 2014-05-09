@@ -1,5 +1,5 @@
 {% extends "layout.html.twig" %}
-{% set active_page = "program" %}
+{% set active_page = "schedule" %}
 
 {% block title 'Schedule – UX Lausanne 2014' %}
 
@@ -38,7 +38,7 @@
     </div>
 
     {% for timeslot in day.timeslots %}
-        {% if timeslot.kind == app.talk_kinds['talk'] or  timeslot.kind == app.talk_kinds['keynote'] %}
+        {% if timeslot.kind == app.talk_kinds['talk'] or timeslot.kind == app.talk_kinds['keynote'] %}
         {% set speaker = timeslot.talk.speaker %}
         <div class="row">
             <div class="col-sm-3 col-xs-12">
@@ -69,8 +69,9 @@
                 <h3 class="unbold">{{timeslot.title}}</h3>
             </div>
         
-            <div class="col-sm-6 col-xs-12">
+            <div class="col-sm-9 col-xs-12">
                 <h3>Workshops</h3>
+                <small>The selection of workshops is done on a first in, first served basis. 40 seats per workshop. There is no prebooking available. </small>
             </div>
         </div>
         <div class="row">
@@ -91,8 +92,46 @@
                         <p><a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a></p>
                     {%endif%}  
                 </div>
+                {% if loop.index is divisibleby(2) %}
+                    <div class="clearfix visible-xs">
+                        <div class="isolated"></div>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
+        {% elseif timeslot.kind == app.talk_kinds['party']  %}
+        </div>
+    </div>
+    <div class="">
+    <div class="container inner-isolated">
+        <div class="row">
+            <div class="col-sm-3 col-xs-12">
+                <h3 class="unbold">{{timeslot.title}}</h3>
+            </div>
+            
+            <div class="col-sm-6 col-xs-12">
+                    <h3>{{timeslot.talk.title}}</h3>
+                    <small>{{timeslot.talk.location}}</small>
+                    {% if timeslot.talk.teaser %}<hr class="short">
+                    <p>{{timeslot.talk.teaser | raw }}</p>{% endif %}
+            </div>
+            <div class="col-sm-3 col-xs-12">
+                
+                {% if timeslot.talk.sponsor %}
+                {% set sponsor = timeslot.talk.sponsor %}
+                    <img src="{{ sponsor.photo }}" alt="{{ sponsor.title }}" class="img-thumbnail" width="100%"></a>
+                    <p>
+                    Sponsored by:<br />
+                    <strong>{{ sponsor.title }}</strong><br />
+                    {{ sponsor.teaser }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+    
         {% elseif timeslot.kind == app.talk_kinds['other']  %}
         <div class="row text_grey">
             <div class="col-sm-3 col-xs-12">
@@ -111,7 +150,7 @@
                 {% set sponsor = timeslot.talk.sponsor %}
                     <img src="{{ sponsor.photo }}" alt="{{ sponsor.title }}" class="img-thumbnail" width="100%"></a>
                     <p>
-                    Sponsorized by:<br />
+                    Sponsored by:<br />
                     <strong>{{ sponsor.title }}</strong><br />
                     {{ sponsor.teaser }}
                     </p>

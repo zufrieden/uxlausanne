@@ -16,7 +16,7 @@ $app->schedule = array(
             'wed21:30' => array ( 
                     'slug' => 'wed18:00',
                     'title' => '18:00 – till late',
-                    'kind' => $app->talk_kinds['other'],
+                    'kind' => $app->talk_kinds['party'],
                     'talk' => $app->talks['opening'],  
             ),
         )
@@ -34,14 +34,14 @@ $app->schedule = array(
             ),
             'th9:30' => array ( 
                     'slug' => 'th9:30',
-                    'title' => '09:30 – 09:40',
+                    'title' => '09:30 – 09:45',
                     'kind' => $app->talk_kinds['other'],
                     'talk' => $app->talks['openingremarks'],  
             ),
-            'th9:40' => array ( 
-                    'slug' => 'th9:40',
-                    'title' => '09:40 – 10:30',
-                    'kind' => $app->talk_kinds['keynote'],
+            'th9:45' => array ( 
+                    'slug' => 'th9:45',
+                    'title' => '09:45 – 10:30',
+                    'kind' => $app->talk_kinds['talk'],
                     'talk' => $app->talks['giles_colborne_talk'],  
             ),
             'th10:30' => array ( 
@@ -60,7 +60,7 @@ $app->schedule = array(
                     'slug' => 'th11:35',
                     'title' => '11:35 – 12:15',
                     'kind' => $app->talk_kinds['talk'],
-                    'talk' => $app->talks['adrian_zumbrunnen'],  
+                    'talk' => $app->talks['simon_raess'],  
             ),
             'thd12:15' => array ( 
                     'slug' => 'thd12:15',
@@ -101,7 +101,7 @@ $app->schedule = array(
             'th19:00' => array ( 
                     'slug' => 'th19:00',
                     'title' => '19:00 – 20:00',
-                    'kind' => $app->talk_kinds['other'],
+                    'kind' => $app->talk_kinds['party'],
                     'talk' => $app->talks['thursdaydance'],  
             ),
         )
@@ -138,7 +138,7 @@ $app->schedule = array(
                     'slug' => 'fr14:00',
                     'title' => '14:00 – 14:40',
                     'kind' => $app->talk_kinds['talk'],
-                    'talk' => $app->talks['simon_raess'],  
+                    'talk' => $app->talks['adrian_zumbrunnen'],  
             ),
             'fr14:40' => array ( 
                     'slug' => 'fr14:40',
@@ -174,24 +174,9 @@ $app->schedule = array(
             'fr18:00' => array ( 
                     'slug' => 'fr18:00',
                     'title' => '19:00 – 22:00',
-                    'kind' => $app->talk_kinds['other'],
+                    'kind' => $app->talk_kinds['party'],
                     'talk' => $app->talks['closing'],  
             ),
         )
     ),
 );
-
-/*foreach ($app->schedule as $day) {
-    foreach ($day['timeslots'] as $timeslot)
-        switch ($timeslot['kind']) {
-            case $app->talk_kinds['workshop']:
-                foreach ( $timeslot['workshops'] as $workshop) {
-                    $workshop['when'] = $day['title'].", ".$timeslot['title'];
-                }
-                break;
-            
-            default:
-                $timeslot['talk']['when'] = $day['title'].", ".$timeslot['title'];
-                break;
-        }
-}*/
