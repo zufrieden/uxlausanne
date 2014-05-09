@@ -195,8 +195,8 @@ $app->sponsors_executive = array(
         'description' => "Get Inspired !",
         'urls' => array(
             array(
-                'url' => 'http://www.urturn.ch/',
-                'label' => 'urturn.ch'
+                'url' => 'http://www.urturn.com/',
+                'label' => 'urturn.com'
             ),
             array(
                 'url' => 'http://twitter.com/UrturnOfficial',

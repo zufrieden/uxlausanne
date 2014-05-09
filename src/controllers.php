@@ -28,7 +28,7 @@ $app->get('/speakers/{slug}', function ($slug) use ($app) {
 
     $talks = array();
     foreach ($app->talks as $talk) {
-        if ($slug === $talk['speaker']['slug']) {
+        if ($talk['speaker'] != "" && $slug === $talk['speaker']['slug']) {
             $talks[] = $talk;
         }
     }
@@ -40,6 +40,35 @@ $app->get('/speakers/{slug}', function ($slug) use ($app) {
 })
 ->bind('speaker')
 ;
+
+$app->get('/schedule/{slug}', function ($slug) use ($app) {
+    if ($slug === "") {
+        return $app['twig']->render('schedule.html.twig');
+    }
+
+    if (!isset($app->schedule[$slug])) {
+        $app->abort(404, "Day $slug is not available.");
+    }
+
+    $day = $app->schedule[$slug];
+
+        return $app['twig']->render('schedule.html.twig', array(
+        'days' => array($slug=>$day),
+        'slug' => $slug
+        ));
+})
+->bind('schedule_detail')
+;
+
+$app->get('/schedule', function () use ($app) {
+    return $app['twig']->render('schedule.html.twig', array(
+        'days' => $app->schedule,
+        'slug' => $app->daynames['full'],
+        ));
+})
+->bind('schedule')
+;
+
 
 
 $app->get('/sponsors', function () use ($app) {

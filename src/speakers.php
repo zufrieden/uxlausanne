@@ -26,7 +26,7 @@ $app->speakers = array(
     'anna_dahlstrom' => array(
         'slug' => 'anna_dahlstrom',
         'display' => true,
-        'promoted' => true,
+        'promoted' => false,
         'title' => 'Anna Dahlström',
         'body' => 'Anna is a former Experience Lead with Dare, the Digital Communication Agency. <br/>After a couple of years, she decided to leave her position and go freelance, in order to pursue her own projects and focus more specifically on Information Architecture and User Experience, as well as getting more involved in the startup community. She’s worked for BBC News, Disney, Tropicana, Max Factor, Google, Vodafone and Johnson & Johnson. She’s also an instructor at General Assembly in London where she’s based.',
         'teaser' => 'Swedish IA+UX designer with a soft spot for cafes, challenges & flexible working.',
@@ -76,7 +76,7 @@ $app->speakers = array(
         'thumbnail' => '',
         'role' => 'Digital Strategy Director & Interaction Design Director',
         'location' => 'Amsterdam, Netherlands',
-        'twitter' => '',
+        'twitter' => 'uxteamoftwo',
         'linkedin' => '',
         'speaker_urls' => array(
         ),
@@ -244,7 +244,7 @@ $app->speakers = array(
         'slug' => 'simon_raess',
         'promoted' => false,
         'title' => 'Simon Raess',
-        'body' => 'Simon is the founder and design strategist at Ginetta LCC, a Digital Agency based in Zürich, who can boast of Swiss Government, Swiss Post, Doodle, Raiffeisen bank, local.ch and the University of Basel as its clients. Formerly at Google, where he lead the design of new and existing Google products like Google Docs -  from the basic concept to the final visual design.',
+        'body' => '<p>Simon Raess is a designer and entrepreneur. He loves to create interactive products that are easy and fun to use. His passion for excellence and innovation in user experience inspired some of todays most useful web and mobile applications.</p><p>Simon is the founder and business partner of Ginetta Web/Mobile, a dedicated web studio in Zürich. He earned his stripes as a designer at Google in New York, Swisscom Innovations and Cmsbox. His work has been recognized by a number of national and international awards.</p>',
         'teaser' => 'Design Strategist at Ginetta Web/Mobile',
         'company' => 'GINETTA WEB/MOBILE',
         'company_url' => 'http://ginetta.ch',
@@ -308,6 +308,24 @@ $app->speakers = array(
         'location' => 'Zurich, Switzerland',
         'twitter' => 'rominadesigner' ,
         'linkedin' => 'ch.linkedin.com/in/rominakavcic/en',
+        'speaker_urls' => array(
+        )
+    ),
+    'bonny' => array(
+        'display' => true,
+        'slug' => 'bonny',
+        'promoted' => true,
+        'title' => 'Bonny Colville-Hyde',
+        'body' => '<p>Bonny is a User Experience consultant at Rockpool Digital. She has worked with a wide range of clients including eBay, Expedia and The Samaritans. She works closely with client teams to help change their approach to digital, not just make cosmetic changes to their websites. By encouraging clients think of their service users differently, she believes digital services can be designed to better meet user needs. Bonny is known for making comics to help clients empathise with their audiences, and she regularly runs UX comic making workshops for peers.</p><p>Bonny loves visiting Scandinavian countries, dreams of living in the Pacific Northwest and has a slightly unhealthy obsession with Twin Peaks.</p>',
+        'teaser' => 'UX Consultant who goes on adventures, dreams of Scandinavia, crafter & proud Girl Geek. I make UX comics too.',
+        'company' => 'Rockpool Digital',
+        'company_url' => 'http://rockpooldigital.com/',
+        'photo' => '/assets/img/speaker_bonny.jpeg',
+        'thumbnail' => '',
+        'role' => 'User Experience Consultant',
+        'location' => 'Bristol, UK',
+        'twitter' => 'almostexact' ,
+        'linkedin' => 'uk.linkedin.com/in/bonny99/fr',
         'speaker_urls' => array(
         )
     ),

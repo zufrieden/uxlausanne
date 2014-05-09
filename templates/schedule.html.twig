@@ -1,0 +1,173 @@
+{% extends "layout.html.twig" %}
+{% set active_page = "schedule" %}
+
+{% block title 'Schedule – UX Lausanne 2014' %}
+
+{% block header %}
+<section class="on-pink circled text-center inner-isolated">
+  <h1>Schedule</h1>
+</section>
+{% endblock %}
+
+{% block content %}
+
+{% if app.schedule %}
+{# Schedule Filter #}
+<div class="on-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                    <ul class="nav nav-pills">
+                    <li {% if slug == app.daynames.full %} class="active"{% endif%}><a href="{{ path('schedule') }}"> Full Schedule</a></li>
+                {% for day in app.schedule %}
+                    <li {% if slug == day.slug %} class="active"{% endif%}><a href="{{ path('schedule_detail', {'slug': day.slug })}}">{{day.menu}}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{# Schedule per day#}
+
+    {% for day in days  %}
+<div class="container isolated schedule">
+    <div class="row">
+        <div class="col-xs-12 card">
+            <h2>{{day.title}}</h2>
+        </div>
+    </div>
+
+    {% for timeslot in day.timeslots %}
+        {% if timeslot.kind == app.talk_kinds['talk'] or timeslot.kind == app.talk_kinds['keynote'] %}
+        {% set speaker = timeslot.talk.speaker %}
+        <div class="row">
+            <div class="col-sm-3 col-xs-12">
+                <h3 class="unbold">{{timeslot.title}}</h3>
+            </div>
+            
+            <div class="col-sm-6 col-xs-12">
+                    <h3>{{timeslot.kind}}: <a href="{{ path('speaker', {'slug': speaker.slug })}}#{{ timeslot.talk.slug }}">{{timeslot.talk.title}}</a></h3>
+                    <small>{{timeslot.talk.location}}</small>
+                    {% if timeslot.talk.teaser %}<hr class="short">
+                    <p>{{timeslot.talk.teaser | raw }}</p>{%endif%}
+            </div>
+            <div class="col-sm-3 col-xs-12">
+                
+                {% if speaker.photo %}
+                    <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
+                {% endif %}
+                <h5 class="text-stronger">{{ speaker.title }}</a></h5>
+                    {% if speaker.twitter %}
+                        <p><a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a></p>
+                    {%endif%}
+            </div>
+        </div>
+
+        {% elseif timeslot.kind == app.talk_kinds['workshop']  %}
+        <div class="row">
+            <div class="col-sm-3 col-xs-12">
+                <h3 class="unbold">{{timeslot.title}}</h3>
+            </div>
+        
+            <div class="col-sm-9 col-xs-12">
+                <h3>Workshops</h3>
+                <small>The selection of workshops is done on a first in, first served basis. 40 seats per workshop. There is no prebooking available. </small>
+            </div>
+        </div>
+        <div class="row">
+            {% for workshop in timeslot.workshops %}
+                {% set speaker = workshop.speaker %}
+                <div class="col-sm-3 col-xs-6">
+                {% if speaker.photo %}
+                    <a href="{{ path('speaker', {'slug': speaker.slug })}}"><img src="{{ speaker.photo }}" alt="{{ speaker.title }}" class="img-thumbnail" width="100%"></a>
+                {% endif %}
+                <h5><a href="{{ path('speaker', {'slug': speaker.slug })}}#{{ workshop.slug }}">{{ workshop.title }}</a></h5>
+                <small>{{workshop.location}}</small>
+                <hr class="short">
+                <p>{{workshop.teaser | raw }}</p>
+                <hr class="short">
+                <h5>{{ speaker.title }}</h5>
+                
+                    {% if speaker.twitter %}
+                        <p><a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a></p>
+                    {%endif%}  
+                </div>
+                {% if loop.index is divisibleby(2) %}
+                    <div class="clearfix visible-xs">
+                        <div class="isolated"></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% elseif timeslot.kind == app.talk_kinds['party']  %}
+        </div>
+    </div>
+    <div class="">
+    <div class="container inner-isolated">
+        <div class="row">
+            <div class="col-sm-3 col-xs-12">
+                <h3 class="unbold">{{timeslot.title}}</h3>
+            </div>
+            
+            <div class="col-sm-6 col-xs-12">
+                    <h3>{% if timeslot.talk.event_url %}<a href="{{timeslot.talk.event_url}}">{% endif %}{{timeslot.talk.title}}{% if timeslot.talk.event_url %}</a>{% endif %}</h3>
+                    <small>{{timeslot.talk.location}}</small>
+                    {% if timeslot.talk.teaser %}<hr class="short">
+                    <p>{{timeslot.talk.teaser | raw }}</p>{% endif %}
+            </div>
+            <div class="col-sm-3 col-xs-12">
+                
+                {% if timeslot.talk.sponsor %}
+                {% set sponsor = timeslot.talk.sponsor %}
+                    <img src="{{ sponsor.photo }}" alt="{{ sponsor.title }}" class="img-thumbnail" width="100%"></a>
+                    <p>
+                    Sponsored by:<br />
+                    <strong>{{ sponsor.title }}</strong><br />
+                    {{ sponsor.teaser }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+    
+        {% elseif timeslot.kind == app.talk_kinds['other']  %}
+        <div class="row text_grey">
+            <div class="col-sm-3 col-xs-12">
+                <h5 class="unbold">{{timeslot.title}}</h5>
+            </div>
+            
+            <div class="col-sm-6 col-xs-12">
+                    <h5>{{timeslot.talk.title}}</h5>
+                    <small>{{timeslot.talk.location}}</small>
+                    {% if timeslot.talk.teaser %}<hr class="short">
+                    <p>{{timeslot.talk.teaser | raw }}</p>{% endif %}
+            </div>
+            <div class="col-sm-3 col-xs-12">
+                
+                {% if timeslot.talk.sponsor %}
+                {% set sponsor = timeslot.talk.sponsor %}
+                    <img src="{{ sponsor.photo }}" alt="{{ sponsor.title }}" class="img-thumbnail" width="100%"></a>
+                    <p>
+                    Sponsored by:<br />
+                    <strong>{{ sponsor.title }}</strong><br />
+                    {{ sponsor.teaser }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+        {% if loop.last %}
+        <hr />
+        {% else %}
+        <hr class="light" />
+        {% endif %}
+        {% endfor %}        
+    </div>
+{% endfor %}
+    
+
+{% endif %}
+
+{% endblock %}
