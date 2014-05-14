@@ -77,6 +77,13 @@ $app->get('/sponsors', function () use ($app) {
 ->bind('sponsors')
 ;
 
+$app->get('/jobs', function () use ($app) {
+    $jobs = $app['jobs'];
+
+    return $app['twig']->render('jobs.html.twig', array('jobs' => $jobs));
+})
+->bind('jobs');
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
