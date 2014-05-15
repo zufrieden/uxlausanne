@@ -206,6 +206,25 @@ $app->sponsors_executive = array(
         'photo' => '/assets/img/sponsor_executive_urturn.png',
         'kind' => $app->sponsors_kinds['executive']
     ),
+    'atracsys' => array(
+        'slug' => "atracsys",
+        'title' => "Atracsys",
+        'teaser' => "",
+        'description' => "",
+        'urls' => array(
+            array(
+                'url' => 'http://http://www.atracsys.com/',
+                'label' => 'atracsys.com'
+            ),
+            array(
+                'url' => 'http://twitter.com/Atracsys',
+                'label' => '@Atracsys'
+            ),
+        ),
+        'photo' => '/assets/img/sponsor_executive_atracsys.png',
+        'kind' => $app->sponsors_kinds['executive']
+    ),
+
 );
 
 
