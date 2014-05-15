@@ -1,0 +1,37 @@
+{% extends "layout.html.twig" %}
+{% set active_page = "jobs" %}
+
+{% block title 'Jobs – UX Lausanne 2014' %}
+
+{% block header %}
+<section class="on-pink circled text-center inner-isolated">
+  <h1>Jobs</h1>
+  <h4>Jobs offers by <a href="http://www.freshjobs.ch" >Freshjobs</a></h4>
+</section>
+{% endblock %}
+
+{% block content %}
+
+{# Speaker #}
+<div class="container isolated">
+    
+    {% for job in jobs %}
+        <div class="row">
+            <div class="col-sm-8" >
+                <h4><a href="{{ job.link }}">{{ job.title }}</a></h4>
+                
+                <b>{{ job.company }}</b> {{ job.pubDate|date('d M Y') }}<br/>
+                <small>{% for tag in job.categories %}
+                    <span class="label label-default">{{ tag }}</span>
+                {% endfor %}
+                </small>
+
+            <hr />
+            </div>
+        </div>
+        
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

@@ -27,4 +27,6 @@ require('homepage.php');
 require('about.php');
 require('venue.php');
 require('schedule.php');
+require('jobs.php');
+
 return $app;
