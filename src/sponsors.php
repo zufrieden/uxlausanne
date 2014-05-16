@@ -64,6 +64,24 @@ $app->sponsors_major = array(
         'photo' => '/assets/img/sponsor_major_liip.png',
         'kind' => $app->sponsors_kinds['major']
     ),
+    'vaud' => array(
+        'slug' => "vaud",
+        'title' => "Canton de Vaud",
+        'teaser' => "Liberté & Patrie",
+        'description' => "",
+        'urls' => array(
+            array(
+                'url' => 'http://www.vaud.ch',
+                'label' => 'vaud.ch'
+            ),
+            array(
+                'url' => 'https://twitter.com/Actualitesvd',
+                'label' => '@Actualitesvd'
+            )
+        ),
+        'photo' => '/assets/img/sponsor_major_vaud.png',
+        'kind' => $app->sponsors_kinds['major']
+    ),
 );
 $app->sponsors_executive = array(
     'balsamiq' => array(
