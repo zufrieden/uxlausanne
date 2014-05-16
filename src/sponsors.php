@@ -231,7 +231,7 @@ $app->sponsors_executive = array(
         'description' => "",
         'urls' => array(
             array(
-                'url' => 'http://http://www.atracsys.com/',
+                'url' => 'http://www.atracsys.com/',
                 'label' => 'atracsys.com'
             ),
             array(
