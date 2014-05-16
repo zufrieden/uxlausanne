@@ -41,6 +41,10 @@ namespace :myproject do
         run "cd #{release_path} && #{release_path}/composer.phar install"
     end
 
+    task :clear_controllers do
+        run "cd #{release_path} && rm  #{release_path}/web/*_dev.php"
+    end
+
     # task :move_fonts do
     #     run "cp -r #{current_path}/vendor/fortawesome/font-awesome/font #{current_path}/web/assets/font"
     # end
@@ -55,6 +59,7 @@ end
 set  :keep_releases,  3
 
 after "deploy:update_code", "myproject:vendors"
+after "deploy:update_code", "myproject:clear_controllers"
 # after "deploy:create_symlink", "myproject:move_fonts"
 
 # Be more verbose by uncommenting the following line
