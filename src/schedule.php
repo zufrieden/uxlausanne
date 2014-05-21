@@ -15,7 +15,7 @@ $app->schedule = array(
         'timeslots' => array (
             'wed21:30' => array ( 
                     'slug' => 'wed18:00',
-                    'title' => '18:00 – till late',
+                    'title' => '18:00 – 20:00',
                     'kind' => $app->talk_kinds['party'],
                     'talk' => $app->talks['opening'],  
             ),
