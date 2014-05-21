@@ -120,7 +120,7 @@
                 
                 {% if timeslot.talk.sponsor %}
                 {% set sponsor = timeslot.talk.sponsor %}
-                    <img src="{{ sponsor.photo }}" alt="{{ sponsor.title }}" class="img-thumbnail" width="100%"></a>
+                    <a href="{{sponsor.urls[0].url}}"><img src="{{ sponsor.photo }}" alt="{{ sponsor.title }}" class="img-thumbnail" width="100%"></a>
                     <p>
                     Sponsored by:<br />
                     <strong>{{ sponsor.title }}</strong><br />
@@ -151,7 +151,7 @@
                 
                 {% if timeslot.talk.sponsor %}
                 {% set sponsor = timeslot.talk.sponsor %}
-                    <img src="{{ sponsor.photo }}" alt="{{ sponsor.title }}" class="img-thumbnail" width="100%"></a>
+                    <a href="{{sponsor.urls[0].url}}"><img src="{{ sponsor.photo }}" alt="{{ sponsor.title }}" class="img-thumbnail" width="100%"></a>
                     <p>
                     Sponsored by:<br />
                     <strong>{{ sponsor.title }}</strong><br />
